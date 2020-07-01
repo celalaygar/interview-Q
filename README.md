@@ -10,7 +10,8 @@
 ```
 - transaction
 ```
-transaction blogu içerisindeki sql query işlemleri düzgün çalışmadığı durumda bütün işlemler geri alınır.
+Bir Transaction içindeki her işlem adımının gerçekleşmesi gerekir, adımlardan herhangi birinde dahi bir hata meydana gelse 
+ilgili transaction içindeki tüm adımlar, diğerleri gerçekleşmiş olsa dahi iptal edilir, eski haline döner.
 ```
 - sql index
 ```
