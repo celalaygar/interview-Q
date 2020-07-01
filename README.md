@@ -16,7 +16,11 @@ diğerleri gerçekleşmiş olsa dahi iptal edilir, eski haline döner.
 ```
 - sql index
 ```
-select işlemi sırasında hızlı search yapabilme kabiliyeti sunar.
+QL indekslemenin amacı işlenen verinin daha az veri okunarak sorgu sonucunun daha kısa zamanda getirilmesini sağlamaktır. 
+Indeksleme kullanarak tablonun tamamını okumaktansa oluşturacağımız indeks key i aracılığı ile okumak istediğimiz kayıda 
+ulaşabilmemiz daha hızlı bir şekilde mümkün olacaktır. Bu sayede tamamlanması saatler süren sorgunun uygun indeksler 
+kullanılarak saniyeler içinde getirilmesini sağlayabiliriz.
+
 ```
 - Observer (Gözlemci) Pattern
 ```
