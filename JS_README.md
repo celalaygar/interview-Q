@@ -1,9 +1,25 @@
 # JAVASCRIPT QUESTİONS
 - Object Oriented JavaScript
+```
+```
 - Prototype, prototype based inheritance
+```
+```
 - Debouncing
+```
+```
 - Throttling
-- Calbacks, 
-- Promises,
+```
+```
+- Calbacks 
+```
+```
+- Promises 
+```
+```
 - Observables
+```
+```
 - Event Loop 
+```
+```
