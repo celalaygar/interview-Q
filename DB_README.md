@@ -7,12 +7,23 @@
 ```
 - rollback
 ```
+ROLLBACK ile transaction içinde yapılan işlemlerin geri alınması sağlanır.
+
+BEGIN TRANSACTION
+INSERT INTO uyeler (age) VALUES (3);
+INSERT INTO uyeler (age) VALUES (4);
+ROLLBACK TRANSACTION
 ```
 - transaction
 ```
 Bir Transaction içindeki her işlem adımının gerçekleşmesi gerekir, adımlardan herhangi birinde dahi 
 bir hata meydana gelse ilgili transaction içindeki tüm adımlar, 
 diğerleri gerçekleşmiş olsa dahi iptal edilir, eski haline döner.
+
+BEGIN TRANSACTION
+INSERT INTO uyeler (age) VALUES (3);
+INSERT INTO uyeler (age) VALUES (4);
+COMMIT TRANSACTION
 ```
 - sql index
 ```
