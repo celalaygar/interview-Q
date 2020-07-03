@@ -1,6 +1,6 @@
 ## GENEREAL Q
 
-- 
+- jwt
 ```
 
 ```
