@@ -21,4 +21,21 @@ Aynı objeden 2 tanesi SET içerisinde tutulmaz.
 Kendisine verilen elemanların her birinde sadece bir tanesini tutar. Kopya ya da
 tekrarlanan elemanları barındırmaz.
 ```
+- RuntimeException
+```
+RuntimeException, Java Virtual Machine'nın normal operasyonlar yani çalışma sırasında gerçekleşen exception'lardır.
+NullPointerException, Java'da bir RuntimeException'dır. 
+```
+- Exception Sınıfı:
+```
+ClassNotFoundException: Olmayan bir dosyaya erişme istediği durumlarını inceler.
+IOException: Giriş çıkış işlemlerindeki istenmeyen durumları inceler.
+RunTimeException: Çalışma zamanı hatalarını inceler.
+AritmeticException: Aritmetik hataları inceler.
+NullPointerException: Herhangi bir nesneye null referanslı bir değişken ile ulaşılmaya çalışılan durumlarda fırlatılır.
+IllegalArgumentException: Metotlara geçersiz argüman atamalarında fırlatılır.
+```
+- 
+```
 
+```
