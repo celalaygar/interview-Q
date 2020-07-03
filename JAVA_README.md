@@ -17,6 +17,8 @@ kullanmasına izin verir. 2 thread in aynı anda synchronized edilmiş bir metho
 - SET
 ```
 Set Interface'ini kullanan sınıfların aynı objeden sadece bir tane saklama imkanı olur. 
-Aynı objeden 2 tanesi SET içerisinde tutulmaz
+Aynı objeden 2 tanesi SET içerisinde tutulmaz. 
+Kendisine verilen elemanların her birinde sadece bir tanesini tutar. Kopya ya da
+tekrarlanan elemanları barındırmaz.
 ```
 
