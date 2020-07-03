@@ -1,4 +1,4 @@
-# JAVASCRIPT QUESTİONS
+## JAVASCRIPT Q
 - Object Oriented JavaScript
 ```
 ```
