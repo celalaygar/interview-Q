@@ -10,12 +10,13 @@ bir thread işlemini bitirmeden diğer bir thread çalışması engellenir.
 ```
 - synchronized
 ```
-Basitçe, aynı anda çalışan birden fazla (thread) veya işlemin (process) sıralı olmasını ve birbiri ile iletişim halinde çalışmasını sağlar. 
-Bir methodda tanımladığımız zaman o method içerisine bir anda sadece bir thread in girmesi ve kullanmasına izin verir.
-2 thread in aynı anda synchronized edilmiş bir methodu kullanmasına izin verilmez.
+Basitçe, aynı anda çalışan birden fazla (thread) veya işlemin (process) sıralı olmasını ve birbiri ile iletişim halinde 
+çalışmasını sağlar. Bir methodda tanımladığımız zaman o method içerisine bir anda sadece bir thread in girmesi ve 
+kullanmasına izin verir. 2 thread in aynı anda synchronized edilmiş bir methodu kullanmasına izin verilmez.
 ```
 - SET
 ```
-Set Interface'ini kullanan sınıfların aynı objeden sadece bir tane saklama imkanı olur. Aynı objeden 2 tanesi bir set içerisinde tutulmaz
+Set Interface'ini kullanan sınıfların aynı objeden sadece bir tane saklama imkanı olur. 
+Aynı objeden 2 tanesi SET içerisinde tutulmaz
 ```
 
