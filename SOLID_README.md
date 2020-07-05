@@ -6,6 +6,26 @@
 Bir Sınıfın ya da fonksiyonun,metodun tek bir görevi, sorumluluğu olmalıdır. Başka sınıfların 
 görevlerini gerçekleştirmemelidir.
 
+public class JsonValidator {
+    public bool IsValid(string input) {
+        // Kural denetimini yap
+        return true;
+    }
+}
+
+public class JsonFormatter {
+    private JsonValidator _validator = new JsonValidator();
+
+    public string Format(string input) {
+        
+        if (!_validator.IsValid(input))
+            throw new ValidationException();
+
+        // Formatlama işlemini yap
+        return "formatlanmış metin!";
+    }
+}
+
 ```
 ### · O — Open-Closed Principle(Açık Kapalı Prensibi)
 
