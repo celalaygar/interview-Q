@@ -1,11 +1,9 @@
 ## SOLID-Q
 
 ### S — Single-Responsibility Principle(Tek Sorumluluk Prensibi)
-
-```
 Bir Sınıfın ya da fonksiyonun,metodun tek bir görevi, sorumluluğu olmalıdır. Başka sınıfların 
 görevlerini gerçekleştirmemelidir.
-
+```
 public class JsonValidator {
     public bool IsValid(string input) {
         // Kural denetimini yap
@@ -28,7 +26,8 @@ public class JsonFormatter {
 
 ```
 ### · O — Open-Closed Principle(Açık Kapalı Prensibi)
-
+- Open Sınıf için yeni davranışlar eklenebilmesini sağlar. Gereksinimler değiştiğinde, yeni gereksinimlerin karşılanabilmesi için bir sınıfa yeni veya farklı davranışlar eklenebilir olmasıdır.
+- Closed Bir sınıf temel özelliklerinin değişimi ise mümkün olmamalıdır.
 ```
 Applicationun veya objelerin ya da entitylerin geliştirilmeye açık ancak değiştirmeye kapalı olduğunu belirtir. 
 İnterface ve abstract sınıflar kullanılarak istenen eklemeler yapılabilir.
@@ -40,14 +39,14 @@ public interface Shape {
 public class Rectangle implements Shape {
     private double length;
     private double height;
-
+    // getters/setters … 
     @Override
     public double getArea() { return (length * height); }
 }
 
 public class Circle implements Shape {
     private double radius;
-
+    // getters/setters … 
     @Override
     public double getArea() {  return (radius * radius * Math.PI); }
 }
