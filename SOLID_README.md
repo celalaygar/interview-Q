@@ -33,6 +33,34 @@ public class JsonFormatter {
 Applicationun veya objelerin ya da entitylerin geliştirilmeye açık ancak değiştirmeye kapalı olduğunu belirtir. 
 İnterface ve abstract sınıflar kullanılarak istenen eklemeler yapılabilir.
 
+public interface Shape { 
+   double getArea(); 
+}
+
+public class Rectangle implements Shape {
+    private double length;
+    private double height;
+
+    @Override
+    public double getArea() { return (length * height); }
+}
+
+public class Circle implements Shape {
+    private double radius;
+
+    @Override
+    public double getArea() {  return (radius * radius * Math.PI); }
+}
+
+public class AreaManager {
+    public double calculateArea(List<Shape> shapes) {
+        double area = 0;
+        for (Shape shape : shapes) {
+            area += shape.getArea();
+        }
+        return area;
+    }
+}
 ```
 ### L — Liskov Substitution Principle ( Liskov’un Yerine geçme Prensibi)
 
