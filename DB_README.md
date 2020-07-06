@@ -1,13 +1,5 @@
 ## DATABASE Q
-### binary search
-Binary Search algoritmasında dizi her adımda ikiye bölünür. Mantığı şu şekildedir.
-```
 
-- Dizinin ortasındaki elemanı bul eğer aradığın elemana eşitse index’i döndür
-- Eğer aradığın eleman ortadaki elemandan küçükse sol tarafa bak ve ortadaki sayıyla karşılaştır
-- Eğer aradığın eleman ortadaki elemandan büyükse sağ tarafa bak ve sayıyla karşılaştır
-Yukarıdaki mantık aranan eleman bulununcaya kadar devam eder.
-```
 ### commit
 ```
 ```
