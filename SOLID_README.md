@@ -64,8 +64,10 @@ public class AreaManager {
 ### L — Liskov Substitution Principle ( Liskov’un Yerine geçme Prensibi)
 
 ```
+Alt sınıflardan oluşturulan nesneler üst sınıfların nesneleriyle yer değiştirdiklerinde aynı davranışı göstermek zorundadırlar.
 Bir ana sınıftan ya da sınıflardan türetilen sınıfların bir üst hiyerarşideki sınıfların yerine geçmesini 
 esas alan bir prensiptir.
+
 
 ```
 ### I — Interface Segregation Principle ( Arayüz Ayrımı Prensibi)
