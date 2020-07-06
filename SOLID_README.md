@@ -62,12 +62,46 @@ public class AreaManager {
 }
 ```
 ### L — Liskov Substitution Principle ( Liskov’un Yerine geçme Prensibi)
-
-```
 Alt sınıflardan oluşturulan nesneler üst sınıfların nesneleriyle yer değiştirdiklerinde aynı davranışı göstermek zorundadırlar.
+```
 Bir ana sınıftan ya da sınıflardan türetilen sınıfların bir üst hiyerarşideki sınıfların yerine geçmesini 
 esas alan bir prensiptir.
+public interface IFly {
+    void Fly();
+}
 
+public interface ISwim {
+    void Swim();
+}
+
+public interface IQuack {
+    void Quack();
+}
+
+public class MallardDuck : IFly, ISwim, IQuack
+{
+    public void Quack() { System.Console.WriteLine("Quack!"); }
+
+    public void Swim() {  System.Console.WriteLine("Swimming!"); }
+
+    public void Fly()  {  System.Console.WriteLine("Flying!"); }
+}
+
+public class MarbledDuck : IFly, ISwim, IQuack
+{
+    public void Quack() { System.Console.WriteLine("Quack!"); }
+
+    public void Swim() {  System.Console.WriteLine("Swimming!"); }
+
+    public void Fly()  {  System.Console.WriteLine("Flying!");  }
+}
+
+public class RubberDuck : ISwim, IQuack
+{
+    public void Quack() {  System.Console.WriteLine("Squeak!"); }
+
+    public void Swim() { System.Console.WriteLine("Floating!");     }
+}
 
 ```
 ### I — Interface Segregation Principle ( Arayüz Ayrımı Prensibi)
