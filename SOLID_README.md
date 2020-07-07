@@ -170,10 +170,42 @@ public class RubberDuck : ISwim, IQuack
 
 ```
 ### I — Interface Segregation Principle ( Arayüz Ayrımı Prensibi)
+- Sınıflar, ihtiyaç duymadıkları metotların bulunduğu Interface’lere bağlı olmaya zorlanmamalıdır.
+- Tek bir interface kullanmak yerine ihtiyaçlara göre bölünmüş birden fazla interface ile işlemleri gerçekleştirmeliyiz.
+- Bir arayüze gerekli olmayan eklentilerin eklenmemesini belirten bir prensiptir.
 
 ```
-Bir arayüze gerekli olmayan eklentilerin eklenmemesini belirten bir prensiptir.
+interface HavaAraclari {
+  void Yuksel();
+  void Alcal();
+}
+interface SavasabilirHavaAraclari : HavaAraclari {
+  void AtesEt();
+}
 
+public class F16 : SavasabilirHavaAraclari {
+  public void Yuksel() {
+    Console.Write("F16 yükseliyor..")
+  }
+  public void Alcal() {
+    Console.Write("F16 alçalıyor..")
+  }
+  public void AtesEt() {
+    Console.Write("F16 ateş ediyor !!")
+  }
+}
+
+// Artık F16 SavasabilirHavaAraclari'ni implemente edecek.
+// Yolcu Uçağı ise HavaAraclari' ni implemente edecek.
+
+public class YolcuUcagi: HavaAraclari {
+  public void Yuksel() {
+    Console.Write("Yolcu Uçağı yükseliyor..")
+  }
+  public void Alcal() {
+    Console.Write("Yolcu Uçağı alçalıyor..")
+  }
+}
 ```
 ### D — Dependency Inversion Principle ( Bağımlılıkların Terslenmesi Prensibi)
 
