@@ -74,8 +74,7 @@ interface IHedefiVur{
     bool HedefiVur();
 }
  
-class UcakA : IUcakKesif, IHedefiVur
-{
+class UcakA : IUcakKesif, IHedefiVur {
     public bool HedefiVur(){
         Console.WriteLine("UcakA Hedefi vurdu.");
         return true;
@@ -95,24 +94,12 @@ class UcakB : IUcakKesif, IHedefiVur{
         return true;
     }
 }
-class UcakC : IUcakKesif, IHedefiVur
-{
-    public bool HedefiVur(){
-        Console.WriteLine("UcakC Hedefi vurdu.");
-        return true;
-    }
-    public bool KesifYap(){
+class UcakC : IUcakKesif {
+    public bool KesifYap() {
         Console.WriteLine("UcakC keşfi tamamladı.");
         return true;
     }
 }
-class UcakD : IUcakKesif {
-    public bool KesifYap() {
-        Console.WriteLine("UcakD keşfi tamamladı.");
-        return true;
-    }
-}
- 
 class Savas {
     List<IHedefiVur> HedefVurucular;
     List<IUcakKesif> KesifYapicilar;
@@ -131,17 +118,11 @@ class Savas {
 }
 ```
 ```
-public interface IFly {
-    void Fly();
-}
+public interface IFly {  void Fly(); }
 
-public interface ISwim {
-    void Swim();
-}
+public interface ISwim { void Swim(); }
 
-public interface IQuack {
-    void Quack();
-}
+public interface IQuack { void Quack(); }
 
 public class MallardDuck : IFly, ISwim, IQuack
 {
@@ -165,7 +146,7 @@ public class RubberDuck : ISwim, IQuack
 {
     public void Quack() {  System.Console.WriteLine("Squeak!"); }
 
-    public void Swim() { System.Console.WriteLine("Floating!");     }
+    public void Swim() { System.Console.WriteLine("Floating!"); }
 }
 
 ```
