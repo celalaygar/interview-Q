@@ -32,11 +32,48 @@ kullanılarak saniyeler içinde getirilmesini sağlayabiliriz.
 
 ```
 ### SQL
-Bir derse kaç öğretmen girdiğini
+Bir döğr. kaç derse giriyor.
 ```
-select d.name	count(td.depertmanid) from teacher_depertman td 
-join depertman d 		on d.id = td.depertmanid
-where d.id = 3
+select t.name	count(td.id) 
+from teacher t
+join teacher_dersler td 	on t.id=td.teacherid
+join dersler d 			on d.id = td.depertmanid
+group by td.id having t.id=3
+```
+Adı a ile b ile yada s ile başlayan kayıtları listeleyelim.
+```
+SELECT * FROM musteriler WHERE adLIKE '[abs]%'
+
+```
+musteriler tablosunda ismi A ile başlayıp ondan sonraki 2 karakteri herhangi bir harf olan ve e ile devam eden ve ondan sonraki harfi belli olmayan kayıtları listeleyelim.(Adı Ahmet olanları listeleyeceğiz. :))
+```
+SELECT * FROM musteriler WHERE ad LIKE 'A _ _ e _'
+
+```
+IN operatörü, WHERE yan tümcesinde birden fazla değer belirlemenizi sağlar.
+Örnek olarak şehri İstanbul ve Konya olan kayıtları listeleyelim.
+```
+SELECT * FROM musteriler WHERE sehir IN ('İstanbul','Konya')
+```
+Örnek olarak musteriler tablosunda puanı 70 ile 90 arasında olan kayıtları listeleyelim.
+```
+SELECT * FROM musteriler WHERE puanNOT BETWEEN 70 AND 90
+```
+Doğum tarihi 01/01/1996 ile 01/01/2006 arasındaki kişileri listelemek için;
+```
+SELECT * FROM musteriler WHERE dtarih BETWEEN '01/01/1996' AND '01/01/2006'
+```
+Doğum tarihi 01/01/1996 ile 01/01/2006 arasındaki kişileri listelemek için;
+```
+SELECT * FROM musteriler WHERE dtarih BETWEEN '01/01/1996' AND '01/01/2006'
+```
+Doğum tarihi 01/01/1996 ile 01/01/2006 arasındaki kişileri listelemek için;
+```
+SELECT * FROM musteriler WHERE dtarih BETWEEN '01/01/1996' AND '01/01/2006'
+```
+Doğum tarihi 01/01/1996 ile 01/01/2006 arasındaki kişileri listelemek için;
+```
+SELECT * FROM musteriler WHERE dtarih BETWEEN '01/01/1996' AND '01/01/2006'
 ```
 ### Observer (Gözlemci) Pattern
 ```
