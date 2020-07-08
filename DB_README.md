@@ -32,5 +32,12 @@ kullanılarak saniyeler içinde getirilmesini sağlayabiliriz.
 
 ```
 ### Observer (Gözlemci) Pattern
+Bir derse kaç öğretmen girdiğini
+```
+select d.name	count(td.depertmanid) from teacher_depertman td 
+join depertman d 		on d.id = td.depertmanid
+where d.id = 3
+```
+### Observer (Gözlemci) Pattern
 ```
 ```
