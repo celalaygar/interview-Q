@@ -45,27 +45,36 @@ Yukarıdaki mantık aranan eleman bulununcaya kadar devam eder.
 ```
 ### JDBC CONNECTION EXAMPLE
 ```
-public class ORACLEConnection {
+   public class ORACLEConnection {
 	private static Connection connection;
 
 	public static Connection getConnection() throws SQLException {
-      if (connection != null) { return connection; }
-      String İpAdress="";     String port="";     String dbName="";       String username="";     String password="";
+		if (connection != null) { return connection; }
+		String İpAdress="";     String port="";     String dbName="";       String username="";     String password="";
 
-      connection = DriverManager.getConnection( "jdbc:oracle:thin:@İpAdress:port:dbName", "username", "password");
+		connection = DriverManager.getConnection( "jdbc:oracle:thin:@İpAdress:port:dbName", "username", "password");
 
-      if (connection != null)   System.out.println("Connected to the database!");
-      else                      System.out.println("Failed to make connection!");
+		if (connection != null)   System.out.println("Connected to the database!");
+		else                      System.out.println("Failed to make connection!");
 
-      return connection;
+		return connection;
 	}
 
 	public static void closeConnection() throws SQLException {
 		connection.close();
 	} 
-}
+   }
 
 
+
+public class DbHelper {
+	private ArrayList<Patient> patients;
+	private Connection connection;
+	private PreparedStatement stmt;
+	
+	public DbHelper() throws SQLException {
+		connection = ORACLEConnection.getConnection();
+	}
 
 	public Patient addPatient(Patient patient) throws SQLException {
 		if (patient != null) {
@@ -85,4 +94,5 @@ public class ORACLEConnection {
 			return null;
 		}
 	}
+}
 ```
