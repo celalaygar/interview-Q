@@ -31,7 +31,7 @@ ulaşabilmemiz daha hızlı bir şekilde mümkün olacaktır. Bu sayede tamamlan
 kullanılarak saniyeler içinde getirilmesini sağlayabiliriz.
 
 ```
-### Observer (Gözlemci) Pattern
+### SQL
 Bir derse kaç öğretmen girdiğini
 ```
 select d.name	count(td.depertmanid) from teacher_depertman td 
