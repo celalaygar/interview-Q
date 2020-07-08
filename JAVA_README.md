@@ -43,7 +43,46 @@ Binary Search algoritmasında dizi her adımda ikiye bölünür. Mantığı şu 
 - Eğer aradığın eleman ortadaki elemandan büyükse sağ tarafa bak ve sayıyla karşılaştır
 Yukarıdaki mantık aranan eleman bulununcaya kadar devam eder.
 ```
-### 
+### JDBC CONNECTION EXAMPLE
 ```
+public class ORACLEConnection {
+	private static Connection connection;
 
+	public static Connection getConnection() throws SQLException {
+      if (connection != null) { return connection; }
+      String İpAdress="";     String port="";     String dbName="";       String username="";     String password="";
+
+      connection = DriverManager.getConnection( "jdbc:oracle:thin:@İpAdress:port:dbName", "username", "password");
+
+      if (connection != null)   System.out.println("Connected to the database!");
+      else                      System.out.println("Failed to make connection!");
+
+      return connection;
+	}
+
+	public static void closeConnection() throws SQLException {
+		connection.close();
+	} 
+}
+
+
+
+	public Patient addPatient(Patient patient) throws SQLException {
+		if (patient != null) {
+			String sql = "INSERT INTO AAPATIENT VALUES (?,?,?,?,?,?)";
+			stmt = connection.prepareStatement(sql);
+			int id = databaseId();
+			stmt.setInt(1, id);
+			stmt.setString(2, patient.getName());
+			stmt.setString(3, patient.getSurname());
+			stmt.setString(5, patient.getGender());
+			patient.setId(id);
+			int i = stmt.executeUpdate();
+			System.out.println(i + " records inserted");
+			return patient;
+		} else {
+			System.out.println("Patient is null");
+			return null;
+		}
+	}
 ```
