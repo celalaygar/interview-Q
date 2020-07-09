@@ -31,7 +31,7 @@ ulaşabilmemiz daha hızlı bir şekilde mümkün olacaktır. Bu sayede tamamlan
 kullanılarak saniyeler içinde getirilmesini sağlayabiliriz.
 
 ```
-### SQL
+## SQL
 Bir döğr. kaç derse giriyor.
 ```
 select t.name	count(td.id) 
@@ -63,18 +63,7 @@ Doğum tarihi 01/01/1996 ile 01/01/2006 arasındaki kişileri listelemek için;
 ```
 SELECT * FROM musteriler WHERE dtarih BETWEEN '01/01/1996' AND '01/01/2006'
 ```
-Doğum tarihi 01/01/1996 ile 01/01/2006 arasındaki kişileri listelemek için;
+SELECT INTO deyimi bir tablodan veri seçer ve yeni bir tabloya ekler. örnek olarak musteriler tablosunun musterilerbackup isimli yedeğini oluşturabiliriz.
 ```
-SELECT * FROM musteriler WHERE dtarih BETWEEN '01/01/1996' AND '01/01/2006'
-```
-Doğum tarihi 01/01/1996 ile 01/01/2006 arasındaki kişileri listelemek için;
-```
-SELECT * FROM musteriler WHERE dtarih BETWEEN '01/01/1996' AND '01/01/2006'
-```
-Doğum tarihi 01/01/1996 ile 01/01/2006 arasındaki kişileri listelemek için;
-```
-SELECT * FROM musteriler WHERE dtarih BETWEEN '01/01/1996' AND '01/01/2006'
-```
-### Observer (Gözlemci) Pattern
-```
+SELECT * INTO musterilerbackup FROM musteriler
 ```
