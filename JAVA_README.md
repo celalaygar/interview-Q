@@ -43,6 +43,65 @@ Binary Search algoritmasında dizi her adımda ikiye bölünür. Mantığı şu 
 - Eğer aradığın eleman ortadaki elemandan büyükse sağ tarafa bak ve sayıyla karşılaştır
 Yukarıdaki mantık aranan eleman bulununcaya kadar devam eder.
 ```
+### Examp -1 
+Java examp 1
+```
+	int i = 0, j = 0;
+	while (i++ < 3) do
+			System.out.print(j);
+		while (j++ < 3);
+
+//	output
+//	012345
+```
+Java examp 2
+```
+public static void main(String[] args) {
+	c b1 = new d(); 
+	System.out.println("z : "+b1.z);
+	b1.play();
+	b1.execute();
+		
+	// output
+//	z : 0
+//	class d method play
+//	class c method execute 
+} 
+class c{
+	static int z= 0;
+	void play() { System.out.println("class c method play"); } 
+	static void execute() { System.out.println("class c method execute"); }
+}
+class d extends c { 
+	static int z= 1; 
+	void play() { System.out.println("class d method play"); } 
+	static void execute() { System.out.println("class d method execute"); }
+}
+```
+Java examp 3
+```
+public static void main(String[] args) {
+	b b1 = new b(); 
+	System.out.println("z : "+b1.z);
+	b1.play();
+	b1.execute();
+
+	// output
+//	z : 1
+//	class b method play
+//	class b method execute 
+}
+class a{
+	static int z= 0;
+	void play() { System.out.println("class a method play"); } 
+	static void execute() { System.out.println("class a method execute"); }
+}
+class b extends a { 
+	static int z= 1; 
+	void play() { System.out.println("class b method play"); } 
+	static void execute() { System.out.println("class b method execute"); }
+}
+```
 ### JDBC CONNECTION EXAMPLE
 ```
    public class ORACLEConnection {
