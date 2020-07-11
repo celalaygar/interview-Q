@@ -21,6 +21,34 @@ Aynı objeden 2 tanesi SET içerisinde tutulmaz.
 Kendisine verilen elemanların her birinde sadece bir tanesini tutar. Kopya ya da
 tekrarlanan elemanları barındırmaz.
 ```
+### Java Checked vs Unchecked Exceptions
+Checked Exception Example
+```
+FileNotFoundException is a checked exception in Java.
+```
+
+```
+    try {
+        FileReader file = new FileReader("somefile.txt");
+    }  catch (FileNotFoundException e)  {
+        e.printStackTrace();
+    }
+```
+Unchecked Exceptions
+```
+Unchecked Exceptions are subclasses of RuntimeException. 
+NullPointerException is unchecked exception in Java.
+Example of unchecked exceptions are : ArithmeticException, ArrayStoreException, ClassCastException
+```
+Exception in thread "main" java.lang.ArithmeticException: / by zero
+```
+    public static void main(String args[]) { 
+       int x = 0; 
+       int y = 10; 
+       int z = y/x; 
+    }
+   
+```
 ### RuntimeException
 ```
 RuntimeException, Java Virtual Machine'nın normal operasyonlar yani çalışma sırasında gerçekleşen exception'lardır.
