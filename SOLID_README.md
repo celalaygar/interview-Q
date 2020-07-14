@@ -189,10 +189,38 @@ public class YolcuUcagi: HavaAraclari {
 }
 ```
 ### D — Dependency Inversion Principle ( Bağımlılıkların Terslenmesi Prensibi)
-
-```
-Varlıklar(Alt sınıflar ve Üst sınıflar) somut olmayan soyutlamalara bağlı olmalıdır. Üst seviye modülün 
+- Katmanlı mimarilerde üst seviye modüller alt seviyedeki modüllere doğruda bağımlı olmamalıdır.
+- Varlıklar(Alt sınıflar ve Üst sınıflar) somut olmayan soyutlamalara bağlı olmalıdır. Üst seviye modülün 
 düşük seviye modülüne bağlı olmamasını, ancak soyutlamalara bağlı olması gerektiğini belirtir. 
-Alt sınıflarda yapılan değişiklikler üst sınıfları etkilememelidir.
+- Alt sınıflarda yapılan değişiklikler üst sınıfları etkilememelidir.
+```
+public interface Message {
+    void sendMessage();
+}
+public class Email implements Message {
+
+    @Override
+    public void sendMessage() { sendEmail();     }
+
+    private void sendEmail() { ...... }
+}
+
+public class SMS implements Message {
+
+    @Override
+    public void sendMessage() {sendSMS(); }
+
+    private void sendSMS() { ... }
+}
+
+public class Notification {
+    private List<Message> messages;
+
+    public Notification(List<Message> messages) { this.messages = messages; }
+
+    public void sender() {
+        for (Message message : messages)  message.sendMessage();
+    }
+}
 
 ```
