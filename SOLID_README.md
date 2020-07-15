@@ -222,5 +222,4 @@ public class Notification {
         for (Message message : messages)  message.sendMessage();
     }
 }
-
 ```
