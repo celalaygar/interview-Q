@@ -23,7 +23,6 @@ public class JsonFormatter {
         return "formatlanmış metin!";
     }
 }
-
 ```
 ### · O — Open-Closed Principle(Açık Kapalı Prensibi)
 - Open Sınıf için yeni davranışlar eklenebilmesini sağlar. Gereksinimler değiştiğinde, yeni gereksinimlerin karşılanabilmesi için bir sınıfa yeni veya farklı davranışlar eklenebilir olmasıdır.
@@ -148,7 +147,6 @@ public class RubberDuck : ISwim, IQuack
 
     public void Swim() { System.Console.WriteLine("Floating!"); }
 }
-
 ```
 ### I — Interface Segregation Principle ( Arayüz Ayrımı Prensibi)
 - Sınıflar, ihtiyaç duymadıkları metotların bulunduğu Interface’lere bağlı olmaya zorlanmamalıdır.
