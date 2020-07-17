@@ -43,12 +43,10 @@ group by td.id having t.id=3
 Adı a ile b ile yada s ile başlayan kayıtları listeleyelim.
 ```
 SELECT * FROM musteriler WHERE adLIKE '[abs]%'
-
 ```
 musteriler tablosunda ismi A ile başlayıp ondan sonraki 2 karakteri herhangi bir harf olan ve e ile devam eden ve ondan sonraki harfi belli olmayan kayıtları listeleyelim.(Adı Ahmet olanları listeleyeceğiz. :))
 ```
 SELECT * FROM musteriler WHERE ad LIKE 'A _ _ e _'
-
 ```
 IN operatörü, WHERE yan tümcesinde birden fazla değer belirlemenizi sağlar.
 Örnek olarak şehri İstanbul ve Konya olan kayıtları listeleyelim.
