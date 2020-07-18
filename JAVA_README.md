@@ -1,6 +1,6 @@
 ## JAVA Q
 ### URL ve URI nedir. Arasındaki fark nedir.
-- URI: Uniform Resource Identifier
+URI: Uniform Resource Identifier
 ```
 internet üzerinde bir kaynağın tam yerine işaret eden (resim veya belge) standart formata uygun bir 
 karakter dizisidir. Kısaca bir URL’nin altında bulunan kaynağın tam yoluna işaret eder.
