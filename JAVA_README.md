@@ -1,4 +1,12 @@
 ## JAVA Q
+### URL ve URI nedir. Arasındaki fark nedir.
+```
+
+```
+### String ile StringBuilder arasındaki fark nedir.
+```
+
+```
 ### Thread.yield()
 ```
 Current da çalışan thread ın geçici olarak durmasına sebeb olur. Diğer thread lerin çalışmasına izin verir.
