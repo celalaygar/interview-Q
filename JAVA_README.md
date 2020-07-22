@@ -24,7 +24,8 @@ Stringler değişmez (immutable) objelerdir.Öyle ki,tanımladığınız bir str
 o objenin içeriği değişmez.Her ne kadar değişiyor gibi gözükse de,arka planda bellek üzerinde bir kopyası 
 daha oluşturulur.Bu da string’e her değer atamanızda yeni bir instance oluşması anlamına gelmektedir
 
-String objesi değişmek için arka planda yeni bir String nesnesi oluşturur. Her değişikilte yeni bir String class’ı oluşuyor. Bu da zamanla performansı kötü yönde etkiliyor.
+String objesi değişmek için arka planda yeni bir String nesnesi oluşturur. Her değişikilte yeni bir 
+String class’ı oluşuyor. Bu da zamanla performansı kötü yönde etkiliyor.
 ```
 ### StringBuffer ve StringBuilder arasındaki fark
 ```
@@ -33,7 +34,6 @@ StringBuffer “synchronized” iken StringBuilder “synchronized” değildir.
 
 Thread kullancaksanız; StringBuffer, kullanmayacaksanız StringBuilder kullanmanız daha verimli olcaktır.
 ```
-
 ### Thread.yield()
 ```
 Current da çalışan thread ın geçici olarak durmasına sebeb olur. Diğer thread lerin çalışmasına izin verir.
