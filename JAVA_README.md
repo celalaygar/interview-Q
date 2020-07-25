@@ -29,9 +29,8 @@ String class’ı oluşuyor. Bu da zamanla performansı kötü yönde etkiliyor.
 ```
 ### StringBuffer ve StringBuilder arasındaki fark
 ```
-StringBuffer ile StringBuilder arasında ki tek fark ise “senkronizasyon”dur.
-StringBuffer “synchronized” iken StringBuilder “synchronized” değildir.
-
+StringBuffer ile StringBuilder arasında ki tek fark ise “senkronizasyon”dur. StringBuffer “synchronized” i
+ken StringBuilder “synchronized” değildir.
 Thread kullancaksanız; StringBuffer, kullanmayacaksanız StringBuilder kullanmanız daha verimli olcaktır.
 ```
 ### Thread.yield()
