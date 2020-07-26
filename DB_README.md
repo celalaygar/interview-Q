@@ -29,7 +29,6 @@ SQL indekslemenin amacı işlenen verinin daha az veri okunarak sorgu sonucunun 
 Indeksleme kullanarak tablonun tamamını okumaktansa oluşturacağımız indeks key i aracılığı ile okumak istediğimiz kayıda 
 ulaşabilmemiz daha hızlı bir şekilde mümkün olacaktır. Bu sayede tamamlanması saatler süren sorgunun uygun indeksler 
 kullanılarak saniyeler içinde getirilmesini sağlayabiliriz.
-
 ```
 ## SQL
 Bir döğr. kaç derse giriyor.
