@@ -52,7 +52,6 @@ class three extends two  {
     } 
 } 
   
-// Drived class 
 public class Main  { 
     public static void main(String[] args)   { 
         three g = new three(); 
@@ -90,7 +89,6 @@ public class Encapsulate
     public int getRoll()   { 
        return geekRoll; 
     }
-    
     public void setAge( int newAge)  { 
       geekAge = newAge; 
     }  
@@ -101,7 +99,6 @@ public class Encapsulate
       geekRoll = newRoll; 
     } 
 } 
-
 
 public class TestEncapsulation 
 {     
@@ -117,7 +114,6 @@ public class TestEncapsulation
         System.out.println("Geek's roll: " + obj.getRoll());  
     } 
 } 
-
 ```
 Output:
 ```
