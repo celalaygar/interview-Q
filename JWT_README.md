@@ -1,4 +1,4 @@
-## GENEREAL Q
+## JWT Q
 
 #### jwt
 ```
