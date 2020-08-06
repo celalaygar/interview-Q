@@ -81,7 +81,6 @@ Exception in thread "main" java.lang.ArithmeticException: / by zero
        int y = 10; 
        int z = y/x; 
     }
-  
 ```
 ### RuntimeException
 ```
