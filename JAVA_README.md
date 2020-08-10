@@ -1,6 +1,18 @@
 ## JAVA Q
 ### Statement ve PreparedStatement arasındaki farklar
 ```
+1    PreparedStatement helps us in preventing SQL injection attacks because it automatically escapes the special characters.
+
+2    PreparedStatement allows us to execute dynamic queries with parameter inputs.
+
+3    PreparedStatement provides different types of setter methods to set the input parameters for the query.
+
+4    PreparedStatement is faster than Statement. It becomes more visible when we reuse the PreparedStatement or use it’s 
+     batch processing methods for executing multiple queries.
+     
+5    PreparedStatement helps us in writing object Oriented code with setter methods whereas with Statement we have to use
+     String Concatenation to create the query. If there are multiple parameters to set, writing Query using String concatenation 
+     looks very ugly and error prone.
 ```
 ### URL ve URI nedir. Arasındaki fark nedir.
 URI: Uniform Resource Identifier
