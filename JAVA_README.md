@@ -1,4 +1,7 @@
 ## JAVA Q
+### Statement ve PreparedStatement arasındaki farklar
+```
+```
 ### URL ve URI nedir. Arasındaki fark nedir.
 URI: Uniform Resource Identifier
 ```
