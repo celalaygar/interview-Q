@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-08-13T09:45:37.790Z" agent="5.0 (Windows)" etag="fLI-NHqamXYgjtP_crDd" version="13.6.2" type="github">
+<mxfile host="app.diagrams.net" modified="2020-08-13T09:46:37.195Z" agent="5.0 (Windows)" etag="6vcUSVRnXqvVfjXy87D2" version="13.6.2" type="github">
   <diagram id="O5Thk8qJjQpYoOTOiQrY" name="Page-1">
     <mxGraphModel dx="1040" dy="529" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -25,10 +25,10 @@
           <mxGeometry x="40" y="300" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="IT4guImNfh3KZpESXHfW-12" value="&lt;div&gt;Account Service&lt;/div&gt;&lt;div&gt;localhost:8501&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
-          <mxGeometry x="215" y="300" width="120" height="60" as="geometry" />
+          <mxGeometry x="205" y="300" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="IT4guImNfh3KZpESXHfW-13" value="&lt;div&gt;Ticket Service App&lt;br&gt;&lt;/div&gt;&lt;div&gt;localhost:8502&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
-          <mxGeometry x="390" y="300" width="120" height="60" as="geometry" />
+          <mxGeometry x="365" y="300" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="IT4guImNfh3KZpESXHfW-15" value="" style="endArrow=classic;html=1;entryX=0.567;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" parent="1" source="IT4guImNfh3KZpESXHfW-2" target="IT4guImNfh3KZpESXHfW-12" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -43,7 +43,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="IT4guImNfh3KZpESXHfW-16" value="&lt;div&gt;Notification Service App&lt;br&gt;&lt;/div&gt;&lt;div&gt;localhost:8503&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
-          <mxGeometry x="550" y="300" width="140" height="60" as="geometry" />
+          <mxGeometry x="515" y="300" width="140" height="60" as="geometry" />
         </mxCell>
         <mxCell id="IT4guImNfh3KZpESXHfW-17" value="" style="endArrow=classic;html=1;entryX=0.183;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" parent="1" source="IT4guImNfh3KZpESXHfW-2" target="IT4guImNfh3KZpESXHfW-16" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -92,13 +92,11 @@
         <mxCell id="IT4guImNfh3KZpESXHfW-25" value="Common Service App" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
           <mxGeometry x="720" y="280" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="IT4guImNfh3KZpESXHfW-34" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0.367;entryY=-0.075;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="IT4guImNfh3KZpESXHfW-2" target="IT4guImNfh3KZpESXHfW-25" edge="1">
+        <mxCell id="IT4guImNfh3KZpESXHfW-34" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" parent="1" source="IT4guImNfh3KZpESXHfW-2" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="400" y="300" as="sourcePoint" />
-            <mxPoint x="450" y="250" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="764" y="160" />
-            </Array>
+            <mxPoint x="720" y="277" as="targetPoint" />
+            <Array as="points" />
           </mxGeometry>
         </mxCell>
         <mxCell id="IT4guImNfh3KZpESXHfW-36" value="Module" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="IT4guImNfh3KZpESXHfW-34" vertex="1" connectable="0">
@@ -112,7 +110,7 @@
             <mxPoint x="440" y="371" as="targetPoint" />
             <Array as="points">
               <mxPoint x="774" y="441" />
-              <mxPoint x="440" y="441" />
+              <mxPoint x="417" y="441" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -126,8 +124,8 @@
             <mxPoint x="280" y="370" as="sourcePoint" />
             <mxPoint x="610" y="440" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="280" y="440" />
-              <mxPoint x="620" y="440" />
+              <mxPoint x="272" y="440" />
+              <mxPoint x="585" y="440" />
             </Array>
           </mxGeometry>
         </mxCell>
