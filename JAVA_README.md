@@ -132,29 +132,56 @@ Java examp 1
 ```
 Java examp 2
 ```
-public static void main(String[] args) {
-	c b1 = new d(); 
-	System.out.println("z : "+b1.z);
-	b1.play();
-	b1.execute();
-		
-	// output
-//	z : 0
-//	class d method play
-//	class c method execute 
-} 
-class c{
+public class main {
+	public static void main(String [] args) {
+		C c = new D(); 
+		System.out.println("z : "+c.z);
+		c.play();
+		c.execute();
+			
+//		output
+//		z : 0
+//		class d method play 2
+//		class c method execute
+	}
+}
+class C{
 	static int z= 0;
-	void play() { System.out.println("class c method play"); } 
+	void play() { System.out.println("class c method play "+(++z)); } 
 	static void execute() { System.out.println("class c method execute"); }
 }
-class d extends c { 
+class D extends C { 
 	static int z= 1; 
-	void play() { System.out.println("class d method play"); } 
+	void play() { System.out.println("class d method play "+(++z)); } 
 	static void execute() { System.out.println("class d method execute"); }
 }
 ```
 Java examp 3
+```
+public class main {
+	public static void main(String [] args) {
+		A b1 = new B(); 
+		System.out.println("z : "+b1.z);
+		b1.play(); 		b1.execute();
+		
+//		OUTPUT :		
+//		z : 0
+//		class b method play 2
+//		class a method execute 1
+	}
+}
+class A{
+	static int z= 0;
+	void play() { System.out.println("class a method play "+(++z)); } 
+	static void execute() { System.out.println("class a method execute "+(++z)); }
+}
+class B extends A { 
+	static int z= 1; 
+	void play() { System.out.println("class b method play "+(++z)); } 
+	static void execute() { System.out.println("class b method execute "+(++z)); }
+}
+```
+Java examp 4
 ```
 public static void main(String[] args) {
 	b b1 = new b(); 
