@@ -8,13 +8,9 @@ public class SingleObject {
 
    private SingleObject(){}
 
-   public static SingleObject getInstance(){    
-        return instance;    
-   }
+   public static SingleObject getInstance(){   return instance;     }
 
-   public void showMessage(){   
-        System.out.println("Hello World!"); 
-   }
+   public void showMessage(){   System.out.println("Hello World!");  }
 }
 
 public class SingletonPatternDemo {
