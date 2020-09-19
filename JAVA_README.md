@@ -111,14 +111,6 @@ NullPointerException, Java'da bir RuntimeException'dır.
 - NullPointerException: Herhangi bir nesneye null referanslı bir değişken ile ulaşılmaya çalışılan durumlarda fırlatılır.
 - IllegalArgumentException: Metotlara geçersiz argüman atamalarında fırlatılır.
 ```
-### binary search
-Binary Search algoritmasında dizi her adımda ikiye bölünür. Mantığı şu şekildedir.
-```
-- Dizinin ortasındaki elemanı bul eğer aradığın elemana eşitse index’i döndür
-- Eğer aradığın eleman ortadaki elemandan küçükse sol tarafa bak ve ortadaki sayıyla karşılaştır
-- Eğer aradığın eleman ortadaki elemandan büyükse sağ tarafa bak ve sayıyla karşılaştır
-Yukarıdaki mantık aranan eleman bulununcaya kadar devam eder.
-```
 ### Examp -1 
 Java examp 1
 ```
