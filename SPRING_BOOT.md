@@ -12,10 +12,10 @@
 pom.xml e bu dependency eklendiğinde bu alttaki anotasyon kullanılır.
 ```
 	<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-configuration-processor</artifactId>
-			<optional>true</optional>
-		</dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-configuration-processor</artifactId>
+		<optional>true</optional>
+	</dependency>
 ```
 ```
 @ConfigurationProperties  // application.properties deki değerleri bu class a assign eder.
