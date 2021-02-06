@@ -197,6 +197,37 @@ class b extends a {
 	static void execute() { System.out.println("class b method execute"); }
 }
 ```
+Java examp 5
+```
+// dizide olmayan en küçük pozitif sayıyı bulunuz....
+	public static void main(String[] args) {
+		//int a[] = { 1, 3, 4};          				// 2
+		//int a[] = { 11, 13, 14};           			// 1
+		int a[] = { -11,-1,3};          				// 1
+		//int a[] = { -3, -1, 1, 3, 6, 4, 1, 2 };   	// 5
+		System.out.println(solution(a));
+	}
+
+	public static int  solution(int[] a) {
+
+		int k = 1, cnt = 0, firstCnt = 0;
+		int control = 0;
+		while (true) {
+			if (a[cnt] < 1 ) {
+				cnt++;
+				firstCnt = cnt;
+			} else if (a[cnt] > 0 && a[cnt] == k) {
+				cnt = firstCnt;
+				k++;
+			} else if (a[cnt] > 0 && a[cnt] != k ){
+				cnt++;
+				if(a.length == cnt)
+					break;
+			}
+		}
+		return k;
+	}
+```
 ### JDBC CONNECTION EXAMPLE
 ```
    public class ORACLEConnection {
