@@ -201,9 +201,9 @@ Java examp 5
 ```
 // dizide olmayan en küçük pozitif sayıyı bulunuz....
 	public static void main(String[] args) {
-		//int a[] = { 1, 3, 4};          				// 2
-		//int a[] = { 11, 13, 14};           			// 1
-		int a[] = { -11,-1,3};          				// 1
+		//int a[] = { 1, 3, 4};          		// 2
+		//int a[] = { 11, 13, 14};           		// 1
+		int a[] = { -11,-1,3};          		// 1
 		//int a[] = { -3, -1, 1, 3, 6, 4, 1, 2 };   	// 5
 		System.out.println(solution(a));
 	}
