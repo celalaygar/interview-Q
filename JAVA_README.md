@@ -1,4 +1,12 @@
 ## JAVA Q
+### ManyToMany
+```
+
+```
+### fetchtype.lazy VS fetchtype.eager
+```
+
+```
 ### Statement ve PreparedStatement arasındaki farklar
 ```
 1    PreparedStatement helps us in preventing SQL injection attacks because it automatically escapes the special characters.
