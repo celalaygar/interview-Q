@@ -1,4 +1,9 @@
 ## GENERAL Q
+
+### Stack and Queue arasındaki fark
+``` 
+
+``` 
 ### Garbage Collector nedir
 ``` 
 Garbage Collection, otomatik bellek yönetimi mekanizmasıdır. Bu işlem heap belleğe bakıp, kullanılan objelerin tespit edilmesi ve 
