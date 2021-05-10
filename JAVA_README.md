@@ -1,4 +1,8 @@
 ## JAVA Q
+### LinkedList ile ArrayList arasındaki fark
+```
+
+```
 ### ManyToMany
 ```
 
