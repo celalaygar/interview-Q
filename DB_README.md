@@ -1,7 +1,10 @@
 ## DATABASE Q
 
-### commit
+### commit & rollback
 ```
+Commit komutu, veri tabanına yapılan değişikliklerin kalıcı olmasını sağlar ve transaction’u sona erdirir.
+Rollback komutu, veri tabanına yapılan değişiklikleri geri almak için kullanılır, 
+böylelikle transaction’u sona erdirir orijinal veriye dönülmesini sağlar.
 ```
 ### rollback
 ```
