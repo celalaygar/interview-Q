@@ -15,9 +15,16 @@ LinkedList, bir Liste ve Kuyruk olarak çalışır.
 ```
 
 ```
-### fetchtype.lazy VS fetchtype.eager
+### FetchType.EAGER VS FetchType.LAZY
 ```
+FetchType.EAGER
+Elimizde yürütülen projeleri (Proje) ve bu projelerde çalışanları(Calisan) tuttuğumuz iki entity olsun. 
+Projeler ve çalışanlar arasında bir ilişki bulunduğundan veritabanından Proje entitysini yüklediğimizde ilişkili olduğu 
+Calisan tablosununda yüklenmesini istiyorsak FetchType tipini fetch=FetchType.EAGER olarak belirleriz.
 
+FetchType.LAZY 
+Bunun aksine Proje entitysini yüklediğimizde Calisan entitysinin yüklenmesini istemiyorsak yani ihtiyaç olması 
+halinde Calisan entitysini yüklemek istiyorsak FetchType tipini fetch=FetchType.LAZY olarak belirleriz. 
 ```
 ### Statement ve PreparedStatement arasındaki farklar
 ```
