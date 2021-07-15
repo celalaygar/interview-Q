@@ -64,6 +64,9 @@ public class AreaManager {
 - Alt sınıflardan oluşturulan nesneler üst sınıfların nesneleriyle yer değiştirdiklerinde aynı davranışı göstermek zorundadırlar.
 - Bir ana sınıftan ya da sınıflardan türetilen sınıfların bir üst hiyerarşideki sınıfların yerine geçmesini 
 esas alan bir prensiptir.
+- Bir class ta bulunan özellikler, kendisinden kalıtım alan class’larda kullanılmayacaksa bu durum LSP’ye aykırı bir durumdur.
+- Yani kalıtım alınan class’ın içindeki özellikler kalıtımı alan class ta kullanılmalıdır. 
+- Yani; türetilen sınıflar, türeyen sınıfların tüm özelliklerini kullanmak zorundadır. Eğer kullanmaz ise ortaya işlevsiz, dummy kodlar çıkacaktır.
 ```
 interface IUcakKesif{
     bool KesifYap();
