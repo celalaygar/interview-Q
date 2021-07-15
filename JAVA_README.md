@@ -1,7 +1,15 @@
 ## JAVA Q
 ### LinkedList ile ArrayList arasındaki fark
 ```
+ArrayList 
+ArrayList öğelerine erişim LinkedList'ten daha hızlıdır.
+ArrayList öğelerinin işlenmesi, LinkedList'ten daha yavaştır.
+ArrayList, bir Liste olarak çalışır.
 
+LinkedList 
+LinkedList öğelerine erişim, ArrayList'ten daha yavaştır.
+LinkedList öğelerinin işlenmesi, ArrayList'ten daha hızlıdır.
+LinkedList, bir Liste ve Kuyruk olarak çalışır.
 ```
 ### ManyToMany
 ```
