@@ -17,6 +17,14 @@ LinkedList, bir Liste ve Kuyruk olarak çalışır.
 - Producer kuyruğa bir şeyler ekler, Consumer ise bu kuyrukta bir şeyler oldukça sırayla alır ve ne yapması gerekiyorsa yapar. 
 ```
 https://ufukuzun.wordpress.com/2015/05/02/javada-multithreading-bolum-7-producer-consumer-yapisi/
+
+Producer ve Consumer birbirinden bağımsız iki ayrı thread halinde gerçekleştirilebilir. 
+Ancak burada yine ortak bir veri kaynağımız olduğunu gözden kaçırmayalım: Kuyruk (Queue). 
+Yine yardımımıza yetişen java.util.concurrent.* paketinden “thread-safe” bir yardımcı sınıf olan “BlockingQueue” oluyor. 
+BlockingQueue aslında bir arabirim (interface) ve biz onun gerçekleştirimlerinden (implementation) biri olan 
+“ArrayBlockingQueue” sınıfını kullanacağız. ArrayBlockingQueue tipinde bir kuyruk oluştururken bir kapasite belirtiriz. 
+Bu kapasite dolu ise kuyruğa yeni eleman eklemek isteyen thread bekletilir. Benzer şekilde eğer kuyrukta eleman yoksa 
+kuyruktan eleman almak isteyen thread kuyrukta eleman oluncaya kadar bekletilir.
 ```
 ```
 public class Application {
