@@ -11,6 +11,51 @@ LinkedList öğelerine erişim, ArrayList'ten daha yavaştır.
 LinkedList öğelerinin işlenmesi, ArrayList'ten daha hızlıdır.
 LinkedList, bir Liste ve Kuyruk olarak çalışır.
 ```
+### Blockİng Queue 
+- Java’da Multithreading – Bölüm 7: Producer-Consumer Yapısı
+- Producer (Üretici) ve Consumer (Tüketici) yapısı hem günlük hayatta hem de programlama yaparken sıkça karşılaşabileceğimiz bir yapıdır. 
+- Producer kuyruğa bir şeyler ekler, Consumer ise bu kuyrukta bir şeyler oldukça sırayla alır ve ne yapması gerekiyorsa yapar. 
+```
+https://ufukuzun.wordpress.com/2015/05/02/javada-multithreading-bolum-7-producer-consumer-yapisi/
+```
+```
+public class Application {
+
+    private static BlockingQueue queue = new ArrayBlockingQueue<>(10);
+
+    public static void main(String[] args) throws InterruptedException {
+        Thread producerThread = new Thread(() -> { produce(); });
+
+        Thread consumerThread = new Thread(() -> { consume(); });
+
+        producerThread.start();     consumerThread.start();
+	
+        producerThread.join();      consumerThread.join();
+    }
+
+    private static void produce() {
+        Random random = new Random();
+        while (true) {
+            try {
+                queue.put(random.nextInt(100));
+            } catch (InterruptedException e) {
+            }
+        }
+    }
+
+    private static void consume() {
+        while (true) {
+            try {
+                Thread.sleep(100);
+                Integer value = queue.take();
+                System.out.print("Alınan sayı: " + value + ", Kuyruğun boyutu: " + queue.size());
+            } catch (InterruptedException e) {
+            }
+        }
+    }
+}
+
+```
 ### ManyToMany
 ```
 
