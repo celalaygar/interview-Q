@@ -43,4 +43,16 @@ public class MyClass {
     }
     
 }    
+
+
+void printData(int ustId,String bosluk) {
+    for (int i = 0; i < array.size(); i++) { 
+        if(ustId==array.get(i).ustId){ 
+            System.out.println(bosluk + array.get(i).menu);
+            printData(array.get(i).id, bosluk+"  "); 
+        }
+    }
+}
+
+
 ```
