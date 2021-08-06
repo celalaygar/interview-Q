@@ -1,4 +1,10 @@
 ## JAVASCRIPT Q
+### null ve undefined anahtar kelimeler arasında fark var mı?
+```
+JavaScript’te undefined, bir değişkenin bildirildiği ancak henüz bir değer atanmamış olduğu anlamına gelir.
+
+null ise bir atama değeridir, değişkene değersiz bir gösterim olarak atanabilir. typeof null bize nesne döndürür.
+```
 ### Object Oriented JavaScript
 ```
 ```
