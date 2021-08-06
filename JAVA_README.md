@@ -1,4 +1,16 @@
 ## JAVA Q
+### Java Sanal Makinası (JVM) Nasıl Çalışır?
+```
+JVM, tüm platformlarda Java kodlarını çalıştırmak üzere geliştirilmiş ve 
+hemen her platforma uygun sürümü olan bir bileşendir. 
+Java ile geliştirilmiş bir yazılım Java Sanal Makinası sayesinde kullanılabiliyor.
+```
+```
+Programcının yazdığı Java kodları geliştirme ortamı tarafından yazım (syntax) hatalarına karşı kontrol edilir. 
+Hatalar giderildiğinde, JDK paketindeki derleyici (compiler) aracılığı ile Java kodları 
+bytecode denilen bir ara dilin kodlarına dönüştürülür. 
+Üzerinde çalışılan sistemdeki JVM bu bytecode’ u yorumlar ve çalıştırır.
+```
 ### LinkedList ile ArrayList arasındaki fark
 ```
 ArrayList 
