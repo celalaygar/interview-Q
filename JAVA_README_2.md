@@ -95,3 +95,21 @@ void printData(int ustId,String bosluk) {
 		// output :
 		// e:2 h:2 y:2 
 ```
+
+### Find First Non Repeating Character
+```
+		String str1 = "gibblegabbler";
+		for (int i = 0; i < str1.length(); i++) {
+			boolean unique = true;
+			for (int j = 0; j < str1.length(); j++) {
+				if (i != j && str1.charAt(i) == str1.charAt(j)) {
+					unique = false;
+					break;
+				}
+			}
+			if (unique) {
+				System.out.println("The first non repeated character in String is: " + str1.charAt(i));
+				break;
+			}
+		}
+```
