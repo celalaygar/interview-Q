@@ -1,5 +1,5 @@
 ## JAVA Q
-### Writing Code 
+### Writing Code (Usage of Recursive Function)
 what is print functıon --->  printData(0, ""); 
 ```
 class Menu {
@@ -43,8 +43,6 @@ public class MyClass {
     }
     
 }    
-
-
 void printData(int ustId,String bosluk) {
     for (int i = 0; i < array.size(); i++) { 
         if(ustId==array.get(i).ustId){ 
@@ -53,6 +51,47 @@ void printData(int ustId,String bosluk) {
         }
     }
 }
+```
+### Show Character count on String
+```
+		String sentence = "bu bir denemedir";
+		Map<Character, Integer> letterMap = new HashMap<Character, Integer>();
 
+		for (Character letter : sentence.replace(" ", "").toCharArray()) {
 
+			Integer integer = letterMap.get(letter);
+			if (integer == null)
+				letterMap.put(letter, 1);
+			else
+				letterMap.put(letter, integer + 1);
+
+		}
+
+		System.out.println(letterMap);
+
+		// output :
+		// {b=2, r=2, d=2, u=1, e=3, i=2, m=1, n=1}
+
+//		for (Map.Entry<Character, Integer> entry : letterMap.entrySet()) {
+//			System.out.print(entry.getKey() + ":" + entry.getValue() + ", ");
+//		}
+```
+
+### Find Repeating Character String
+```
+		String sentence = "hih everybody".toLowerCase();
+		Map<Character, Integer> letterMap = new HashMap<Character, Integer>();
+
+		for (Character letter : sentence.replace(" ", "").toCharArray()) {
+
+			Integer integer = letterMap.get(letter);
+			if (integer == null) 	letterMap.put(letter, 1);
+			else 					letterMap.put(letter, integer + 1);
+		}
+
+		for (Map.Entry<Character, Integer> entry : letterMap.entrySet())
+			if (entry.getValue() > 1)	System.out.print(entry.getKey() + ":" + entry.getValue() + " ");
+	
+		// output :
+		// e:2 h:2 y:2 
 ```
