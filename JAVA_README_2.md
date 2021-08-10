@@ -113,3 +113,24 @@ void printData(int ustId,String bosluk) {
 			}
 		}
 ```
+### Find First Repeating Character
+```
+	Character[] charArray = {'a', 'b', 'c', 'd', 'e' , 'c','e'};
+	
+	System.out.println(getMultipleFirstCharacter(charArray));
+	
+	public Character getMultipleFirstCharacter(Character[] charArray) {
+		
+		Set<Character> charHashSet = new HashSet<Character>();
+		Character result = null;
+		for(int i = 0;i<charArray.length; i++) {
+			if(charHashSet.contains(charArray[i])) {
+				result = charArray[i];
+				break;
+			}
+			charHashSet.add( charArray[i]);
+		}
+        
+        	return result;
+	}
+```
