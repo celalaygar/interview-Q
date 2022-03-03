@@ -1,4 +1,22 @@
 ## REACT Q
+
+### Virtual DOM nedir
+```
+Gerçek DOM’a karşılık gelen sanal bir DOM nesnesidir, yani render edilen DOM’un bir kopyasıdır. 
+React her state değişikliğinde render edilen gerçek DOM’u bütünüyle tekrar oluşturmak yerine, 
+state değişikliğini Virtual DOM’a yansıtmaktadır. Bu sayede gerçek DOM ile ve 
+yeni sanal(virtual) DOM arasındaki farklılıkları tespit ederek, 
+gerçek DOM’da yapılacak değişikleri hesaplar ve tek seferde 
+sadece gerçek DOM’da değişen elemanları yeniden render eder. 
+Bu şekilde state her değiştiğinde ana DOM’un tüm elemanlarıyla yeniden oluşturulması 
+maliyetinden korunulmuş ve azami performans iyileştirmesi sağlanmaktadır. 
+Gerçek DOM render edildiğinde, virtual DOM ile eşittir. 
+```
+```
+Virtual DOM (VDOM), bir UI’ın ideal veya “sanal” bir temsilinin bellekte tutulduğu ve 
+ReactDOM gibi bir kütüphane tarafından “gerçek” DOM ​​ile senkronize edildiği 
+bir programlama konseptidir. Bu sürece uyumlaştırma denir.
+```
 ### React Element ve Component arasındaki fark nedir?
 Alıntıdır : https://kodsozluk.com/bakigul/react-element-ve-component-arasindaki-fark-nedir
 ```
