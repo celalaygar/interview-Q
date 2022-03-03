@@ -11,6 +11,16 @@ Hatalar giderildiğinde, JDK paketindeki derleyici (compiler) aracılığı ile 
 bytecode denilen bir ara dilin kodlarına dönüştürülür. 
 Üzerinde çalışılan sistemdeki JVM bu bytecode’ u yorumlar ve çalıştırır.
 ```
+### Array ve ArrayList nedir? 
+```
+İki veri yapısı arasındaki başlıca ve gözle görülür farklılıklardan biri Array'ın statik olmasıdır; 
+bu da sabit uzunlukta bir veri türü anlamına gelir; ArrayList doğada dinamiktir, 
+yani değişken uzunlukta bir veri yapısı olduğu anlamına gelir. 
+Teknik terimlerle, Array nesnesi oluşturulduktan sonra Array uzunluğu değiştirilemez veya değiştirilemez. 
+Aynı veri türünün elemanlarının sıralı olarak toplanmasını içerir. Java'daki diziler, C / C ++'da işlev görenden farklı çalışır. 
+Öte yandan, ArrayList kendisini yeniden boyutlandırabilir ve diziler ihtiyaç duyuldukça büyüyebilir. 
+Dinamik bir veri yapısı olduğu için, elemanlar listeye eklenebilir ve listeden çıkarılabilir.
+```
 ### LinkedList ile ArrayList arasındaki fark
 ```
 ArrayList 
