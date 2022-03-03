@@ -11,6 +11,21 @@ Hatalar giderildiğinde, JDK paketindeki derleyici (compiler) aracılığı ile 
 bytecode denilen bir ara dilin kodlarına dönüştürülür. 
 Üzerinde çalışılan sistemdeki JVM bu bytecode’ u yorumlar ve çalıştırır.
 ```
+### Java’da Final Anahtar Kelimesi
+```
+- Final sınıf değişkenleri: Final olan bir sınıf değişkenine sadece bir kere değer ataması yapilabilir ve 
+bu atama sadece sınıf konstrüktöründe gerçekleşebilir.
+
+- Final metot parametreleri: Final olarak tanımlanmış bir metot parametresine sadece bir kere değer atanabilir. 
+Metot parametrelerinin tamamen final olarak tanımlamış olmalarında büyük fayda vardır. 
+Bu şekilde parametrenin metot bünyesinde değişikliğe ugrama tehlikesi ortadan kaldırılmış olur.
+
+- Final metotlar: Final olan bir metot ne alt sınıflarca yeniden yüklenebilir 
+(method overloading) ne de saklı (hidden) tutulabilir.
+
+- Final sınıflar: Final olan bir sınıf genişletilerek bir alt sınıf oluşturulamaz.
+
+```
 ### Array ve ArrayList nedir? 
 ```
 İki veri yapısı arasındaki başlıca ve gözle görülür farklılıklardan biri Array'ın statik olmasıdır; 
