@@ -17,6 +17,14 @@ Virtual DOM (VDOM), bir UI’ın ideal veya “sanal” bir temsilinin bellekte 
 ReactDOM gibi bir kütüphane tarafından “gerçek” DOM ​​ile senkronize edildiği 
 bir programlama konseptidir. Bu sürece uyumlaştırma denir.
 ```
+### SPA nedir
+```
+
+```
+### Base component nedir
+```
+
+```
 ### React Element ve Component arasındaki fark nedir?
 Alıntıdır : https://kodsozluk.com/bakigul/react-element-ve-component-arasindaki-fark-nedir
 ```
