@@ -25,7 +25,7 @@ bir programlama konseptidir. Bu sürece uyumlaştırma denir.
 ```
 
 ```
-### UseMemo ve UserCallBack nedir
+### UseMemo ve UseCallBack nedir
 ```
 
 ```
