@@ -25,6 +25,14 @@ bir programlama konseptidir. Bu sürece uyumlaştırma denir.
 ```
 
 ```
+### UseMemo ve UserCallBack nedir
+```
+
+```
+### Context Api ve Redux nedir
+```
+
+```
 ### React Element ve Component arasındaki fark nedir?
 Alıntıdır : https://kodsozluk.com/bakigul/react-element-ve-component-arasindaki-fark-nedir
 ```
