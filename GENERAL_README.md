@@ -23,8 +23,9 @@ Binary Search algoritmasında dizi her adımda ikiye bölünür. Mantığı şu 
 Yukarıdaki mantık aranan eleman bulununcaya kadar devam eder.
 ```
 ### Liquibase ve Flyway nedir, farkları nelerdir?
-Alıntıdır : http://localhost:3000/kis-ui/giris
-- Temel olarak veri tabanı taşıma (migration) işlemlerimizi gerçekleştirebildiğimiz ve bunun yanında farklı yardımcı mekanizmaları da destekleyen araçlar olduklarından bahsedebiliriz.
+Alıntıdır : [Liquibase ve Flyway farkları nelerdir?](https://medium.com/sahibinden-technology/liquibase-ve-flyway-nedir-farklar%C4%B1-nelerdir-1b8d95fe1537)
+
+Temel olarak veri tabanı taşıma (migration) işlemlerimizi gerçekleştirebildiğimiz ve bunun yanında farklı yardımcı mekanizmaları da destekleyen araçlar olduklarından bahsedebiliriz.
 ``` 
 - Liquibase, veritabanı şema değişikliklerini izlemek, yönetmek ve uygulamak için açık kaynaklı, 
 veri tabanından bağımsız bir kütüphanedir.
