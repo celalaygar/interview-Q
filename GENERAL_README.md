@@ -41,7 +41,7 @@ Annatasyonlar sorulabilir.
 - Spring interceptor AOP
 - Spring Hystrix
 - mikroservis projesi var servislerdeen biri 2 tane instance oluşmuş biri full dolu isteklerle ugrasıyor diğeri yarım dolu. API GATEWAY ISTEK GELDI bu 2 instance hangısıne gıdecegını nasıl anlıcak ve exceptıon olursa nasıl kontrol edıcem ve bunun loglamasını nasıl yapıcaz. API GATEWAY onun ınstancesı olmadıgını bılıyorsa annatasyon sayesınde o zaman 500 atar. bi kere gider baktı ayakta degıl bir daha gıdıp kontrol etmez.
--
+- 1 methoda 1 cümle ve 2 kelime gönderecem. bu kelimeler cümlede kac defa geçti kontrol et eşitse true gönder değilse false gönder.
 
 
 - @LAZY kullanımı ile ilgilş bir soru: a classı var ıcınde b classı new lenmiş. b classı var ıcınde a new lenmiş. circuler oluşuyor ne yaparsın.
@@ -52,7 +52,6 @@ Annatasyonlar sorulabilir.
 - a listesini stream ile dön her a içindeki c listesini bir listeye at (flatmap)
 
 
-1 methoda 1 cümle ve 2 kelime gönderecem. bu kelimeler cümlede kac defa geçti kontrol et eşitse true gönder değilse false gönder.
 
 
 
