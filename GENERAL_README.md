@@ -43,8 +43,8 @@ Annatasyonlar sorulabilir.
 - mikroservis projesi var servislerdeen biri 2 tane instance oluşmuş biri full dolu isteklerle ugrasıyor diğeri yarım dolu. API GATEWAY ISTEK GELDI bu 2 instance hangısıne gıdecegını nasıl anlıcak ve exceptıon olursa nasıl kontrol edıcem ve bunun loglamasını nasıl yapıcaz. API GATEWAY onun ınstancesı olmadıgını bılıyorsa annatasyon sayesınde o zaman 500 atar. bi kere gider baktı ayakta degıl bir daha gıdıp kontrol etmez.
 -
 
-@LAZY kullanımı ile ilgilş bir soru
-- a classı var ıcınde b classı new lenmiş. b classı var ıcınde a new lenmiş. circuler oluşuyor ne yaparsın.
+
+- @LAZY kullanımı ile ilgilş bir soru: a classı var ıcınde b classı new lenmiş. b classı var ıcınde a new lenmiş. circuler oluşuyor ne yaparsın.
 
 2 ayrı soru var
 - a  b ve c classı var   a için b den bir instance var ve ayrıca arraylist var ve c classı tutuyor bu arraylist a classı ıcınde.
