@@ -52,7 +52,7 @@ Annatasyonlar sorulabilir.
 - a listesini stream ile dön her a içindeki c listesini bir listeye at (flatmap)
 
 
-
+1 methoda 1 cümle ve 2 kelime gönderecem. bu kelimeler cümlede kac defa geçti kontrol et eşitse true gönder değilse false gönder.
 
 
 
