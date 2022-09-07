@@ -33,7 +33,20 @@ veri tabanından bağımsız bir kütüphanedir.
 - Flyway, açık kaynaklı bir veritabanı taşıma (migration) aracıdır. Sadeliği ve 
 konfigürasyondan bağımsız konvensiyonel bir mekanizmayı ön plana çıkarmayı amaçlar.
 ``` 
-### Genel Sorular (Spring, Java) turkcell soruları
+### Genel Sorular (Spring, Java) V1
+```
+- gRPC graphQL rest soap  Bu 4 ü arasındaki farklar nelerdi
+- New lemeden classı nasıl kullanırsın Bu soru turkcell den geldi
+- İnterface içerinde hiç birşey yazmazsam ne olur
+```
+``` 
+- İnnova mülakat sorusu ---> 
+11 sayısı ile ilgili soru : [1,2,3,5,9,8,6] array içindeki herhangi 2 sayının toplamı 11 ediyorsa 
+o 2 sayının index ini yazsın Ama o(N) İle çözmeniz lazımmış
+``` 
+
+### Genel Sorular (Spring, Java) V2 
+##### Turkcell soruları
 Annatasyonlar sorulabilir.
 - depencey ınjectıon ve ozellıkle solidi acıkla 
 - 2 class var 1 ınterfaceden ımplement edılmıs. bunun bır annatasyonu varmıs. nedır bu ?
