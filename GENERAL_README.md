@@ -35,7 +35,7 @@ konfigürasyondan bağımsız konvensiyonel bir mekanizmayı ön plana çıkarma
 ``` 
 ### Genel Sorular (Spring, Java) V1
 ```
-- gRPC graphQL rest soap  Bu 4 ü arasındaki farklar nelerdi
+- gRPC graphQL rest soap  Bu 4 ü arasındaki farklar nelerdir
 - New lemeden classı nasıl kullanırsın Bu soru turkcell den geldi
 - İnterface içerinde hiç birşey yazmazsam ne olur
 ```
