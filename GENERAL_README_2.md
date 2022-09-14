@@ -1,14 +1,5 @@
 ## GENERAL Q ---- 2
 
-### Scrum nedir
-``` 
-
-``` 
-
-### Kanvas nedir
-``` 
-
-``` 
 
 ### Genel Sorular (Spring, Java) V1
 ```
@@ -41,6 +32,21 @@ Annatasyonlar sorulabilir.
 - a class lı bır arraylist var  stream kullanarak dön her a classı ıcındekı b lerı bır lısteye at.
 - a listesini stream ile dön her a içindeki c listesini bir listeye at (flatmap)
 
+
+
+### Scrum nedir
+``` 
+
+``` 
+
+### Kanvas nedir
+``` 
+
+``` 
+### round robin 
+``` 
+
+``` 
 
 
 
