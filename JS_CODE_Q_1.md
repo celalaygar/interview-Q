@@ -22,11 +22,14 @@ if(x>0.1){
 }else{
     var x = 2;
 }
-console.log(x);      // 2
+console.log(x);      
+// output: 2
 ``` 
 
 ### JS_CODE_Q_3
-
+what is value of a?
 ```
-
+const ccc = [45, 4, 9, 16, 25];
+let a = ccc.every(val => val> 8);
+// output: false
 ``` 
