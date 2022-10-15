@@ -5,9 +5,12 @@ Thread Safe; birden çok thread’in tekbir kaynağı aynı anda kullanabilmesi/
 ortaya çıkabilecek tutarsızlıklar neticesinde üretilecek olası hatalara karşı 
 o anki thread’in kaynağını güvenceye alan ve bunu o kaynağı kullanan tüm threadler için sağlayan bir konsepttir.
 ```
-Alıntıdır : https://www.baeldung.com/java-thread-safety
 
-
+```
+Alıntıdır : 
+```
+ https://metinalniacik.medium.com/singleton-design-pattern-thread-safe-e00d11407e0c
+ https://www.baeldung.com/java-thread-safety
 ```
 ### Thread pull
 ```
