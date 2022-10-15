@@ -1,4 +1,4 @@
-## JAVA Q
+## JAVA_CODE_Q_1
 ### Writing Code (Usage of Recursive Function)
 what is print functıon --->  printData(0, ""); 
 ```
@@ -76,7 +76,7 @@ void printData(int ustId,String bosluk) {
 //			System.out.print(entry.getKey() + ":" + entry.getValue() + ", ");
 //		}
 ```
-
+## JAVA_CODE_Q_2
 ### Find Repeating Character String
 ```
 		String sentence = "hih everybody".toLowerCase();
@@ -95,7 +95,7 @@ void printData(int ustId,String bosluk) {
 		// output :
 		// e:2 h:2 y:2 
 ```
-
+## JAVA_CODE_Q_3
 ### Find First Non Repeating Character
 ```
 		String str1 = "gibblegabbler";
