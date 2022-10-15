@@ -1,0 +1,195 @@
+## JAVA_CODE_Q_1
+
+### JAVA_CODE_Q_1 
+Java examp 1
+```
+	int i = 0, j = 0;
+	while (i++ < 3) do
+			System.out.print(j);
+		while (j++ < 3);
+
+//	output
+//	012345
+```
+### JAVA_CODE_Q_2
+Java examp 2
+```
+public class main {
+	public static void main(String [] args) {
+		C c = new D(); 
+		System.out.println("z : "+c.z);
+		c.play();
+		c.execute();
+			
+//		output
+//		z : 0
+//		class d method play 2
+//		class c method execute
+	}
+}
+class C{
+	static int z= 0;
+	void play() { System.out.println("class c method play "+(++z)); } 
+	static void execute() { System.out.println("class c method execute"); }
+}
+class D extends C { 
+	static int z= 1; 
+	void play() { System.out.println("class d method play "+(++z)); } 
+	static void execute() { System.out.println("class d method execute"); }
+}
+```
+### JAVA_CODE_Q_3
+Java examp 3
+```
+public class main {
+	public static void main(String [] args) {
+		A b1 = new B(); 
+		System.out.println("z : "+b1.z);
+		b1.play(); 		b1.execute();
+		
+//		OUTPUT :		
+//		z : 0
+//		class b method play 2
+//		class a method execute 1
+	}
+}
+class A{
+	static int z= 0;
+	void play() { System.out.println("class a method play "+(++z)); } 
+	static void execute() { System.out.println("class a method execute "+(++z)); }
+}
+class B extends A { 
+	static int z= 1; 
+	void play() { System.out.println("class b method play "+(++z)); } 
+	static void execute() { System.out.println("class b method execute "+(++z)); }
+}
+```
+### JAVA_CODE_Q_4
+Java examp 4
+```
+public static void main(String[] args) {
+	b b1 = new b(); 
+	System.out.println("z : "+b1.z);
+	b1.play();
+	b1.execute();
+
+	// output
+//	z : 1
+//	class b method play
+//	class b method execute 
+}
+class a{
+	static int z= 0;
+	void play() { System.out.println("class a method play"); } 
+	static void execute() { System.out.println("class a method execute"); }
+}
+class b extends a { 
+	static int z= 1; 
+	void play() { System.out.println("class b method play"); } 
+	static void execute() { System.out.println("class b method execute"); }
+}
+```
+### JAVA_CODE_Q_5
+Java examp 5
+```
+// dizide olmayan en küçük pozitif sayıyı bulunuz....
+	public static void main(String[] args) {
+		//int a[] = { 1, 3, 4};          		// 2
+		//int a[] = { 11, 13, 14};           		// 1
+		int a[] = { -11,-1,3};          		// 1
+		//int a[] = { -3, -1, 1, 3, 6, 4, 1, 2 };   	// 5
+		System.out.println(solution(a));
+	}
+
+	public static int  solution(int[] a) {
+
+		int k = 1, cnt = 0, firstCnt = 0;
+		int control = 0;
+		while (true) {
+			if (a[cnt] < 1 ) {
+				cnt++;
+				firstCnt = cnt;
+			} else if (a[cnt] > 0 && a[cnt] == k) {
+				cnt = firstCnt;
+				k++;
+			} else if (a[cnt] > 0 && a[cnt] != k ){
+				cnt++;
+				if(a.length == cnt)
+					break;
+			}
+		}
+		return k;
+	}
+```
+## JAVA_CODE_Q_6
+### JDBC CONNECTION EXAMPLE
+```
+   public class ORACLEConnection {
+	private static Connection connection;
+
+	public static Connection getConnection() throws SQLException {
+		if (connection != null) { return connection; }
+		String İpAdress="";     String port="";     String dbName="";       String username="";     String password="";
+
+		connection = DriverManager.getConnection( "jdbc:oracle:thin:@İpAdress:port:dbName", "username", "password");
+
+		if (connection != null)   System.out.println("Connected to the database!");
+		else                      System.out.println("Failed to make connection!");
+
+		return connection;
+	}
+
+	public static void closeConnection() throws SQLException {
+		connection.close();
+	} 
+   }
+
+public class DbHelper {
+	private ArrayList<Patient> patients;
+	private Connection connection;
+	private PreparedStatement stmt;
+	
+	public DbHelper() throws SQLException {
+		connection = ORACLEConnection.getConnection();
+	}
+
+	public Patient addPatient(Patient patient) throws SQLException {
+		if (patient != null) {
+			String sql = "INSERT INTO AAPATIENT VALUES (?,?,?,?,?,?)";
+			stmt = connection.prepareStatement(sql);
+			int id = databaseId();
+			stmt.setInt(1, id);
+			stmt.setString(2, patient.getName());
+			stmt.setString(3, patient.getSurname());
+			stmt.setString(5, patient.getGender());
+			patient.setId(id);
+			int i = stmt.executeUpdate();
+			System.out.println(i + " records inserted");
+			return patient;
+		} else {
+			System.out.println("Patient is null");
+			return null;
+		}
+	}
+}
+```
+## JAVA_CODE_Q_7
+### REVERSE STRİNG WİTH RECURSİVE FUNCTION
+```
+	public void reverse() {
+		String data = "20022002";
+		System.out.println(this.recursive(data, 0, data.length()-1) );
+	}
+	
+	private Boolean recursive( String data, int preIndex, int postIndex) {
+		Boolean control = true;
+		if(preIndex == postIndex || postIndex < preIndex ) 
+			return control;
+		if(data.charAt(preIndex) == data.charAt(postIndex) ) {
+			control = this.recursive(data, preIndex+1, postIndex-1);
+		}else {
+			control = false;
+		}
+		return control;
+	}
+	```
