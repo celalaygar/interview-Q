@@ -17,6 +17,13 @@ Alıntıdır : https://www.baeldung.com/java-thread-safety
 ```
 
 ```
+### CQRS (Command Query Responsibility Segregation) Nedir?
+
+```
+Alıntıdır :  https://sefikcankanber.medium.com/cqrs-command-query-responsibility-segregation-nedir-16b196376389#:~:text=CQRS%2C%20ana%20oda%C4%9F%C4%B1%20write%20(yazma,CQS%20ilkesi%20baz%20al%C4%B1narak%20kurulmu%C5%9Ftur.
+```
+
+
 ### Kafkanın kullanım sebebleri ? 
 ```
 
