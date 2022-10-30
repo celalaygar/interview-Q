@@ -33,3 +33,31 @@ const ccc = [45, 4, 9, 16, 25];
 let a = ccc.every(val => val> 8);
 // output: false
 ``` 
+
+### JS_CODE_Q_4
+what is output?
+```
+console.log("start");
+setTimeout(()=>{
+console.log("first");
+},0);
+
+Promise.resolve(123).then((value) => {
+  console.log("value " + value);
+});
+console.log("end");
+``` 
+output : 
+```
+start
+ende
+value 123
+first
+```
+
+
+
+
+
+
+
