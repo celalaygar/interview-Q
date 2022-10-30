@@ -1,4 +1,4 @@
-## JS QUESTION 
+## JS QUESTION 1
 ### JS_CODE_Q_1
 ```
 console.log(1)
