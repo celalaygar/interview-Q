@@ -14,6 +14,35 @@ console.log(person1.name);
 
 ### JS_CODE_Q_2
 ```
+const calc = (a) => {
+	return (b) => {
+		if(b) return calc(a+b);
+		return a;
+	};
+};
+
+console.log(calc(1)(2)(3)(4)());
+
+// output : 10
+```
+
+### JS_CODE_Q_3
+```
+
+```
+```
+OUTPUT : 
+```
+
+### JS_CODE_Q_4
+```
+
+```
+```
+OUTPUT : 
+```
+### JS_CODE_Q_3
+```
 
 ```
 ```
