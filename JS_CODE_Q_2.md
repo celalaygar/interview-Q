@@ -28,10 +28,16 @@ console.log(calc(1)(2)(3)(4)());
 
 ### JS_CODE_Q_3
 ```
+const calc = (a) => {
+	return (b) => {
+		if(b) return calc(a+b);
+		return a;
+	};
+};
 
-```
-```
-OUTPUT : 
+console.log(calc(1)(2)());
+
+// output : 3
 ```
 
 ### JS_CODE_Q_4
