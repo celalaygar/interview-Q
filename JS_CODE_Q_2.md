@@ -57,7 +57,7 @@ console.log(isLoading);
 
 // output : true   one   two
 ```
-### JS_CODE_Q_3
+### JS_CODE_Q_5
 ```
 const fetcData = ()=>{
     return new Promise((res) => res("one"))
@@ -75,7 +75,7 @@ console.log(isLoading);
 
 // output :  one   two   false
 ```
-### JS_CODE_Q_4
+### JS_CODE_Q_6
 ```
 const person ={
   name:"celal",
@@ -89,11 +89,11 @@ copyPerson.displayName();
 
 // output :  celal   celal
 ```
-### JS_CODE_Q_5
+### JS_CODE_Q_7
 ```
 
 ```
-### JS_CODE_Q_6
+### JS_CODE_Q_8
 ```
 
 ```
