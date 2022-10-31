@@ -77,7 +77,17 @@ console.log(isLoading);
 ```
 ### JS_CODE_Q_4
 ```
+const person ={
+  name:"celal",
+  displayName(){
+    console.log(this.name)
+  }
+}
+const copyPerson = Object.create(person);
+person.displayName();
+copyPerson.displayName();
 
+// output :  celal   celal
 ```
 ### JS_CODE_Q_5
 ```
