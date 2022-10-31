@@ -91,7 +91,16 @@ copyPerson.displayName();
 ```
 ### JS_CODE_Q_7
 ```
+function execc (){
+    let a = (b = 0);
+  a++;
+    return a;
+}
+execc();
+console.log(typeof a);
+console.log(typeof b); 
 
+// output :  undefined   number
 ```
 ### JS_CODE_Q_8
 ```
