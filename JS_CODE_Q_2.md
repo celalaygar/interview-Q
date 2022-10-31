@@ -42,15 +42,48 @@ console.log(calc(1)(2)());
 
 ### JS_CODE_Q_4
 ```
+const fetcData = ()=>{
+    return new Promise((res) => res("one"))
+};
+let isLoading = true;
 
-```
-```
-OUTPUT : 
+fetcData().then((result) => {
+    console.log(result);
+}).finally(()=>{
+    console.log("two");
+    isLoading = false;
+})
+console.log(isLoading); 
+
+// output : true   one   two
 ```
 ### JS_CODE_Q_3
 ```
+const fetcData = ()=>{
+    return new Promise((res) => res("one"))
+};
+let isLoading = true;
+
+await fetcData().then((result) => {
+    console.log(result);
+}).finally(()=>{
+
+    console.log("two");
+    isLoading = false;
+})
+console.log(isLoading);
+
+// output :  one   two   false
+```
+### JS_CODE_Q_4
+```
 
 ```
+### JS_CODE_Q_5
 ```
-OUTPUT : 
+
+```
+### JS_CODE_Q_6
+```
+
 ```
