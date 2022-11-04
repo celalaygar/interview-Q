@@ -89,6 +89,20 @@ run ve call methodları arasındakı fark nedır
 - thread concurrency
 - HttpClient  nedirc 
 - 2 farklı tablo var bunlardakı verı tekrarı onlemek ıcın ne yaparsn..
-
+reverse string nedir kesin bil   polingrom kelime   2002   ada   
+stack de çözümü (tersten çekme), recursive functıon ile çözümüde var..
+string de her karakter arasında (bir cümlede) 1 kez tekrar eden karakteri bul.. 
+reverse string nedir kesin bil   polingrom kelime   2002   ada   
 ``` 
+### Etiya 
+``` 
+- Union all sorusu sorulur  
+- join 
+- group by havıng sorulur
+Hash  map de nesne tekrarını önlemek ıcın ne kullanılır..
+String, Stringbuilder, StringBuffer (thread sencronıze oldugu ıcın daha guvenlı ve 2. birinin kullanılmasını engelliyor..) .
 
+bir arrayde en buyuk sayıyı bulan kodu nasıl yazarsın
+sort algorıtmaları nasıl calısır.
+facede , observer desıgn pattern neden kullanırız. kodunu yazabılır mısın
+``` 
