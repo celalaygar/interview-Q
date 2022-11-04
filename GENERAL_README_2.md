@@ -48,5 +48,19 @@ Annatasyonlar sorulabilir.
 
 ``` 
 
+### Gneral Question 1 - Real Time İnterview Questions
+``` 
+array ile arraylist arasındakı fark
+component ile element farkı varmıdır nedir
+final class ile method kullanımı ? 
+virtual dom ile real dom arasındakı fark ? 
+Component life cycle.
+functıonal ınterface
+
+
+final class extend edılemez
+final method override edilemez
+``` 
+
 
 
