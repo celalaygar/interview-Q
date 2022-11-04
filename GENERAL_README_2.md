@@ -61,6 +61,34 @@ functıonal ınterface
 final class extend edılemez
 final method override edilemez
 ``` 
+### Obss
 
 
+``` 
+login sıfresını unutursa ne yaparsın 
+logın guvrenlıgı nasıl saglanır 
+şifresini unutursa ne yaparsın...
+
+
+thrad agırlıklı soru soruldu
+thread ıle ılgılı  nedir..
+thread nasıl olusturulur. nasıl calısır.
+thread ile procces arasındakı fark nedir
+thread ve runnable ne zaman kullanılmalı. hangı durumlarda kullanılmalı
+run ve call methodları arasındakı fark nedır
+%99 thread sorarlar
+- thread safety nedir
+- thread nasıl durdurulur.
+- javada 2 thread arasında veri paylaşımı ve aktarımı nasıl yapılır
+- thread yield, join isAlive interrrupt 
+- notify ve notifyAll arasındakı fark ne ,
+- interrupted ile isInterrupted arasındakı fark nedir.
+- stack ve heap arasındakı fark nedir.
+- garbage collector acıkla
+- deadlock ve livelock arasındakı fark
+- thread concurrency
+- HttpClient  nedirc 
+- 2 farklı tablo var bunlardakı verı tekrarı onlemek ıcın ne yaparsn..
+
+``` 
 
