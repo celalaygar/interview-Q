@@ -106,3 +106,24 @@ bir arrayde en buyuk sayıyı bulan kodu nasıl yazarsın
 sort algorıtmaları nasıl calısır.
 facede , observer desıgn pattern neden kullanırız. kodunu yazabılır mısın
 ``` 
+### Genel Question
+``` 
+array ile arraylist arasındakı fark
+component ile element farkı varmıdır nedir
+final class ile method kullanımı ? 
+virtual dom ile real dom arasındakı fark ? 
+Component life cycle.
+functıonal ınterface
+
+final class extend edılemez
+final method override edilemez
+``` 
+
+
+
+
+
+
+
+
+
