@@ -104,5 +104,22 @@ console.log(typeof b);
 ```
 ### JS_CODE_Q_8
 ```
+var str = true;
+console.log(str + 0);
+console.log(str + "abc");
+console.log(str + true);
+console.log(str + false);
+
+// output :  
+1 
+trueabc
+2 
+1
+```
+### JS_CODE_Q_9
+```
 
 ```
+
+
+
