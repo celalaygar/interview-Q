@@ -8,8 +8,10 @@ const person2 = {name:"aygar"};
 const person = Object.assign(person1, person2);
 console.log(person.name);
 console.log(person1.name);
-
-//output : aygar aygar
+``` 
+output : 
+```
+aygar aygar
 ```
 
 ### JS_CODE_Q_2
@@ -22,8 +24,10 @@ const calc = (a) => {
 };
 
 console.log(calc(1)(2)(3)(4)());
-
-// output : 10
+``` 
+output : 
+```
+10
 ```
 
 ### JS_CODE_Q_3
@@ -36,8 +40,10 @@ const calc = (a) => {
 };
 
 console.log(calc(1)(2)());
-
-// output : 3
+``` 
+output : 
+```
+3
 ```
 
 ### JS_CODE_Q_4
@@ -54,8 +60,10 @@ fetcData().then((result) => {
     isLoading = false;
 })
 console.log(isLoading); 
-
-// output : true   one   two
+``` 
+output : 
+```
+true   one   two
 ```
 ### JS_CODE_Q_5
 ```
@@ -72,8 +80,10 @@ await fetcData().then((result) => {
     isLoading = false;
 })
 console.log(isLoading);
-
-// output :  one   two   false
+``` 
+output : 
+```
+one   two   false
 ```
 ### JS_CODE_Q_6
 ```
@@ -99,8 +109,10 @@ function execc (){
 execc();
 console.log(typeof a);
 console.log(typeof b); 
-
-// output :  undefined   number
+``` 
+output : 
+```
+ undefined   number
 ```
 ### JS_CODE_Q_8
 ```
@@ -110,7 +122,9 @@ console.log(str + "abc");
 console.log(str + true);
 console.log(str + false);
 
-// output :  
+``` 
+output : 
+``` 
 1 
 trueabc
 2 
@@ -121,5 +135,9 @@ trueabc
 
 ```
 
+``` 
+output : 
+```
 
+```
 
