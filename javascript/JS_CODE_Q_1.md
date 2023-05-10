@@ -80,4 +80,16 @@ one
 three
 two
 ```
+#### JS_CODE_Q_6
+what is output?
+```
+var x = 10;
+function ff(){console.log(x); var x = 20;}
+ff();
+```
+output : 
+```
+undefined
+```
+
 
