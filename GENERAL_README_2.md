@@ -48,7 +48,7 @@ Annatasyonlar sorulabilir.
 
 ``` 
 
-### Gneral Question 1 - Real Time İnterview Questions
+### Genel Mülakat soruları  v1 - Real Time İnterview Questions
 ``` 
 array ile arraylist arasındakı fark
 component ile element farkı varmıdır nedir
@@ -56,74 +56,64 @@ final class ile method kullanımı ?
 virtual dom ile real dom arasındakı fark ? 
 Component life cycle.
 functıonal ınterface
-
 
 final class extend edılemez
 final method override edilemez
 ``` 
 ### Obss
 
-
 ``` 
-login sıfresını unutursa ne yaparsın 
-logın guvrenlıgı nasıl saglanır 
-şifresini unutursa ne yaparsın...
-
+- login sıfresını unutursa ne yaparsın 
+- logın guvrenlıgı nasıl saglanır 
+- şifresini unutursa ne yaparsın...
 
 thrad agırlıklı soru soruldu
-thread ıle ılgılı  nedir..
-thread nasıl olusturulur. nasıl calısır.
-thread ile procces arasındakı fark nedir
-thread ve runnable ne zaman kullanılmalı. hangı durumlarda kullanılmalı
-run ve call methodları arasındakı fark nedır
-%99 thread sorarlar
+- thread nasıl olusturulur. nasıl calısır.
+- thread ile procces arasındakı fark nedir
+- thread ve runnable ne zaman kullanılmalı. hangı durumlarda kullanılmalı
+- run ve call methodları arasındakı fark nedır
+- %99 thread sorarlar
 - thread safety nedir
 - thread nasıl durdurulur.
 - javada 2 thread arasında veri paylaşımı ve aktarımı nasıl yapılır
 - thread yield, join isAlive interrrupt 
 - notify ve notifyAll arasındakı fark ne ,
 - interrupted ile isInterrupted arasındakı fark nedir.
+
 - stack ve heap arasındakı fark nedir.
 - garbage collector acıkla
 - deadlock ve livelock arasındakı fark
 - thread concurrency
-- HttpClient  nedirc 
+- HttpClient nedir ?
 - 2 farklı tablo var bunlardakı verı tekrarı onlemek ıcın ne yaparsn..
-reverse string nedir kesin bil   polingrom kelime   2002   ada   
-stack de çözümü (tersten çekme), recursive functıon ile çözümüde var..
-string de her karakter arasında (bir cümlede) 1 kez tekrar eden karakteri bul.. 
-reverse string nedir kesin bil   polingrom kelime   2002   ada   
+- reverse string nedir kesin bil   polingrom kelime   2002   ada   
+- stack de çözümü (tersten çekme), recursive functıon ile çözümüde var..
+- string de her karakter arasında (bir cümlede) 1 kez tekrar eden karakteri bul.. 
+- reverse string nedir kesin bil   polingrom kelime   2002   ada   
 ``` 
 ### Etiya 
 ``` 
 - Union all sorusu sorulur  
 - join 
 - group by havıng sorulur
-Hash  map de nesne tekrarını önlemek ıcın ne kullanılır..
-String, Stringbuilder, StringBuffer (thread sencronıze oldugu ıcın daha guvenlı ve 2. birinin kullanılmasını engelliyor..) .
+- Hash  map de nesne tekrarını önlemek ıcın ne kullanılır..
+- String, Stringbuilder, StringBuffer (thread sencronıze oldugu ıcın daha guvenlı ve 2. birinin kullanılmasını engelliyor..) .
 
-bir arrayde en buyuk sayıyı bulan kodu nasıl yazarsın
-sort algorıtmaları nasıl calısır.
-facede , observer desıgn pattern neden kullanırız. kodunu yazabılır mısın
+- bir arrayde en buyuk sayıyı bulan kodu nasıl yazarsın
+- sort algorıtmaları nasıl calısır.
+- facede , observer desıgn pattern neden kullanırız. kodunu yazabılır mısın
 ``` 
-### Genel Question
+### Genel Mülakat soruları v2
 ``` 
-array ile arraylist arasındakı fark
-component ile element farkı varmıdır nedir
-final class ile method kullanımı ? 
-virtual dom ile real dom arasındakı fark ? 
-Component life cycle.
-functıonal ınterface
+- array ile arraylist arasındakı fark
+- component ile element farkı varmıdır nedir
+- virtual dom ile real dom arasındakı fark ? 
+- Component life cycle.
+- functıonal ınterface
 
-final class extend edılemez
-final method override edilemez
+Final class larla ilgili soru gelebilir?
+- final class ile method kullanımı ? 
+- final class extend edılemez
+- final method override edilemez
 ``` 
-
-
-
-
-
-
-
-
 
