@@ -1,5 +1,6 @@
 ## JAVA_CODE_Q_1
 ### Writing Code (Usage of Recursive Function)
+### Recursive fonksiyon kullanarak printData methodunun içini doldurunuz..
 what is print functıon --->  printData(0, ""); 
 ```
 class Menu {
@@ -52,7 +53,9 @@ void printData(int ustId,String bosluk) {
     }
 }
 ```
+## JAVA_CODE_Q_2
 ### Show Character count on String
+### bir metindeki karakter miktarını gösteriniz.
 ```
 		String sentence = "bu bir denemedir";
 		Map<Character, Integer> letterMap = new HashMap<Character, Integer>();
@@ -76,8 +79,9 @@ void printData(int ustId,String bosluk) {
 //			System.out.print(entry.getKey() + ":" + entry.getValue() + ", ");
 //		}
 ```
-## JAVA_CODE_Q_2
+## JAVA_CODE_Q_3
 ### Find Repeating Character String
+### Tekrar eden karakterleri bulunuz.
 ```
 		String sentence = "hih everybody".toLowerCase();
 		Map<Character, Integer> letterMap = new HashMap<Character, Integer>();
@@ -95,8 +99,10 @@ void printData(int ustId,String bosluk) {
 		// output :
 		// e:2 h:2 y:2 
 ```
-## JAVA_CODE_Q_3
+## JAVA_CODE_Q_4
 ### Find First Non Repeating Character
+### ilk Tekrar etmeyen karakteri bulunuz.
+
 ```
 		String str1 = "gibblegabbler";
 		for (int i = 0; i < str1.length(); i++) {
@@ -113,7 +119,9 @@ void printData(int ustId,String bosluk) {
 			}
 		}
 ```
+## JAVA_CODE_Q_5
 ### Find First Repeating Character
+### ilk Tekrar eden karakteri bulunuz.
 ```
 	Character[] charArray = {'a', 'b', 'c', 'd', 'e' , 'c','e'};
 	
