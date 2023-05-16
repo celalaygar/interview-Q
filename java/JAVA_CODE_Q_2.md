@@ -1,18 +1,19 @@
 ## JAVA_CODE_Q_1
 
 ### JAVA_CODE_Q_1 
-Java examp 1
+Kodun çıktısı nedir?
 ```
 	int i = 0, j = 0;
 	while (i++ < 3) do
 			System.out.print(j);
 		while (j++ < 3);
-
-//	output
-//	012345
+```
+OUTPUT
+```
+012345
 ```
 ### JAVA_CODE_Q_2
-Java examp 2
+Kodun çıktısı nedir?
 ```
 public class main {
 	public static void main(String [] args) {
@@ -20,11 +21,6 @@ public class main {
 		System.out.println("z : "+c.z);
 		c.play();
 		c.execute();
-			
-//		output
-//		z : 0
-//		class d method play 2
-//		class c method execute
 	}
 }
 class C{
@@ -38,8 +34,14 @@ class D extends C {
 	static void execute() { System.out.println("class d method execute"); }
 }
 ```
+OUTPUT
+```	
+z : 0
+class d method play 2
+class c method execute
+```
 ### JAVA_CODE_Q_3
-Java examp 3
+Kodun çıktısı nedir?
 ```
 public class main {
 	public static void main(String [] args) {
@@ -47,10 +49,7 @@ public class main {
 		System.out.println("z : "+b1.z);
 		b1.play(); 		b1.execute();
 		
-//		OUTPUT :		
-//		z : 0
-//		class b method play 2
-//		class a method execute 1
+
 	}
 }
 class A{
@@ -64,8 +63,14 @@ class B extends A {
 	static void execute() { System.out.println("class b method execute "+(++z)); }
 }
 ```
+OUTPUT
+```		
+z : 0
+class b method play 2
+class a method execute 1
+```
 ### JAVA_CODE_Q_4
-Java examp 4
+Kodun çıktısı nedir?
 ```
 public static void main(String[] args) {
 	b b1 = new b(); 
@@ -73,10 +78,7 @@ public static void main(String[] args) {
 	b1.play();
 	b1.execute();
 
-	// output
-//	z : 1
-//	class b method play
-//	class b method execute 
+
 }
 class a{
 	static int z= 0;
@@ -89,8 +91,14 @@ class b extends a {
 	static void execute() { System.out.println("class b method execute"); }
 }
 ```
+OUTPUT
+```
+z : 1
+class b method play
+class b method execute 
+```
 ### JAVA_CODE_Q_5
-Java examp 5
+Dizide olmayan en küçük pozitif sayıyı bulunuz. Kodunu yazınız...
 ```
 // dizide olmayan en küçük pozitif sayıyı bulunuz....
 	public static void main(String[] args) {
@@ -122,7 +130,30 @@ Java examp 5
 	}
 ```
 ## JAVA_CODE_Q_6
+### REVERSE STRİNG WİTH RECURSİVE FUNCTION
+Recursive fonksiyonu ile bir stringi ters çeviren methodu yazınız.
+```
+	public void reverse() {
+		String data = "20022002";
+		System.out.println(this.recursive(data, 0, data.length()-1) );
+	}
+	
+	private Boolean recursive( String data, int preIndex, int postIndex) {
+		Boolean control = true;
+		if(preIndex == postIndex || postIndex < preIndex ) 
+			return control;
+		if(data.charAt(preIndex) == data.charAt(postIndex) ) {
+			control = this.recursive(data, preIndex+1, postIndex-1);
+		}else {
+			control = false;
+		}
+		return control;
+	}
+```
+
+## JAVA_CODE_Q_6
 ### JDBC CONNECTION EXAMPLE
+statik çalışan jdbc connection kodu örneğini yazınız
 ```
    public class ORACLEConnection {
 	private static Connection connection;
@@ -173,23 +204,3 @@ public class DbHelper {
 	}
 }
 ```
-## JAVA_CODE_Q_7
-### REVERSE STRİNG WİTH RECURSİVE FUNCTION
-```
-	public void reverse() {
-		String data = "20022002";
-		System.out.println(this.recursive(data, 0, data.length()-1) );
-	}
-	
-	private Boolean recursive( String data, int preIndex, int postIndex) {
-		Boolean control = true;
-		if(preIndex == postIndex || postIndex < preIndex ) 
-			return control;
-		if(data.charAt(preIndex) == data.charAt(postIndex) ) {
-			control = this.recursive(data, preIndex+1, postIndex-1);
-		}else {
-			control = false;
-		}
-		return control;
-	}
-	```
