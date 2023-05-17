@@ -1,4 +1,4 @@
-## JAVA Q
+## JAVA_GENEL_SORULAR_1
 ### Java Sanal Makinası (JVM) Nasıl Çalışır?
 ```
 JVM, tüm platformlarda Java kodlarını çalıştırmak üzere geliştirilmiş ve 
