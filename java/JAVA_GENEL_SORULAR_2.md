@@ -1,4 +1,4 @@
-## JAVA_GENEL_SORULAR_2
+## JAVA GENEL SORULAR 2
 ### Thread safe
 Thread Safe, anlam olarak iş parçacığı güvenliği şeklinde Türkçe ifade edebileceğimiz bir kavramdır. 
 Thread Safe; birden çok thread’in tekbir kaynağı aynı anda kullanabilmesi/erişebilmesi durumlarında 
