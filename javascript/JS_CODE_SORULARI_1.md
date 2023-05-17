@@ -1,4 +1,4 @@
-## JS QUESTION 1
+## JS CODE SORULARI 1
 
 #### JS_CODE_Q_1
 ```
