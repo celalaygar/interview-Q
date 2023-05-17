@@ -13,7 +13,7 @@
 - many to many ilişkiyi açıklayınız? one to many den farkı nedir? 
 
 - 11 sayısı ile ilgili soru : [1,2,3,5,9,8,6] array içindeki herhangi 2 sayının toplamı 11 ediyorsa 
-o 2 sayının indexlerini yazarmısın. Ama o(N) İle çözülmesi gerekiyor.
+   o 2 sayının indexlerini yazarmısın. Ama o(N) İle çözülmesi gerekiyor.
 ``` 
 
 ### Genel Sorular (Spring, Java) V2 
@@ -24,7 +24,11 @@ Annatasyonlar sorulabilir.
 - 2 class var 1 ınterfaceden ımplement edılmıs. bunun bır annatasyonu varmıs. nedır bu ?
 - Spring @Qualifier @Primary
 - Spring interceptor AOP
-- Spring Hystrix
+- Spring Hystrix nedir? 
+- Mikroservisler arası iletişimi yapmanın yolları nelerdir? 
+  Örnek: Feign client ve resttemplate
+
+
 - mikroservis projesi var servislerdeen biri 2 tane instance oluşmuş biri full dolu isteklerle ugrasıyor diğeri yarım dolu. 
     API GATEWAY ISTEK GELDI bu 2 instance hangısıne gıdecegını nasıl anlayacak ve 
     exceptıon olursa nasıl kontrol edıcem ve bunun loglamasını nasıl yapıcaz. 
@@ -46,15 +50,15 @@ Annatasyonlar sorulabilir.
 
 ### Genel Mülakat soruları  v1 - Real Time İnterview Questions
 ``` 
-array ile arraylist arasındakı fark
-component ile element farkı varmıdır nedir
-final class ile method kullanımı ? 
-virtual dom ile real dom arasındakı fark ? 
-Component life cycle.
-functıonal ınterface
+- array ile arraylist arasındakı fark
+- component ile element farkı varmıdır nedir
+- final class ile method kullanımı ? 
+- virtual dom ile real dom arasındakı fark ? 
+- Component life cycle.
+- functıonal ınterface
 
-final class extend edılemez
-final method override edilemez
+- final class extend edılemez
+- final method override edilemez
 ``` 
 ### Obss
 
