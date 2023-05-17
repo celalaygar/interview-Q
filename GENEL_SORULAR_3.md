@@ -21,15 +21,3 @@ https://metinalniacik.medium.com/feign-client-open-feign-kullanarak-servisler-ar
 ``` 
 https://erkanerkisi.github.io/Hystrix-Circuit-Breaker-Bulkhead/
 ``` 
-###  
-``` 
-
-``` 
-###  
-``` 
-
-``` 
-###  
-``` 
-
-``` 
