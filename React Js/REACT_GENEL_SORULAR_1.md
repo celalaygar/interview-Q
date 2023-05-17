@@ -1,4 +1,4 @@
-## REACT Q
+## REACT GENEL SORULAR 1
 
 ### Virtual DOM nedir
 ```
