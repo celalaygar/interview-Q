@@ -1,4 +1,4 @@
-## SOLID-Q
+## SOLID PRENSİPLERİ
 
 ### S — Single-Responsibility Principle(Tek Sorumluluk Prensibi)
 Bir Sınıfın ya da fonksiyonun,metodun tek bir görevi, sorumluluğu olmalıdır. Başka sınıfların 
