@@ -7,10 +7,12 @@
 - New lemeden classı nasıl kullanırsın Bu soru turkcell den geldi
 - İnterface içerinde hiç birşey yazmazsam ne olur
 ```
-``` 
 - İnnova mülakat sorusu ---> 
-11 sayısı ile ilgili soru : [1,2,3,5,9,8,6] array içindeki herhangi 2 sayının toplamı 11 ediyorsa 
-o 2 sayının index ini yazsın Ama o(N) İle çözmeniz lazımmış
+``` 
+- DATABASE de tarihleri formatlayarak karşılaştırma yapmak durumunda kalabiliyoruz. Sebebi Nedir?
+- many to many ilişkiyi açıklayınız? one to many den farkı nedir? 
+- 11 sayısı ile ilgili soru : [1,2,3,5,9,8,6] array içindeki herhangi 2 sayının toplamı 11 ediyorsa 
+o 2 sayının indexlerini yazarmısın. Ama o(N) İle çözülmesi gerekiyor.
 ``` 
 
 ### Genel Sorular (Spring, Java) V2 
