@@ -1,4 +1,4 @@
-## GENERAL Q ---- 2
+## GENEL SORULAR 1
 
 
 ### Genel Sorular (Spring, Java) V1
