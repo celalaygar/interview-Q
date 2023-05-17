@@ -1,4 +1,4 @@
-## GENEL_SORULAR_1
+## GENEL SORULAR 3
 
 ### Design Patterns
 ``` 
