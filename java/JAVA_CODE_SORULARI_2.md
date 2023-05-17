@@ -1,4 +1,4 @@
-## JAVA_CODE_Q_1
+## JAVA CODE SORULARI 2
 
 ### JAVA_CODE_Q_1 
 Kodun çıktısı nedir?
