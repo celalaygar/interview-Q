@@ -1,6 +1,6 @@
 ## REACT GENEL SORULAR 1
 
-### Virtual DOM nedir
+### Virtual DOM nedir ?
 ```
 Gerçek DOM’a karşılık gelen sanal bir DOM nesnesidir, yani render edilen DOM’un bir kopyasıdır. 
 React her state değişikliğinde render edilen gerçek DOM’u bütünüyle tekrar oluşturmak yerine, 
@@ -17,7 +17,7 @@ Virtual DOM (VDOM), bir UI’ın ideal veya “sanal” bir temsilinin bellekte 
 ReactDOM gibi bir kütüphane tarafından “gerçek” DOM ​​ile senkronize edildiği 
 bir programlama konseptidir. Bu sürece uyumlaştırma denir.
 ```
-### SPA nedir
+### SPA nedir ?
 ```
 Single Page Application (SPA), birçok bilginin aynı kaldığı ve bir seferde yalnızca 
 birkaç parçanın güncellenmesi gereken tek bir sayfadır.
@@ -29,11 +29,11 @@ Alıntı yapılan sayfa
 ```
 https://www.argenova.com.tr/single-page-application-spa-nedir
 ```
-### Base component nedir
+### Base component nedir ?
 ```
 
 ```
-### UseRef, UseMemo ve UseCallBack nedir
+### UseRef, UseMemo ve UseCallBack nedir ?
 useRef
 ```
 useRef bir component içerisinde component'in tekrar render olmasını tetiklemeden “mutable” değişken tutmamızı sağlayan yapıdır.
@@ -50,11 +50,7 @@ useCallback parametre olarak bir fonksiyon ve dependency array alıyor ve depend
 değişmediği sürece parametre olarak aldığı fonksiyonu return ediyor.
 ```
 
-### Context Api ve Redux nedir
-```
-
-```
-### React Element ve Component arasındaki fark nedir?
+### React Element ve Component arasındaki fark nedir ?
 Alıntıdır : https://kodsozluk.com/bakigul/react-element-ve-component-arasindaki-fark-nedir
 ```
 Bir element, DOM düğümleri veya diğer bileşenler açısından ekranda ne görünmesini istediğinizi açıklayan düz bir nesnedir. 
@@ -90,6 +86,7 @@ Ardından JSX, bir React.createElement() işlev ağacına aktarılır:
 const Button = ({ onLogin }) =>
   React.createElement('div', { id: 'login-btn', onClick: onLogin }, 'Login');
 ```
+
 ### JS ile JSX arasındaki fark nedir ? 
 ```
 JSX , geliştiricilerin mantığı kontrol etmek için JS ile karıştırılamayan HTML ve XML'ye benzeyen 
@@ -109,8 +106,4 @@ ReactDOM.render(element, document.getElementById('root'));
 let element = <h1>This is JSX</h1>
 ReactDOM.render(element, document.getElementById('root'))
 ```
-
-
-
-
 
