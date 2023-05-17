@@ -8,8 +8,12 @@
 @EnableAutoConfgiuration itself, which is used to allow for auto-configuration in Spring Boot application
 ```
 
-### @ConfigurationProperties
-pom.xml e bu dependency eklendiğinde bu alttaki anotasyon kullanılır.
+### @ConfigurationProperties ne iş yapar?
+@ConfigurationProperties ne iş yapar?
+```
+application.properties deki değerleri bu class a assign eder.
+```
+pom.xml e bu dependency eklendiğinde bu üstteki anotasyon kullanılır.
 ```
 	<dependency>
 		<groupId>org.springframework.boot</groupId>
@@ -17,9 +21,7 @@ pom.xml e bu dependency eklendiğinde bu alttaki anotasyon kullanılır.
 		<optional>true</optional>
 	</dependency>
 ```
-```
-@ConfigurationProperties  // application.properties deki değerleri bu class a assign eder.
-```
+
 ### @Profile
 applicaton.yml dosyasında öncelikli olarak alttaki gibi bir örnek kullanmalısınız.
 ```
