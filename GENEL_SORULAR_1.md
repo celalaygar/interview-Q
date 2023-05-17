@@ -1,13 +1,13 @@
 ## GENEL SORULAR 1
 
 
-### Genel Sorular (Spring, Java) V1
+##### Genel Sorular 
 ```
 - gRPC graphQL rest soap  Bu 4 ü arasındaki farklar nelerdir
 - New lemeden classı nasıl kullanırsın Bu soru turkcell den geldi
 - İnterface içerinde hiç birşey yazmazsam ne olur
 ```
-İnnova mülakat sorusu ---> 
+##### İnnova mülakat sorusu 
 ``` 
 - DATABASE de tarihleri formatlayarak karşılaştırma yapmak durumunda kalabiliyoruz. Sebebi Nedir?
 - many to many ilişkiyi açıklayınız? one to many den farkı nedir? 
@@ -16,7 +16,6 @@
    o 2 sayının indexlerini yazarmısın. Ama o(N) İle çözülmesi gerekiyor.
 ``` 
 
-### Genel Sorular (Spring, Java) V2 
 ##### Turkcell soruları
 ```
 Annatasyonlar sorulabilir.
@@ -60,9 +59,14 @@ Annatasyonlar sorulabilir.
 - final class extend edılemez
 - final method override edilemez
 ``` 
-### Obss
+### Obss Turkcell soruları
 
 ``` 
+- bir react projesini farklı ip ve portta nasıl çalıştırırız ? 
+.env.local dosyası  kullanarak yapılır.
+- useeffect, useMemo nedir? 
+- bir div için margin:auto yaparsak sonuç ne olur?
+
 - login sıfresını unutursa ne yaparsın 
 - logın guvrenlıgı nasıl saglanır 
 - şifresini unutursa ne yaparsın...
@@ -103,7 +107,7 @@ thrad agırlıklı soru soruldu
 - sort algorıtmaları nasıl calısır.
 - facede , observer desıgn pattern neden kullanırız. kodunu yazabılır mısın
 ``` 
-### Genel Mülakat soruları v2
+#### Genel Mülakat soruları v2
 ``` 
 - array ile arraylist arasındakı fark
 - component ile element farkı varmıdır nedir
@@ -116,8 +120,6 @@ Final class larla ilgili soru gelebilir?
 - final class extend edılemez
 - final method override edilemez
 ``` 
-
-
 
 ### Scrum nedir
 ``` 
