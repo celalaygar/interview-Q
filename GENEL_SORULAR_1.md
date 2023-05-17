@@ -35,7 +35,9 @@ Annatasyonlar sorulabilir.
     Bi kere gider baktı ayakta degıl bir daha gıdıp kontrol etmez.
 
 
-- 1 methoda 1 cümle ve 2 kelime gönderecem. bu kelimeler cümlede kac defa geçti kontrol et eşitse true gönder değilse false gönder.
+Kod yazma sorusu
+- 1 methoda 1 cümle ve 2 kelime gönderecem. bu kelimeler cümlede kac defa geçti kontrol et 
+   eşitse true gönder değilse false gönder.
 
 
 - @LAZY kullanımı ile ilgilş bir soru: 
