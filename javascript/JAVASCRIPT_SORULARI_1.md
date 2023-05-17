@@ -1,4 +1,4 @@
-## JAVASCRIPT Q
+## JAVASCRIPT_SORULARI_1
 ### Virtual DOM nedir
 ```
 Gerçek DOM’a karşılık gelen sanal bir DOM nesnesidir, yani render edilen DOM’un bir kopyasıdır. 
