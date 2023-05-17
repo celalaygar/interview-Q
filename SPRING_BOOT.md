@@ -44,8 +44,26 @@ spring.profiles.active = dev ise bu anotasyonun oldugu method çalışır.
 @Profile("!dev") veya @Profile("prod") 
 spring.profiles.active = prod ise bu anotasyonun oldugu method çalışır.
 ```
-### ---
----
+
+### AOP nedir?
 ```
-------
+AOP ifadesi Aspect-Oriented Programming ifadesinin kısaltması. OOP'den (Object-Oriented Programming) farkı 
+OOP'nin class'lara odaklanırken AOP'nin ana modülarite biriminin aspect olması. AOP'de aspect'ler 
+cross-cuting concern'leri uygular ve belirtir.
+```
+
+### "Dependency injection" nedir?
+```
+Dependency injection nesneler için belli bağlımlılıklar sağlamak için kullanılıyor. 
+Projenizi sorunsuz ve test gibi eylemlere daha uygun hale getiren bir tasarım modelidir.
+```
+```
+Dependency injection kaba tabir ile bir sınıfın/nesnenin bağımlılıklardan kurtulmasını amaçlayan ve o nesneyi 
+olabildiğince bağımsızlaştıran bir programlama tekniği/prensibidir.
+```
+
+### @Autowire ve @Qualifier birlikte kullanılırsa ne olur?
+```
+Bu kombinasyon türü uygulamada birçok farklı türde tekil bean bulunduğunda kullanılır. 
+Bu kombinasyon her bir ayrı bean'i farklılaştırır.
 ```
