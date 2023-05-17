@@ -19,16 +19,37 @@ bir programlama konseptidir. Bu sürece uyumlaştırma denir.
 ```
 ### SPA nedir
 ```
+Single Page Application (SPA), birçok bilginin aynı kaldığı ve bir seferde yalnızca 
+birkaç parçanın güncellenmesi gereken tek bir sayfadır.
 
+Single Page Application, sunucudan yeni sayfaların tamamını yüklemek yerine geçerli 
+sayfayı dinamik olarak yeniden yazarak kullanıcıyla etkileşime giren bir web uygulaması veya web sitesidir.
+```
+Alıntı yapılan sayfa
+```
+https://www.argenova.com.tr/single-page-application-spa-nedir
 ```
 ### Base component nedir
 ```
 
 ```
 ### UseRef, UseMemo ve UseCallBack nedir
+useRef
+```
+useRef bir component içerisinde component'in tekrar render olmasını tetiklemeden “mutable” değişken tutmamızı sağlayan yapıdır.
+```
+useMemo
+```
+useMemo, gereksiz render işleminin önüne geçmek sebebi ile değişmeyen state'lere sahip sayfaların render işlemini engeller. 
+React ile hazırladığımız projede oluşturduğumuz state'leri farklı componentlere aktarmamız gerekebilir. 
+Bu durumda state değişmese bile o componentlerin de render edilme sorunu ile karşılaşırız.
+```
+UseCallBack
+```
+useCallback parametre olarak bir fonksiyon ve dependency array alıyor ve dependency array içerisindeki değerler 
+değişmediği sürece parametre olarak aldığı fonksiyonu return ediyor.
 ```
 
-```
 ### Context Api ve Redux nedir
 ```
 
