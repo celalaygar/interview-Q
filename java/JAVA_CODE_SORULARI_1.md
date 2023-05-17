@@ -1,4 +1,4 @@
-## JAVA_CODE_Q_1
+## JAVA CODE SORULARI 1
 ### Writing Code (Usage of Recursive Function)
 ### Recursive fonksiyon kullanarak printData methodunun içini doldurunuz..
 what is print functıon --->  printData(0, ""); 
