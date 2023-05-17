@@ -44,9 +44,9 @@ Kod yazma sorusu
    a classı var ıcınde b classı new lenmiş. b classı var ıcınde a new lenmiş. circuler oluşuyor ne yaparsın.
 
 2 ayrı soru var
-- a  b ve c classı var   a için b den bir instance var ve ayrıca arraylist var ve c classı tutuyor bu arraylist a classı ıcınde.
-- a class lı bır arraylist var  stream kullanarak dön her a classı ıcındekı b lerı bır lısteye at.
-- a listesini stream ile dön her a içindeki c listesini bir listeye at (flatmap)
+- a  b ve c classı var. a için b den bir instance var ve ayrıca arraylist var ve c classı tutuyor.
+   bu arraylist a classı ıcınde. a class lı bır arraylist var  stream kullanarak dön her a classı ıcındekı b lerı bır lısteye at. 
+   a listesini stream ile dön her a içindeki c listesini bir listeye at (flatmap)
 ```
 
 ### Genel Mülakat soruları  v1 - Real Time İnterview Questions
