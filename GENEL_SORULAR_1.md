@@ -1,4 +1,4 @@
-## GENERAL Q ---- 1
+## GENEL SORULAR 1
 
 ### Stack and Queue arasındaki fark
 ``` 
