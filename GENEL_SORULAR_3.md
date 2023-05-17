@@ -1,4 +1,4 @@
-## GENERAL Q ---- 0
+## GENEL_SORULAR_1
 
 ### Design Patterns
 ``` 
