@@ -132,12 +132,12 @@ trueabc
 ```
 ### JS_CODE_Q_9
 ```
-
+const resp = () => {
+    return (()=> 0 )();
+}
+console.log("typeof : "+ typeof resp())
 ```
-
-``` 
 output : 
+``` 
+typeof : number
 ```
-
-```
-
