@@ -1,6 +1,6 @@
 ## JS CODE SORULARI 1
 
-#### JS_CODE_Q_1
+### JS CODE QUESTION 1
 ```
 console.log(1)
 console.log(2)
@@ -14,7 +14,7 @@ OUTPUT :
 3
 4
 ``` 
-#### JS_CODE_Q_2
+### JS CODE QUESTION 2
 what is output?
 ```
 var x = Math.floor(Math.random());
@@ -29,8 +29,7 @@ output :
 ```
  2
 ``` 
-
-#### JS_CODE_Q_3
+### JS CODE QUESTION 3
 what is value of a?
 ```
 const ccc = [45, 4, 9, 16, 25];
@@ -40,8 +39,7 @@ output :
 ```
 false
 ``` 
-
-#### JS_CODE_Q_4
+### JS CODE QUESTION 4
 what is output?
 ```
 console.log("start");
@@ -61,8 +59,7 @@ ende
 value 123
 first
 ```
-
-#### JS_CODE_Q_5
+### JS CODE QUESTION 5
 what is output?
 ```
 const realFunction = (callBack1, callBack2) => {
@@ -80,7 +77,7 @@ one
 three
 two
 ```
-#### JS_CODE_Q_6
+### JS CODE QUESTION 6
 what is output?
 ```
 var x = 10;
