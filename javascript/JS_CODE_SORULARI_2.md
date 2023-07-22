@@ -141,3 +141,18 @@ output :
 ``` 
 typeof : number
 ```
+### JS_CODE_Q_10
+```
+const setList = new Set(); 
+setList.add(1);
+setList.add(2);
+setList.add(3);
+setList.add(4);
+setList.delete(2);
+
+console.log(setList.has(2) +" " + setList.size);
+``` 
+output : 
+``` 
+false 3
+```
