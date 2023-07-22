@@ -1,6 +1,6 @@
 ## JS_CODE_SORULARI_2
 
-### JS_CODE_Q_1
+### JS CODE QUESTION 1
 ```
 const person1 = {name:"celal"};
 const person2 = {name:"aygar"};
@@ -13,8 +13,7 @@ output :
 ```
 aygar aygar
 ```
-
-### JS_CODE_Q_2
+### JS CODE QUESTION 2
 ```
 const calc = (a) => {
 	return (b) => {
@@ -29,8 +28,7 @@ output :
 ```
 10
 ```
-
-### JS_CODE_Q_3
+### JS CODE QUESTION 3
 ```
 const calc = (a) => {
 	return (b) => {
@@ -45,8 +43,7 @@ output :
 ```
 3
 ```
-
-### JS_CODE_Q_4
+### JS CODE QUESTION 4
 ```
 const fetcData = ()=>{
     return new Promise((res) => res("one"))
@@ -65,7 +62,7 @@ output :
 ```
 true   one   two
 ```
-### JS_CODE_Q_5
+### JS CODE QUESTION 5
 ```
 const fetcData = ()=>{
     return new Promise((res) => res("one"))
@@ -84,8 +81,8 @@ console.log(isLoading);
 output : 
 ```
 one   two   false
-```
-### JS_CODE_Q_6
+``` 
+### JS CODE QUESTION 6
 ```
 const person ={
   name:"celal",
@@ -99,7 +96,7 @@ copyPerson.displayName();
 
 // output :  celal   celal
 ```
-### JS_CODE_Q_7
+### JS CODE QUESTION 7
 ```
 function execc (){
     let a = (b = 0);
@@ -114,7 +111,7 @@ output :
 ```
  undefined   number
 ```
-### JS_CODE_Q_8
+### JS CODE QUESTION 8
 ```
 var str = true;
 console.log(str + 0);
@@ -130,7 +127,7 @@ trueabc
 2 
 1
 ```
-### JS_CODE_Q_9
+### JS CODE QUESTION 9
 ```
 const resp = () => {
     return (()=> 0 )();
@@ -141,7 +138,7 @@ output :
 ``` 
 typeof : number
 ```
-### JS_CODE_Q_10
+### JS CODE QUESTION 10
 ```
 const setList = new Set(); 
 setList.add(1);
