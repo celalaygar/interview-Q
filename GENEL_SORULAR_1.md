@@ -1,4 +1,4 @@
-![image](https://github.com/celalaygar/interview-Q/assets/11775341/9f9e1bff-5d48-4266-a8d5-675db4542aa6)## GENEL SORULAR 1
+## GENEL SORULAR 1
 
 
 ##### Genel Sorular 
