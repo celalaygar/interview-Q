@@ -22,8 +22,10 @@ Java ****************
 - aspect ıle ılgılı sorular sorulabılır? Loglama yöntemleri nelerdir? Nasıl bir loglama yöntemi izlersiniz?
 
 React js ****************
-componentler arası data nasıl taşınır?
-
+- componentler arası data nasıl taşınır?
+Redux toolkit, Redux, Context Api, Mobx
+- Useeffect ne yapar?
+- UseRef açıklayınız.
 ```
 ##### İnnova mülakat sorusu 
 ``` 
