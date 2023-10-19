@@ -58,7 +58,8 @@ Annatasyonlar sorulabilir.
   Örnek: Feign client ve resttemplate
 
 
-- mikroservis projesi var servislerdeen biri 2 tane instance oluşmuş biri full dolu isteklerle ugrasıyor diğeri yarım dolu. 
+- mikroservis projesi var servislerden biri 2 tane instance oluşmuş biri full dolu isteklerle ugrasıyor
+diğeri yarım dolu. 
     API GATEWAY ISTEK GELDI bu 2 instance hangısıne gıdecegını nasıl anlayacak ve 
     exceptıon olursa nasıl kontrol edıcem ve bunun loglamasını nasıl yapıcaz. 
     API GATEWAY onun ınstancesı olmadıgını bılıyorsa annatasyon sayesınde o zaman 500 atar. 
