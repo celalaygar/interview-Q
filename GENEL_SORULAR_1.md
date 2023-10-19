@@ -7,6 +7,16 @@
 - New lemeden classı nasıl kullanırsın Bu soru turkcell den geldi
 - İnterface içerinde hiç birşey yazmazsam ne olur
 ```
+
+##### Yapıkredi mülakat sorulaır 
+```
+Java
+- hibernate nin kullandığı design pattern nedir (Proxy)
+- hibernate nasıl connection oluşturur. (ipucu : Session Factory)
+
+- Redux? Context Api?
+- A component ile B componenti aynı dizinde. arasında veri nasıl taşırım.
+```
 ##### Bilge adam Garanti Mülakat soruları
 ```
 - Domain Driven Design (DDD) Açıklayınız?
