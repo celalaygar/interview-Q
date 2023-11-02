@@ -14,8 +14,8 @@ null ise bir atama değeridir, değişkene değersiz bir gösterim olarak atanab
 ```
 ECMAScript, betik dilleri için bir standarttır.
 JavaScript gibi diller ECMAScript standardını temel alır.
-ECMA Standardı, en bilinen JavaScript (Netscape) ve JScript (Microsoft) olmak üzere çeşitli kaynak teknolojilerine dayanmaktadır.
-ECMA, Avrupa Bilgisayar Üreticileri Birliği anlamına gelir.
+ECMA Standardı, en bilinen JavaScript (Netscape) ve JScript (Microsoft) olmak üzere
+çeşitli kaynak teknolojilerine dayanmaktadır.ECMA, Avrupa Bilgisayar Üreticileri Birliği anlamına gelir.
 ```
 ### call (), bind () ve apply () arasındaki fark nedir?
 ```
