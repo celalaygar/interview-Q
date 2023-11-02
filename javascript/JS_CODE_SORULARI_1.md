@@ -88,5 +88,16 @@ output :
 ```
 undefined
 ```
+### JS CODE QUESTION 7
+what is output?
+```
+const array = [1,2,3,4,5]
+const [x,y, , z] = array;
+console.log(z)
+```
+output : 
+```
+4
+```
 
 
