@@ -93,8 +93,10 @@ const person ={
 const copyPerson = Object.create(person);
 person.displayName();
 copyPerson.displayName();
-
-// output :  celal   celal
+```
+output : 
+```
+celal   celal
 ```
 ### JS CODE QUESTION 7
 ```
