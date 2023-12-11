@@ -1,5 +1,20 @@
 ## GENEL SORULAR 4
 
+### Service registry
+Bir servis var 3 pod kullanyor. ben 4. podu actım ve bu servis nereden bılıyorda yükü 4 e bölüyor . nereden anlıyor 4. servis oldugunu ve ayakta oldugunu
+```
+Microservice Mimarilerinde Service Discovery
+https://medium.com/@bilgehan.yildiz/spring-boot-i%CC%87le-microservice-registry-ve-discovery-patternleri%CC%87ne-baki%C5%9F-a25fb5dd340c
+```
+### Service registry;
+``` 
+Service registry; bütün microservice instance'larının mevcutta host edildikleri network
+lokasyonlarını tutan merkezi bir bileşendir. Service registry client; microservice'ler
+tarafından registry'e kaydı bulunan ve network communication yapmak istediği service'in
+adresini registry'den sorgulayarak kullanırlar.
+
+http://www.canertosuner.com/post/asp-net-core-service-discovery-using-eureka
+```
 ### Optimistic Lock Nedir ? Pessimistic Lock Nedir ? 
 ``` 
  http://www.canertosuner.com/post/optimistic-lock-nedir-pessimistic-lock-nedir-data-concurrency
