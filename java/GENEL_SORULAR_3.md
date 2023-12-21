@@ -47,3 +47,15 @@ Comparable’ı uygulamalıdır. Bununla birlikte, sıralama sınıfın alışı
 sıralama yalnızca belirli bir kullanım durumu için mantıklıysa, Karşılaştırıcı daha iyi bir seçenektir.
 ```
  
+###  Java Virtual Threads — Easy introduction
+```
+https://yteblog.bilgem.tubitak.gov.tr/jdk21-virtual-threads-springte-kullanimi
+https://medium.com/@onurokkyay/java-virtual-thread-nedir-6049151ac2b8
+https://medium.com/@RamLakshmanan/java-virtual-threads-easy-introduction-44d96b8270f8
+```
+ 
+###  Difference Between Thread and Virtual Thread in Java
+```
+https://www.baeldung.com/java-virtual-thread-vs-thread
+```
+ 
