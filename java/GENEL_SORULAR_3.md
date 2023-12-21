@@ -48,6 +48,7 @@ sıralama yalnızca belirli bir kullanım durumu için mantıklıysa, Karşıla�
 ```
  
 ###  Java Virtual Threads — Easy introduction
+Java 21'de Gelen Yenilikler - Virtual Threads
 ```
 https://yteblog.bilgem.tubitak.gov.tr/jdk21-virtual-threads-springte-kullanimi
 https://medium.com/@onurokkyay/java-virtual-thread-nedir-6049151ac2b8
