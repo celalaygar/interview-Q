@@ -41,6 +41,7 @@ kullanılarak saniyeler içinde getirilmesini sağlayabiliriz.
 ### SQL — Normalizasyon
 ```
 https://medium.com/@mehmet1icme/sql-normalizasyon-8835d600df71
+https://ilkaygenc.com.tr/normalizasyon-nedir-sql/
 ```
 
 ## SQL
