@@ -67,6 +67,9 @@
 
         System.out.println(" ----------------------------- personList");
         System.out.println(personList);
+
+
+
         /*   output :
         [[Person{id=1, name='Metin', surname='Aln'}, Person{id=2, name='Kağan', surname='Aln'}, Person{id=3, name='Yusuf', surname='Aln'}, Person{id=4, name='Dilek', surname='Aln'}], [Person{id=9, name='Enver', surname='Akça'}, Person{id=10, name='Kağan', surname='Korkmaz'}, Person{id=11, name='Yusuf', surname='Sönmez'}, Person{id=12, name='Yılmaz', surname='Aln'}], [Person{id=5, name='Ahmet', surname='Davut'}, Person{id=6, name='Rıza', surname='Özkök'}, Person{id=7, name='Ali', surname='Can'}, Person{id=8, name='Ayşe', surname='Nur'}]]
         */
