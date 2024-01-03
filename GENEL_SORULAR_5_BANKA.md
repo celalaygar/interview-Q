@@ -31,7 +31,7 @@ https://www.scaler.com/topics/class-loader-in-java/
 
 ``` 
 
-### ŞEKER BANK MULAKAT SORULARI
+###  BANKA MULAKAT SORULARI
 
 ```
 multıthread soru var 
