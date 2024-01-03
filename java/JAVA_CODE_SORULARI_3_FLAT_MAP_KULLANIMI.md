@@ -1,4 +1,4 @@
-## JAVA_Q_3_FLAT_MAP
+## FLAT_MAP KULLANIMI
 ### flatmap usage 1
 ```
         List<String> europeanCountries = Arrays.asList("Almanya", "Avusturya", "Belçika", "Bulgaristan");
