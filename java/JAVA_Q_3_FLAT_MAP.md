@@ -12,16 +12,19 @@
 
         System.out.println("allCountries as list ------------------------------------  ");
         System.out.println(allCountries);
-        /*
-        output :
 
+
+        /*   output :
         [[Almanya, Avusturya, Belçika, Bulgaristan], [Ethiopia, Tanzania, Kenya, Sudan], [Japonya, Çin, Hindistan, Kore]]
         */
+
+
         System.out.println("allCountries as list foreach ------------------------------------  ");
         allCountries.forEach(System.out::println);
-        /*
-        output :
 
+
+
+        /*   output :
         [Almanya, Avusturya, Belçika, Bulgaristan]
         [Ethiopia, Tanzania, Kenya, Sudan]
         [Japonya, Çin, Hindistan, Kore]
@@ -33,9 +36,9 @@
         System.out.println("allCountries as String list ------------------------------------  ");
         System.out.println(allCountriesAsFlat);
 
-        /*
-        output :
 
+
+        /*   output :
         [Almanya, Avusturya, Belçika, Bulgaristan, Ethiopia, Tanzania, Kenya, Sudan, Japonya, Çin, Hindistan, Kore]
         */
 ```
@@ -64,9 +67,7 @@
 
         System.out.println(" ----------------------------- personList");
         System.out.println(personList);
-        /*
-        output :
-
+        /*   output :
         [[Person{id=1, name='Metin', surname='Aln'}, Person{id=2, name='Kağan', surname='Aln'}, Person{id=3, name='Yusuf', surname='Aln'}, Person{id=4, name='Dilek', surname='Aln'}], [Person{id=9, name='Enver', surname='Akça'}, Person{id=10, name='Kağan', surname='Korkmaz'}, Person{id=11, name='Yusuf', surname='Sönmez'}, Person{id=12, name='Yılmaz', surname='Aln'}], [Person{id=5, name='Ahmet', surname='Davut'}, Person{id=6, name='Rıza', surname='Özkök'}, Person{id=7, name='Ali', surname='Can'}, Person{id=8, name='Ayşe', surname='Nur'}]]
         */
 
@@ -78,11 +79,14 @@
 
         System.out.println(" ----------------------------- allIds");
         System.out.println(allIds);
-        /*
-        output :
 
+
+
+        /*   output :
         [1, 2, 3, 4, 9, 10, 11, 12, 5, 6, 7, 8]
         */
+
+
 
         List<Integer> filterIds = personList.stream()
                 .flatMap(persons -> persons.stream())
@@ -91,9 +95,10 @@
 
         System.out.println(" ----------------------------- filterIds");
         System.out.println(filterIds);
-        /*
-        output :
 
+
+
+        /*   output :
         [null, null, null, null, 9, 10, 11, 12, null, 6, 7, 8]
         */
 
