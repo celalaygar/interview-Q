@@ -30,3 +30,14 @@ https://www.scaler.com/topics/class-loader-in-java/
 
 
 ``` 
+
+### ŞEKER BANK MULAKAT SORULARI
+
+```
+multıthread soru var 
+array var 123456 gibi. çift sayıları array e al, kodunu yaz.
+class loader   3 aşaması vardır. nedir bunlar
+Stream foreach yapıları  ile ilgili soru soruldu.
+collectionlar, arayy yapıları, linkedlist ile ilgili soru soruldu.
+
+``` 
