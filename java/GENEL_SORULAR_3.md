@@ -59,4 +59,9 @@ https://medium.com/@RamLakshmanan/java-virtual-threads-easy-introduction-44d96b8
 ```
 https://www.baeldung.com/java-virtual-thread-vs-thread
 ```
- 
+
+### Java’da Classloader Nedir ?
+```
+https://kerimfirat.medium.com/java-virtual-machine-1-class-loader-ff145a4167d0
+https://abdullahcicekli.medium.com/javada-classloader-914435492dea
+```
