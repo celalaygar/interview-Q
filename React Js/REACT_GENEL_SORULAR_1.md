@@ -89,11 +89,9 @@ const Button = ({ onLogin }) =>
 
 ### JS ile JSX arasındaki fark nedir ? 
 ```
-JSX , geliştiricilerin mantığı kontrol etmek için JS ile karıştırılamayan HTML ve XML'ye benzeyen 
-sözdizimini kullanarak görünümler yazmasına izin veren bir JavaScript uzantısıdır.
+.js dosyaları genel JavaScript kodlarını içerirken, . jsx dosyaları React veya benzeri UI kütüphaneleriyle kullanılan,
+JavaScript'e HTML benzeri bir sözdizimi ekleyen dosyalardır.
 
-```
-```
 JSX, JavaScript için XML benzeri bir sözdizimi uzantısıdır. Başka bir deyişle, HTML'yi JavaScript ile birleştirir! 
 Bu çok büyük bir avantaj çünkü DOM'umuzun nasıl görüneceğini görselleştirmek daha kolay.
 ```
