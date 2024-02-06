@@ -1,5 +1,10 @@
 ## JAVA GENEL SORULAR 3
 
+### ConcurrentHashMap  nedir? 
+```
+https://medium.com/@mmuratakbiyik/concurrenthashmap-detaylar%C4%B1-ve-temel-kullan%C4%B1m%C4%B1-5bb415d3bcf2
+```
+
 ###  Java’da HashMap ve ConcurrentHashMap arasındaki fark nedir?
 ```
 1. ConcurrentHashMap iş parçacığı açısından güvenlidir; Bir seferde yalnızca bir iş parçacığı koda erişebilir,
