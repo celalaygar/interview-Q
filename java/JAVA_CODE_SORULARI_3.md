@@ -35,8 +35,29 @@ Palindrome String in Java v2
 ```
 
 ### JAVA_CODE_Q_2 
-```
 
+Remove the biggset number from integer list on java
+```
+        int[] intList= new int[]{1,4,3,22,33,12,13};
+        List<Integer> list = new ArrayList<>();
+
+        int currentInt = intList[0];
+        int index = 0;
+
+        for (int i = 0; i <= intList.length - 1; i ++) {
+
+            list.add(intList[i]);
+            if( intList[i] > currentInt  ){
+                currentInt = intList[i];
+                index = i;
+            }
+        }
+        list.remove(index);
+        int[] newList = new int[list.size()];
+        for (int i = 0; i <= list.size() - 1; i ++) {
+            newList[i] = list.get(i);
+        }
+        System.out.println(Arrays.toString(newList));
 ```
 
 ### JAVA_CODE_Q_3 
