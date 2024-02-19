@@ -22,8 +22,11 @@ Spring IoC Container, Spring Framework'ün çekirdeğidir. Bu konteyner, nesnele
 nesneleri birbirine bağlar, bağımlılıklarını yapılandırır ve tüm yaşam döngüsünü yönetir.
 Spring konteyneri, bir uygulamayı oluşturan bileşenleri yönetmek için Dependency Injection'ı kullanır.
 ```
+```
+https://gokhana.medium.com/inversion-of-control-ioc-nedir-ve-avantajlar%C4%B1-nelerdir-cf05e42c16e4
+```
 
-###
+### Monolog vs Microservices
 ```
 
 ```
