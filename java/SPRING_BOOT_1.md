@@ -85,4 +85,9 @@ https://acokgungordu.medium.com/spring-cloud-netflix-hystrix-ile-circuit-breaker
 https://medium.com/trendyol-tech/nedir-bu-circuit-breaker-pattern-2d3d34948767
 ```
 
-
+### spring ioc container nedir
+```
+Spring IoC Container, Spring Framework'ün çekirdeğidir. Bu konteyner, nesneleri oluşturur,
+nesneleri birbirine bağlar, bağımlılıklarını yapılandırır ve tüm yaşam döngüsünü yönetir.
+Spring konteyneri, bir uygulamayı oluşturan bileşenleri yönetmek için Dependency Injection'ı kullanır.
+```
