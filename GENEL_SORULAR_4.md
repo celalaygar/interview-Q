@@ -45,3 +45,9 @@ https://medium.com/@RamLakshmanan/java-virtual-threads-easy-introduction-44d96b8
 ```
 https://www.baeldung.com/java-virtual-thread-vs-thread
 ```
+
+
+### Monolog vs Microservices
+```
+
+```
