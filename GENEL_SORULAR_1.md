@@ -8,7 +8,7 @@
 - İnterface içerinde hiç birşey yazmazsam ne olur
 ```
 
-##### Yapıkredi mülakat sorulaır 
+##### Y. B. mülakat sorulaır 
 ```
 Java
 - hibernate nin kullandığı design pattern nedir (Proxy)
@@ -17,7 +17,7 @@ Java
 - Redux? Context Api?
 - A component ile B componenti aynı dizinde. arasında veri nasıl taşırım.
 ```
-##### Bilge adam Garanti Mülakat soruları
+##### Bil G. B. Mülakat soruları
 ```
 - Domain Driven Design (DDD) Açıklayınız?
 https://medium.com/@avniozunlu/domain-driven-design-ddd-151c90472914
@@ -37,7 +37,7 @@ Redux toolkit, Redux, Context Api, Mobx
 - Useeffect ne yapar?
 - UseRef açıklayınız.
 ```
-##### İnnova mülakat sorusu 
+##### İNN. mülakat sorusu 
 ``` 
 - DATABASE de tarihleri formatlayarak karşılaştırma yapmak durumunda kalabiliyoruz. Sebebi Nedir?
 - many to many ilişkiyi açıklayınız? one to many den farkı nedir? 
@@ -46,7 +46,7 @@ Redux toolkit, Redux, Context Api, Mobx
    o 2 sayının indexlerini yazarmısın. Ama o(N) İle çözülmesi gerekiyor.
 ``` 
 
-##### Turkcell soruları
+##### TCLL soruları
 ```
 Annatasyonlar sorulabilir.
 - depencey ınjectıon ve ozellıkle solidi acıkla 
@@ -93,7 +93,7 @@ Kod yazma sorusu
 - final class extend edılemez
 - final method override edilemez
 ``` 
-### Obss Turkcell soruları
+### TRCLL soruları
 
 ``` 
 - bir react projesini farklı ip ve portta nasıl çalıştırırız ? 
@@ -129,7 +129,7 @@ thrad agırlıklı soru soruldu
 - string de her karakter arasında (bir cümlede) 1 kez tekrar eden karakteri bul.. 
 - reverse string nedir kesin bil   polingrom kelime   2002   ada   
 ``` 
-### Etiya 
+### Et.
 ``` 
 - Union all sorusu sorulur  
 - join 
