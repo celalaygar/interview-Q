@@ -81,7 +81,7 @@ Kod yazma sorusu
    a listesini stream ile dön her a içindeki c listesini bir listeye at (flatmap)
 ```
 
-### Genel Mülakat soruları  v1 - Real Time İnterview Questions
+##### Genel Mülakat soruları  v1 - Real Time İnterview Questions
 ``` 
 - array ile arraylist arasındakı fark
 - component ile element farkı varmıdır nedir
@@ -93,7 +93,7 @@ Kod yazma sorusu
 - final class extend edılemez
 - final method override edilemez
 ``` 
-### TRCLL soruları
+##### TCLL soruları
 
 ``` 
 - bir react projesini farklı ip ve portta nasıl çalıştırırız ? 
