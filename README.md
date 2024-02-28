@@ -97,10 +97,69 @@ mevcut application context’i içerisinde tanımlıdır.
 
 ```
 
-## sql de index türleri ?
+## PostgreSQL de index türleri ?
+https://gokhana.dev/postgresql-index-tipleri-ve-index-secimi/
+##### BTREE Index
+```
+Bir index yaratıldığında tipi verilmez ise default olarak btree oluşturulmaktadır. Özellikle “büyüktür”, “büyük eşittir”, “küçüktür”,
+“küçük eşittir”, “eşittir”, “between”, “is null”, “is not null” gibi sorguların hepsinde kullanılabilir. Like’lı ifadeler ise
+“sabit değer%” şeklinde ise kullanılabilir. Balance tree algoritmasını kullanmaktadır.
+
+- Çoğu sorgu türü için en performanslı seçenektir.”>, >=, <, <=, =, IN, BETWEEN” gibi gibi..
+- Varsayılan/Default sorgu tipidir.
+- Çoklu kolon indexlemesini yapılabilir. 
+```
+##### Hash Index
+```
+Hash daha çok eşitlik anında kullanılabilen bir index türüdür. Oluşum hızı index yaratma süresi açısından Btree’ye göre çok daha fazladır.
+Ancak kapladığı alan bakımından Btree’ye göre çok daha az bir yer kaplar. Çünkü Btree ağaç yapısında tutulurken,
+hash flat bir yapıda tutulmaktadır.
+
+Hash index, kullanım şekli açısından genellikle B-tree ile karşılaştırılmaktadır.
+- Eşitlik operatörü ile yapılan sorgular için iyi bir seçenektir. 
+- Hash index, B-Tree indexinden daha az yer kaplar.
+- Tabloya satırlar eklendikçe linear olarak büyüyen B-Tree indexinin aksine, Hash indexi ani artışlarla büyür.
+- Hash indexler ile “unique” constraint kullanılamaz.
+- Hash indexler birden fazla kolon için oluşturulamazlar. 
+- Hash indexleme yapılırken sıralama ifadelerine yer verilemez.
+- Hash indexleme yaptığınız bir tablo için Cluster kullanamazsınız.
+```
+##### BRIN: Block range index
+```
+Postgresql verileri varsayılan olarak 8 Kb’lık bloklar halinde saklamaktadır. Brin indexlemede, indexler tutulurken
+bloklar içerisindeki en büyük ve en küçük değerler baz alınır. B-tree’nin aksine blok içersinde sıralanmış
+tüm değerler değil, sadece min ve max değerler tutulur. Eski adıyla min-max indextir.
+
+B-tree yaratıldığında 8Kb’lık veri setlerinin tümünü saklayacak şekilde bir indexleme yapar.
+Ancak BRIN ındex 8Kb’lık bloklardan sadece minumum ve maximum değerleri alarak index halinde saklar.
+
+- Btree ile karşılaştırıldığında tutalan veri boyutuna bakarsak çok çok daha az olduğunu görebiliriz.
+- Doğrudan bir veri yerine bir aralık üzerinde işlem yapılıyorsa çok performanslı çalışabilir.
+- Sadece belirli veriler index için tutulduğundan ötürü en az yer kaplayan index türüdür.
+- Özellikle big data ve veri analizi alanlarında range işlemlerinin çokluğundan dolayı tercih edilmektedir.
+```
+##### GIN Index
+```
+Generalized Inverted Index ile her kelime için bir index ve bu indexin içinde aranan ifadenin geçtiği yerlerin
+listesini sıkıştırılmış olarak tutar.
+- Bir kolonda array gibi çoklu verinin olması durumlarında kullanılabilir. Yani metin içinde aramalarda kullanılması önerilir
+- “Full text search” işlerinde kullanılabilir.
+- JSONB üzerinde yapılan aramalarda tercih edilebilir.
+- Range ve array veri tiplerinde kullanılabilir
+- ILIKE ile birlikte ‘%abc%’ şeklindeki aramalarda btree verimli çalışmaz. GIN tercih edilebilir.
 ```
 
+##### GIST Index
 ```
+Generalized search tree, full text search için güçlü diğer bir adaydır. Btree karşılaştırma yapıları için kullanılırken,
+GIST’te ağaç yapısında veri tutmasına karşın daha çok modern veritabanlarındaki geodata, text documents gibi operatorler
+için kullanılmaktadır.
+- Aynı kolonda değerlerin başka satırlarda çakışması durumlarında kullanılabilir.
+- Indexleme yöntemidir ve bu index tipinden birçok index türetilebilir.
+- “Full text search” işlerinde kullanılabilir.
+- Geometrik veri türlerini indexlemek için kullanılırlar.
+```
+
 
 ## spring IOC Container ?
 ```
