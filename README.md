@@ -101,9 +101,9 @@ mevcut application context’i içerisinde tanımlıdır.
 https://gokhana.dev/postgresql-index-tipleri-ve-index-secimi/
 ##### BTREE Index
 ```
-Bir index yaratıldığında tipi verilmez ise default olarak btree oluşturulmaktadır. Özellikle “büyüktür”, “büyük eşittir”, “küçüktür”,
-“küçük eşittir”, “eşittir”, “between”, “is null”, “is not null” gibi sorguların hepsinde kullanılabilir. Like’lı ifadeler ise
-“sabit değer%” şeklinde ise kullanılabilir. Balance tree algoritmasını kullanmaktadır.
+Bir index yaratıldığında tipi verilmez ise default olarak btree oluşturulmaktadır. Özellikle “büyüktür”, “büyük eşittir”,
+“küçüktür”, “küçük eşittir”, “eşittir”, “between”, “is null”, “is not null” gibi sorguların hepsinde kullanılabilir.
+Like’lı ifadeler ise “sabit değer%” şeklinde ise kullanılabilir. Balance tree algoritmasını kullanmaktadır.
 
 - Çoğu sorgu türü için en performanslı seçenektir.”>, >=, <, <=, =, IN, BETWEEN” gibi gibi..
 - Varsayılan/Default sorgu tipidir.
