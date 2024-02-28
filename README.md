@@ -71,24 +71,25 @@ setter’ı özgürce kullanıp çalışacaktır.
 ```
 ##### request Scope
 ```
-Request bean’i HTTP isteği geldiğinde oluşturulur. örneğin, bir “ /products” API’niz var, şimdi controller
-bu isteği aldığında ve service methodunu çağırdığında, Request Scope ile bir Bean’iniz olacak ve
-bu API isteği yanıtı geri gönderene kadar her zaman nesnenin aynı instance’ını alırsınız, ancak yeni bir
-request geldiğinde, yeni bir instance gönderecek.
+Request bean’i HTTP isteği geldiğinde oluşturulur. örneğin, bir “ /products” API’niz var, şimdi
+controller bu isteği aldığında ve service methodunu çağırdığında, Request Scope ile bir
+Bean’iniz olacak ve bu API isteği yanıtı geri gönderene kadar her zaman nesnenin aynı
+instance’ını alırsınız, ancak yeni bir request geldiğinde, yeni bir instance gönderecek.
 ```
 ##### session Scope
 ```
-Session Scope Web Uygulamalarında HTTP isteği geldiğinde oluşturulur. Mesela Spring boot uygulamanız
-kullanıcı sessionlarını sürdürdüğünde, bu scope yardımcı olabilir. Session Scope kullandığımızda, tüm
-Session için (kullanıcı düzeyindeki oturumda) her zaman nesnenin aynı instance’ını return eder. Ancak
-kullanıcı oturumu kapandığında, yeni bir kullanıcı oturumu için nesnenin yeni bir instance’ını alacaksınız.
+Session Scope Web Uygulamalarında HTTP isteği geldiğinde oluşturulur. Mesela Spring boot
+uygulamanız kullanıcı sessionlarını sürdürdüğünde, bu scope yardımcı olabilir.
+Session Scope kullandığımızda, tüm Session için (kullanıcı düzeyindeki oturumda) her zaman
+nesnenin aynı instance’ını return eder. Ancak kullanıcı oturumu kapandığında, yeni bir
+kullanıcı oturumu için nesnenin yeni bir instance’ını alacaksınız.
 ```
 ##### application Scope
 ```
-Bir application scope, ServletContext’in yaşam döngüsü için bean örneğini oluşturur. Bu singleton scope’a
-benzer ancak aralarında farklılıklar mevcuttur. Bir bean application scope değerine sahipken bu bean çoklu
-servlet tabanlı uygulamalar ile de paylaşılabilirken, singleton scope değerine sahip bir bean yalnızca
-mevcut application context’i içerisinde tanımlıdır.
+Bir application scope, ServletContext’in yaşam döngüsü için bean örneğini oluşturur.
+Bu singleton scope’a benzer ancak aralarında farklılıklar mevcuttur. Bir bean application
+scope değerine sahipken bu bean çoklu servlet tabanlı uygulamalar ile de paylaşılabilirken,
+singleton scope değerine sahip bir bean yalnızca mevcut application context’i içerisinde tanımlıdır.
 ```
 
 ## Circuat Breaker nedir ?
@@ -105,9 +106,10 @@ mevcut application context’i içerisinde tanımlıdır.
 https://gokhana.dev/postgresql-index-tipleri-ve-index-secimi/
 ##### BTREE Index
 ```
-Bir index yaratıldığında tipi verilmez ise default olarak btree oluşturulmaktadır. Özellikle “büyüktür”, “büyük eşittir”,
-“küçüktür”, “küçük eşittir”, “eşittir”, “between”, “is null”, “is not null” gibi sorguların hepsinde kullanılabilir.
-Like’lı ifadeler ise “sabit değer%” şeklinde ise kullanılabilir. Balance tree algoritmasını kullanmaktadır.
+Bir index yaratıldığında tipi verilmez ise default olarak btree oluşturulmaktadır. Özellikle
+“büyüktür”, “büyük eşittir”, “küçüktür”, “küçük eşittir”, “eşittir”, “between”, “is null”,
+“is not null” gibi sorguların hepsinde kullanılabilir. Like’lı ifadeler ise “sabit değer%”
+şeklinde ise kullanılabilir. Balance tree algoritmasını kullanmaktadır.
 
 - Çoğu sorgu türü için en performanslı seçenektir.”>, >=, <, <=, =, IN, BETWEEN” gibi gibi..
 - Varsayılan/Default sorgu tipidir.
@@ -115,9 +117,9 @@ Like’lı ifadeler ise “sabit değer%” şeklinde ise kullanılabilir. Balan
 ```
 ##### Hash Index
 ```
-Hash daha çok eşitlik anında kullanılabilen bir index türüdür. Oluşum hızı index yaratma süresi açısından Btree’ye göre
-çok daha fazladır. Ancak kapladığı alan bakımından Btree’ye göre çok daha az bir yer kaplar. Çünkü Btree
-ağaç yapısında tutulurken, hash flat bir yapıda tutulmaktadır.
+Hash daha çok eşitlik anında kullanılabilen bir index türüdür. Oluşum hızı index yaratma süresi
+açısından Btree’ye göre çok daha fazladır. Ancak kapladığı alan bakımından Btree’ye göre çok 
+daha az bir yer kaplar. Çünkü Btree ağaç yapısında tutulurken, hash flat bir yapıda tutulmaktadır.
 
 Hash index, kullanım şekli açısından genellikle B-tree ile karşılaştırılmaktadır.
 - Eşitlik operatörü ile yapılan sorgular için iyi bir seçenektir. 
@@ -130,23 +132,31 @@ Hash index, kullanım şekli açısından genellikle B-tree ile karşılaştır�
 ```
 ##### BRIN: Block range index
 ```
-Postgresql verileri varsayılan olarak 8 Kb’lık bloklar halinde saklamaktadır. Brin indexlemede,
-indexler tutulurken bloklar içerisindeki en büyük ve en küçük değerler baz alınır. B-tree’nin aksine
-blok içersinde sıralanmış tüm değerler değil, sadece min ve max değerler tutulur. Eski adıyla min-max indextir.
+Postgresql verileri varsayılan olarak 8 Kb’lık bloklar halinde saklamaktadır. Brin
+indexlemede, indexler tutulurken bloklar içerisindeki en büyük ve en küçük değerler
+baz alınır. B-tree’nin aksine blok içersinde sıralanmış tüm değerler değil, sadece
+min ve max değerler tutulur. Eski adıyla min-max indextir.
 
-B-tree yaratıldığında 8Kb’lık veri setlerinin tümünü saklayacak şekilde bir indexleme yapar.
-Ancak BRIN ındex 8Kb’lık bloklardan sadece minumum ve maximum değerleri alarak index halinde saklar.
+B-tree yaratıldığında 8Kb’lık veri setlerinin tümünü saklayacak şekilde bir
+indexleme yapar. Ancak BRIN ındex 8Kb’lık bloklardan sadece minumum ve maximum
+değerleri alarak index halinde saklar.
 
-- Btree ile karşılaştırıldığında tutalan veri boyutuna bakarsak çok çok daha az olduğunu görebiliriz.
-- Doğrudan bir veri yerine bir aralık üzerinde işlem yapılıyorsa çok performanslı çalışabilir.
-- Sadece belirli veriler index için tutulduğundan ötürü en az yer kaplayan index türüdür.
-- Özellikle big data ve veri analizi alanlarında range işlemlerinin çokluğundan dolayı tercih edilmektedir.
+- Btree ile karşılaştırıldığında tutalan veri boyutuna bakarsak çok çok daha az
+  olduğunu görebiliriz.
+- Doğrudan bir veri yerine bir aralık üzerinde işlem yapılıyorsa çok performanslı
+  çalışabilir.
+- Sadece belirli veriler index için tutulduğundan ötürü en az yer kaplayan index
+  türüdür.
+- Özellikle big data ve veri analizi alanlarında range işlemlerinin çokluğundan
+  dolayı tercih edilmektedir.
 ```
 ##### GIN Index
 ```
-Generalized Inverted Index ile her kelime için bir index ve bu indexin içinde aranan ifadenin geçtiği yerlerin
-listesini sıkıştırılmış olarak tutar.
-- Bir kolonda array gibi çoklu verinin olması durumlarında kullanılabilir. Yani metin içinde aramalarda kullanılması önerilir
+Generalized Inverted Index ile her kelime için bir index ve bu indexin içinde aranan
+ifadenin geçtiği yerlerin listesini sıkıştırılmış olarak tutar.
+
+- Bir kolonda array gibi çoklu verinin olması durumlarında kullanılabilir. Yani metin
+  içinde aramalarda kullanılması önerilir
 - “Full text search” işlerinde kullanılabilir.
 - JSONB üzerinde yapılan aramalarda tercih edilebilir.
 - Range ve array veri tiplerinde kullanılabilir
@@ -155,9 +165,10 @@ listesini sıkıştırılmış olarak tutar.
 
 ##### GIST Index
 ```
-Generalized search tree, full text search için güçlü diğer bir adaydır. Btree karşılaştırma yapıları için kullanılırken,
-GIST’te ağaç yapısında veri tutmasına karşın daha çok modern veritabanlarındaki geodata, text documents gibi operatorler
-için kullanılmaktadır.
+Generalized search tree, full text search için güçlü diğer bir adaydır. Btree karşılaştırma
+yapıları için kullanılırken, GIST’te ağaç yapısında veri tutmasına karşın daha çok modern
+veritabanlarındaki geodata, text documents gibi operatorler için kullanılmaktadır.
+
 - Aynı kolonda değerlerin başka satırlarda çakışması durumlarında kullanılabilir.
 - Indexleme yöntemidir ve bu index tipinden birçok index türetilebilir.
 - “Full text search” işlerinde kullanılabilir.
