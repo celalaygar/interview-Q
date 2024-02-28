@@ -122,9 +122,11 @@ açısından Btree’ye göre çok daha fazladır. Ancak kapladığı alan bakı
 daha az bir yer kaplar. Çünkü Btree ağaç yapısında tutulurken, hash flat bir yapıda tutulmaktadır.
 
 Hash index, kullanım şekli açısından genellikle B-tree ile karşılaştırılmaktadır.
+
 - Eşitlik operatörü ile yapılan sorgular için iyi bir seçenektir. 
 - Hash index, B-Tree indexinden daha az yer kaplar.
-- Tabloya satırlar eklendikçe linear olarak büyüyen B-Tree indexinin aksine, Hash indexi ani artışlarla büyür.
+- Tabloya satırlar eklendikçe linear olarak büyüyen B-Tree indexinin aksine, Hash indexi ani
+  artışlarla büyür.
 - Hash indexler ile “unique” constraint kullanılamaz.
 - Hash indexler birden fazla kolon için oluşturulamazlar. 
 - Hash indexleme yapılırken sıralama ifadelerine yer verilemez.
