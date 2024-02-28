@@ -1,20 +1,5 @@
 # Genel Mülakat Soruları
 
-### CQRC ?
-```
-
-```
-
-### Apache Kafka ve Rabbit MQ arasındaki farklar nelerdir ?
-```
-
-```
-
-### Saga Pattern nedir ?
-```
-
-```
-
 ### Spring Scope Türleri nelerdir ?
 ```
 
@@ -44,6 +29,22 @@
 ```
 
 ```
+
+### CQRC nedir?
+```
+
+```
+
+### Apache Kafka ve Rabbit MQ arasındaki farklar nelerdir ?
+```
+
+```
+
+### Saga Pattern nedir ?
+```
+
+```
+
 
 ### Domain Driven Design Nedir?
 ```
