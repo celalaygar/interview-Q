@@ -1,27 +1,27 @@
 # Genel Mülakat Soruları
 
 
-### Java Class Loader nedir ?
+## Java Class Loader nedir ?
 ```
 
 ```
 
-### Java Thread ile Virtua Thread arasndaki fark nedir ?
+## Java Thread ile Virtua Thread arasndaki fark nedir ?
 ```
 
 ```
 
-### Java Thread safe ?
+## Java Thread safe ?
 ```
 
 ```
 
-### Java ConcurrentHashMap ?
+## Java ConcurrentHashMap ?
 ```
 https://medium.com/@mmuratakbiyik/concurrenthashmap-detaylar%C4%B1-ve-temel-kullan%C4%B1m%C4%B1-5bb415d3bcf2
 ```
 
-### Spring Scope Türleri nelerdir ?
+## Spring Scope Türleri nelerdir ?
 ```
 Spring Framework içinde “scope” bir nesnenin yaşam döngüsünü ve ne kadar süreyle erişilebilir olduğunu tanımlayan bir
 kavramdır. Spring, çeşitli nesne scope’ları sağlar ve bu scope’lar nesnelerin oluşturulma, kullanılma ve yok edilme
@@ -69,43 +69,42 @@ servlet tabanlı uygulamalar ile de paylaşılabilirken, singleton scope değeri
 mevcut application context’i içerisinde tanımlıdır.
 ```
 
-### Circuat Breaker nedir ?
+## Circuat Breaker nedir ?
 ```
 
 ```
 
-### spring de interceptorler ?
+## spring de interceptorler ?
 ```
 
 ```
 
-### sql de index türleri ?
+## sql de index türleri ?
 ```
 
 ```
 
-### spring IOC Container ?
+## spring IOC Container ?
 ```
 
 ```
 
-### CQRC nedir?
+## CQRC nedir?
 ```
 
 ```
 
-### Apache Kafka ve Rabbit MQ arasındaki farklar nelerdir ?
+## Apache Kafka ve Rabbit MQ arasındaki farklar nelerdir ?
 ```
 
 ```
 
-### Saga Pattern nedir ?
+## Saga Pattern nedir ?
 ```
 
 ```
 
-
-### Domain Driven Design Nedir?
+## Domain Driven Design Nedir?
 ```
 https://medium.com/@avniozunlu/domain-driven-design-ddd-151c90472914
 ```
