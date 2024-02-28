@@ -41,7 +41,14 @@ threadin üzerine virtual threadler eşlenir.
 
 ## Java Multi Thread  nedir ?
 ```
+Thread safe, birden çok threadin bir kaynağı aynı anda kullanması durumlarında ortaya çıkan
+tutarsızlıkların sonucundaki hatalara karşı; o anki threadin kaynağını güvenceye alan ve
+bunu o kaynağı kullanan tüm threadler için uygulayan bir konsepttir.
 
+Asenkron yani multithreading bir yapıda threadlerin aynı veri kaynağına erişip değiştirmeye
+çalışması, hatalı davranışların sergilenmesine ve tutarlı bir sonuç elde edilememesine
+neden olabilir. Bu ve bunun gibi problemleri önlemek için threadleri güvenli bir şekilde
+tasarlamak ve geliştirmek gerekir. Bu metodolojiye thread safe, iş parçacığı güvenliği denir.
 ```
 
 ## Java Thread safe ?
