@@ -1,5 +1,6 @@
 # Genel Mülakat Soruları
 
++1 +2 +3 Yıl tecrübeliler için Java mülakat soruları
 
 ## Java Class Loader nedir ?
 ```
