@@ -3,20 +3,22 @@
 
 ## Java Class Loader nedir ?
 ```
-Java’da ClassLoader, Java programlarındaki sınıf dosyalarını yüklemek için kullanılan bir sınıftır. Java kodu,
-javac derleyicisi tarafından sınıf dosyasına derlenir ve JVM, sınıf dosyasında yazılmış byte kodlarını
-çalıştırarak Java programını yürütür.
+Java’da ClassLoader, Java programlarındaki sınıf dosyalarını yüklemek için kullanılan bir sınıftır.
+Java kodu, javac derleyicisi tarafından sınıf dosyasına derlenir ve JVM, sınıf dosyasında yazılmış
+byte kodlarını çalıştırarak Java programını yürütür.
 ```
 Java’da üç varsayılan ClassLoader vardır: Bootstrap, Extension ve System (Application) ClassLoader.
 ```
 1. Bootstrap ClassLoader : rt.jar ve diğer temel sınıflar gibi standart JDK sınıf dosyalarını yükler.
-Tüm ClassLoader’ların atasıdır ve herhangi bir atası yoktur. Primordial ClassLoader olarak da adlandırılır.
+Tüm ClassLoader’ların atasıdır ve herhangi bir atası yoktur. Primordial ClassLoader olarak da
+adlandırılır.
 
-2. Extension ClassLoader : Bu sınıf yükleyicisi, kullanıcının genişletilmiş sınıf dosyalarını yüklemesine izin verir.
-Bu sınıflar, “java.ext.dirs” olarak tanımlanan özel bir klasörde bulunur.
+2. Extension ClassLoader : Bu sınıf yükleyicisi, kullanıcının genişletilmiş sınıf dosyalarını
+yüklemesine izin verir. Bu sınıflar, “java.ext.dirs” olarak tanımlanan özel bir klasörde bulunur.
 
-3. System / Application ClassLoader : Bu sınıf yükleyicisi, kullanıcının kendi sınıf dosyalarını yüklemesine izin verir.
-(Yazılan Kodlar) Bu sınıflar, “java.class.path” olarak tanımlanan özel bir klasörde bulunur.
+3. System / Application ClassLoader : Bu sınıf yükleyicisi, kullanıcının kendi sınıf dosyalarını
+yüklemesine izin verir. (Yazılan Kodlar) Bu sınıflar, “java.class.path” olarak tanımlanan özel
+bir klasörde bulunur.
 ```
 
 ## Java Thread ile Virtua Thread arasndaki fark nedir ?
@@ -41,29 +43,31 @@ https://medium.com/@mmuratakbiyik/concurrenthashmap-detaylar%C4%B1-ve-temel-kull
 
 ## Spring Scope Türleri nelerdir ?
 ```
-Spring Framework içinde “scope” bir nesnenin yaşam döngüsünü ve ne kadar süreyle erişilebilir olduğunu tanımlayan bir
-kavramdır. Spring, çeşitli nesne scope’ları sağlar ve bu scope’lar nesnelerin oluşturulma, kullanılma ve yok edilme
-şeklini belirler.
+Spring Framework içinde “scope” bir nesnenin yaşam döngüsünü ve ne kadar süreyle erişilebilir
+olduğunu tanımlayan bir kavramdır. Spring, çeşitli nesne scope’ları sağlar ve bu scope’lar
+nesnelerin oluşturulma, kullanılma ve yok edilme şeklini belirler.
 
-Bu scope’lar, Spring uygulamalarında nesnelerin nasıl yönetileceğini belirlemek için kullanılır. Scope belirleme,
-nesnelerin doğru zamanda oluşturulması, paylaşılması ve yok edilmesi açısından önemlidir ve uygulamanın performansı ve
-davranışı üzerinde etkili olabilir.
+Bu scope’lar, Spring uygulamalarında nesnelerin nasıl yönetileceğini belirlemek için kullanılır.
+Scope belirleme, nesnelerin doğru zamanda oluşturulması, paylaşılması ve yok edilmesi açısından
+önemlidir ve uygulamanın performansı ve davranışı üzerinde etkili olabilir.
 ```
 
 ##### singleton Scope 
 ```
-Bir bean default olarak singleton scope’a sahiptir. Bean singleton scope ile tanımlandığı zaman mevcut application
-context‘imiz içerisinde o bean’den yalnızca tek bir adet initialize edileceğini garanti ederiz. Bu bean ile yapılacak
-olan tüm request’ler cache’lenmiş olan aynı nesne üzerinden yapılır. 
+Bir bean default olarak singleton scope’a sahiptir. Bean singleton scope ile tanımlandığı
+zaman mevcut application context‘imiz içerisinde o bean’den yalnızca tek bir adet initialize
+edileceğini garanti ederiz. Bu bean ile yapılacak olan tüm request’ler cache’lenmiş olan aynı
+nesne üzerinden yapılır. 
 ```
 ##### prototype Scope
 ```
-Prototype ile belirlenmiş bir bean, container içerisinde çağırıldığı her request’te yeniden oluşturulacaktır.
-Scope notasyonun iki farklı kullanımını aşağıda görebilirsiniz.
+Prototype ile belirlenmiş bir bean, container içerisinde çağırıldığı her request’te yeniden
+oluşturulacaktır. Scope notasyonun iki farklı kullanımını aşağıda görebilirsiniz.
 
-Prototype Scope kullandığınızda, her request geldiğinde yeni bir instance döndürür. Diyelim ki bir setter
-methoduna sahip bir sınıfınız var, şimdi bu sınıf için bir bean oluşturduğunuzda, size her zaman sınıfın
-yeni bir instance’sını verecek ve nesne niteliklerini değiştirmek için setter’ı özgürce kullanıp çalışacaktır. 
+Prototype Scope kullandığınızda, her request geldiğinde yeni bir instance döndürür. Diyelim ki
+bir setter methoduna sahip bir sınıfınız var, şimdi bu sınıf için bir bean oluşturduğunuzda,
+size her zaman sınıfın yeni bir instance’sını verecek ve nesne niteliklerini değiştirmek için
+setter’ı özgürce kullanıp çalışacaktır. 
 ```
 ##### request Scope
 ```
