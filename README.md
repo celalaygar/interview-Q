@@ -111,9 +111,9 @@ Bir index yaratıldığında tipi verilmez ise default olarak btree oluşturulma
 ```
 ##### Hash Index
 ```
-Hash daha çok eşitlik anında kullanılabilen bir index türüdür. Oluşum hızı index yaratma süresi açısından Btree’ye göre çok daha fazladır.
-Ancak kapladığı alan bakımından Btree’ye göre çok daha az bir yer kaplar. Çünkü Btree ağaç yapısında tutulurken,
-hash flat bir yapıda tutulmaktadır.
+Hash daha çok eşitlik anında kullanılabilen bir index türüdür. Oluşum hızı index yaratma süresi açısından Btree’ye göre
+çok daha fazladır. Ancak kapladığı alan bakımından Btree’ye göre çok daha az bir yer kaplar. Çünkü Btree
+ağaç yapısında tutulurken, hash flat bir yapıda tutulmaktadır.
 
 Hash index, kullanım şekli açısından genellikle B-tree ile karşılaştırılmaktadır.
 - Eşitlik operatörü ile yapılan sorgular için iyi bir seçenektir. 
@@ -126,9 +126,9 @@ Hash index, kullanım şekli açısından genellikle B-tree ile karşılaştır�
 ```
 ##### BRIN: Block range index
 ```
-Postgresql verileri varsayılan olarak 8 Kb’lık bloklar halinde saklamaktadır. Brin indexlemede, indexler tutulurken
-bloklar içerisindeki en büyük ve en küçük değerler baz alınır. B-tree’nin aksine blok içersinde sıralanmış
-tüm değerler değil, sadece min ve max değerler tutulur. Eski adıyla min-max indextir.
+Postgresql verileri varsayılan olarak 8 Kb’lık bloklar halinde saklamaktadır. Brin indexlemede,
+indexler tutulurken bloklar içerisindeki en büyük ve en küçük değerler baz alınır. B-tree’nin aksine
+blok içersinde sıralanmış tüm değerler değil, sadece min ve max değerler tutulur. Eski adıyla min-max indextir.
 
 B-tree yaratıldığında 8Kb’lık veri setlerinin tümünü saklayacak şekilde bir indexleme yapar.
 Ancak BRIN ındex 8Kb’lık bloklardan sadece minumum ve maximum değerleri alarak index halinde saklar.
