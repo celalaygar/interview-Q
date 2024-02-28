@@ -199,9 +199,21 @@ veritabanlarındaki geodata, text documents gibi operatorler için kullanılmakt
 ```
 
 
-## spring IOC Container ?
+## Spring IOC Container ?
 ```
+Spring IoC Container, Spring Framework'ün çekirdeğidir. Bu konteyner, nesneleri oluşturur,
+nesneleri birbirine bağlar, bağımlılıklarını yapılandırır ve tüm yaşam döngüsünü yönetir.
 
+Inversion of control bir yazılım tasarım prensibidir. Ioc ile Uygulama içerisindeki obje
+instance’larının yönetimi sağlanarak, bağımlılıklarını en aza indirgemek amaçlanmaktadır.
+Projeniz deki bağımlılıkların oluşturulmasını ve yönetilmesini geliştiricinin yerine,
+framework’ün yapması olarak da açıklanabilir.
+
+Framework‘in üzerinde çalıştığımız da görülüyor ki; frameworkler birçok işi kendisi yapmakta
+ve bizim kodumuzu çalıştırmak için framework gerekli kaynakları ve çalışması gereken metotları
+oluşturup, yönetmektedir. Yazdığımız kod bloğu çalışacağı zaman, framework bizim kodumuzu
+çağırır ve çalıştırır daha sonra kontrol yeniden framework’e geçmesi olayının tümüne
+Inversion Of Control adı verilmektedir.
 ```
 
 ## CQRC nedir?
