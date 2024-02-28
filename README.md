@@ -21,9 +21,22 @@ yüklemesine izin verir. (Yazılan Kodlar) Bu sınıflar, “java.class.path” 
 bir klasörde bulunur.
 ```
 
-## Java Thread ile Virtua Thread arasndaki fark nedir ?
+## Java Thread ile VirtuaL Thread arasndaki fark nedir ?
 ```
+https://medium.com/@onurokkyay/java-virtual-thread-nedir-6049151ac2b8
+```
+```
+Java’da kullandığımız geleneksel threadler (bundan sonra Platform Thread olarak da bahsedeceğiz)
+işletim sistemi tarafından yönetilir ve planlanır. Yeni bir platform thread oluşturmak için bir
+sistem çağrısı yapılmalıdır ve bu maliyetli bir işlemdir.
 
+Geleneksel threadlerin aksine virtual threadler JVM tarafından yönetilir. Bu nedenle, tahsisleri
+bir sistem çağrısı gerektirmez ve işletim sisteminin bağlam anahtarından (context switch) muaftırlar.
+Sonuç olarak, sistemin bağlam anahtarından kurtulduğumuz için daha az maliyetle birçok virtual
+thread üretebiliriz.Ayrıca virtual threadler, gerçek çekirdek thread olan taşıyıcı threadler
+üzerinde çalışır. Virtual threadler, Java kodu perspektifinden normal threadler gibi hissedilir,
+ancak işletim sistemi threadlerine 1:1 eşlenmezler. Taşıyıcı thread havuzundan uygun olan taşıyıcı
+threadin üzerine virtual threadler eşlenir.
 ```
 
 ## Java Multi Thread  nedir ?
