@@ -24,6 +24,11 @@ Bu sınıflar, “java.ext.dirs” olarak tanımlanan özel bir klasörde bulunu
 
 ```
 
+## Java Multi Thread  nedir ?
+```
+
+```
+
 ## Java Thread safe ?
 ```
 
