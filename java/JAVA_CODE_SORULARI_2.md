@@ -101,17 +101,16 @@ class b method execute
 Dizide olmayan en küçük pozitif sayıyı bulunuz. Kodunu yazınız...
 ```
 // dizide olmayan en küçük pozitif sayıyı bulunuz....
-	public static void main(String[] args) {
-        int[] arr = {-5,  5, 14 , 1, 3, 12, 2, 11 };
 
+        int[] arr = {-5,  5, 14 , 1, 3, 12, 2, 11 };
+        arr = new int[]{1, 3, 4};
+        arr = new int[]{ -3, -1,  3, 6, 4,  2 , 22};
         int cnt = 0;
         int flag = 0;
         int first = 0;
         while (true) {
 
-            if (cnt == arr.length) {
-                break;
-            }
+            if (cnt == arr.length) { break; }
             if (arr[cnt] < 0) {
                 cnt++;
                 continue;
@@ -122,12 +121,9 @@ Dizide olmayan en küçük pozitif sayıyı bulunuz. Kodunu yazınız...
                flag = first;
                continue;
             }
-            if(first < flag ){
-                flag = first;
-            }
+            if(first < flag ){ flag = first; }
         }
         System.out.println(" flag " + flag);
-     }
 
 ```
 ## JAVA_CODE_Q_6
