@@ -102,32 +102,33 @@ Dizide olmayan en küçük pozitif sayıyı bulunuz. Kodunu yazınız...
 ```
 // dizide olmayan en küçük pozitif sayıyı bulunuz....
 	public static void main(String[] args) {
-		//int a[] = { 1, 3, 4};          		// 2
-		//int a[] = { 11, 13, 14};           		// 1
-		int a[] = { -11,-1,3};          		// 1
-		//int a[] = { -3, -1, 1, 3, 6, 4, 1, 2 };   	// 5
-		System.out.println(solution(a));
-	}
+        int[] arr = {-5,  5, 14 , 1, 3, 12, 2, 11 };
 
-	public static int  solution(int[] a) {
+        int cnt = 0;
+        int flag = 0;
+        int first = 0;
+        while (true) {
 
-		int k = 1, cnt = 0, firstCnt = 0;
-		int control = 0;
-		while (true) {
-			if (a[cnt] < 1 ) {
-				cnt++;
-				firstCnt = cnt;
-			} else if (a[cnt] > 0 && a[cnt] == k) {
-				cnt = firstCnt;
-				k++;
-			} else if (a[cnt] > 0 && a[cnt] != k ){
-				cnt++;
-				if(a.length == cnt)
-					break;
-			}
-		}
-		return k;
-	}
+            if (cnt == arr.length) {
+                break;
+            }
+            if (arr[cnt] < 0) {
+                cnt++;
+                continue;
+            }
+            first = arr[cnt];
+            cnt++;
+            if(flag == 0){
+               flag = first;
+               continue;
+            }
+            if(first < flag ){
+                flag = first;
+            }
+        }
+        System.out.println(" flag " + flag);
+     }
+
 ```
 ## JAVA_CODE_Q_6
 ### REVERSE STRİNG WİTH RECURSİVE FUNCTION
