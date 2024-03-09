@@ -127,7 +127,31 @@ kullanıcı oturumu için nesnenin yeni bir instance’ını alacaksınız.
 Bir application scope, ServletContext’in yaşam döngüsü için bean örneğini oluşturur.
 Bu singleton scope’a benzer ancak aralarında farklılıklar mevcuttur. Bir bean application
 scope değerine sahipken bu bean çoklu servlet tabanlı uygulamalar ile de paylaşılabilirken,
-singleton scope değerine sahip bir bean yalnızca mevcut application context’i içerisinde tanımlıdır.
+singleton scope değerine sahip bir bean yalnızca mevcut application context’i içerisinde
+tanımlıdır.
+```
+
+## Solid prensipleri nelerdir?
+```
+1-Single responsibilty: Bir nesne ya da bir sınıfın tek bir sorumluluğu olmalıdır.
+
+2-Open-closed: Bir sınıf değişime kapalı gelişmeye açık olmalıdır.
+
+3-Liskov's Substitution: Nesneler programın çalışmasında sorun yaratmadan kendi alt örnekleriyle
+  değiştirilebilmelidir.
+
+4-Interface Segregation: Nesneler ihtiyaç duymadıkları metotların interfacelerinden ayrıştırılmalıdır.
+
+5-Dependency Inversion: Yüksek seviyeli sınıflar düşük seviyeli sınıflara bağlı olmamalı,
+  her ikisi de soyut kavramlara bağlı olmalıdır.
+```
+
+## Single Responsibilty nedir?
+```
+Single responsibilty bir nesnenin tek bir amaçla yaratılmasını konu alır. Bağlı olduğu sınıfın içerdiği
+davranışsal özellikler tek bir amaca uygun olmalı başka bir davranış göstermemelidir. Örneğin bir çalışan
+sınıfı içerisinde vergi hesaplama fonskiyonu bulunamaz. Bu single responsibilty prensibine aykırı bir
+kod yazım şeklidir.
 ```
 
 ## Circuat Breaker nedir ?
