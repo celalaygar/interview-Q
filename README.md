@@ -51,6 +51,14 @@ Asenkron yani multithreading bir yapıda threadlerin aynı veri kaynağına eri�
 neden olabilir. Bu ve bunun gibi problemleri önlemek için threadleri güvenli bir şekilde
 tasarlamak ve geliştirmek gerekir. Bu metodolojiye thread safe, iş parçacığı güvenliği denir.
 ```
+## Serilization nedir?
+```
+Bir nesnenin veya bir sınıfın saklanacak forma dönüştürülme işlemidir. Extend edilen
+Serilization sınıfı alt sınıf olan kullanacağımız sınıfın byte'lar halinde streamlere
+yazılabilir böylece bir java objesi veritabanına kaydedilebilir.
+
+Deserilization ise byte haline çevrilen java objesinin eski haline çevrimine denir.
+```
 
 ## Java Thread safe ?
 ```
@@ -197,7 +205,15 @@ veritabanlarındaki geodata, text documents gibi operatorler için kullanılmakt
 - “Full text search” işlerinde kullanılabilir.
 - Geometrik veri türlerini indexlemek için kullanılırlar.
 ```
+## Optimistic Lock Nedir ?
+```
 
+```
+
+## Pessimistic Lock Nedir ?
+```
+
+```
 
 ## Spring IOC Container ?
 ```
