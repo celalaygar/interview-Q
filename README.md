@@ -207,12 +207,18 @@ veritabanlarındaki geodata, text documents gibi operatorler için kullanılmakt
 ```
 ## Optimistic Lock Nedir ?
 ```
-
+Optimistic, yani iyimser eş zamanlılık kontrolünde aynı anda bir kaydın update edilmeyeceği
+varsayılır ve birden fazla session aynı kaydı update etmek için erişilebilir. Eğer aynı kayıt
+birden fazla kişi tarafından update edilirse kayıtlardan biri iptal olur ve kullanıcıya
+iptal olduğuna dair bilgilendirme yapılır.
 ```
 
 ## Pessimistic Lock Nedir ?
 ```
-
+Pessimistic, yani kötümser eş zamanlılık kontrolünde bir kullanıcı bir kaydı değiştirmek
+istediğinde o kayda kilit koyar ve o kaydı başkası değiştiremez. İlk değiştirmeye çalışan
+kişi kaydı değiştirdikten sonra değiştirilen kayıt üzerindeki kilit açılır ve diğer
+değiştirmek isteyenler artık değiştirebilir hale gelir.
 ```
 
 ## Spring IOC Container ?
