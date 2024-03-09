@@ -22,6 +22,15 @@ yüklemesine izin verir. (Yazılan Kodlar) Bu sınıflar, “java.class.path” 
 bir klasörde bulunur.
 ```
 
+## Javada Access modifiers nelerdir? 
+```
+1-Default: Aynı sınıftan, altsınıftan ve aynı package'den erişilebilir. Javada bir access modifier
+tanımlanmazsa default olarak kabul edilir ve bu geçerli olur.
+2-Private: Sadece aynı sınıftan erişilebilir.
+3-Protected: Aynı sınıftan, aynı packageden ve alt sınıflardan erişilebilir.
+4-Public: Her yerden erişilebilir.
+```
+
 ## Java Thread ile VirtuaL Thread arasndaki fark nedir ?
 ```
 https://medium.com/@onurokkyay/java-virtual-thread-nedir-6049151ac2b8
