@@ -126,9 +126,19 @@ singleton scope değerine sahip bir bean yalnızca mevcut application context’
 
 ```
 
-## spring de interceptorler ?
+## Spring Boot Interceptor Nedir?
 ```
+Interceptor, Spring MVC paketinde bulunan bir sınıftır. HTTP isteklerinin öncesi, sonrası
+ve tamamlandıktan sonra yapılması gereken işlemleri bu sınıf aracılığı ile handle edebilmekteyiz.
 
+Gelen isteklerin endpointe ulaşmadan önce işlenmesini sağlamamıza yarayan bir sınıftır.
+Bir servlete benzer ve DispatcherServlet ten sonra bulunmaktadır. HTTP isteklerini kontrol
+etmek için kullanılır. İstek başlamadan önce çağrılır ve HTTP isteği ile ilgili bilgileri
+içeren HttpServletRequest nesnesini ve HTTP isteği ile ilgili yanıtı döndürecek
+HttpServletResponse nesnesini alır.
+
+Ref : 
+https://blog.burakkutbay.com/spring-boot-interceptor-nedir-uygulama-ornegi.html/
 ```
 
 ## PostgreSQL de index türleri ?
