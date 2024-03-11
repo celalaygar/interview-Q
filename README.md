@@ -31,6 +31,31 @@ tanımlanmazsa default olarak kabul edilir ve bu geçerli olur.
 4-Public: Her yerden erişilebilir.
 ```
 
+## Final anahtar kelimesi ne işe yarar?
+```
+Final değişkenler:Değiştirilemez. Static ile beraber Constant olarak kullanılabilir.
+Final class:Extend edilemez
+Final methods: Override edilemez.
+```
+
+## Error ve Exception arasındaki farklar ?
+```
+Error, jvm tarafından runtime'da handle edilmesi mümkün olmayan türden hatalardır.
+Exception ise try catch ile handle edilebilir. Java'da exceptionları 5 farklı keyword ile
+handle edilebilir. -- Try -- Catch -- Finally -- Throw -- Throws
+```
+
+## Checked Exception ve Unchecked Exception arasındaki farklar ?
+```
+RuntimeException ve Error dışında Throwable sınıfını extend eden sınıflar Checked Exceptions
+olarak tanımlanabilir. Checked Exceptionlar compile edilirken alınan hatalardır.
+(IOException, SQLException)
+
+RuntimeException sınıfını extend eden exceptionlar Unchecked Exceptionlar olarak adlandırılır.
+Compile edilirken kontrol edilip gözükmez,
+(ArithmeticException, NullPointerException)
+```
+
 ## Java Thread ile VirtuaL Thread arasndaki fark nedir ?
 ```
 https://medium.com/@onurokkyay/java-virtual-thread-nedir-6049151ac2b8
