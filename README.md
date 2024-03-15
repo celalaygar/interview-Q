@@ -173,10 +173,10 @@ tanımlıdır.
 
 ## Single Responsibilty nedir?
 ```
-Single responsibilty bir nesnenin tek bir amaçla yaratılmasını konu alır. Bağlı olduğu sınıfın içerdiği
-davranışsal özellikler tek bir amaca uygun olmalı başka bir davranış göstermemelidir. Örneğin bir çalışan
-sınıfı içerisinde vergi hesaplama fonskiyonu bulunamaz. Bu single responsibilty prensibine aykırı bir
-kod yazım şeklidir.
+Single responsibilty bir nesnenin tek bir amaçla yaratılmasını konu alır. Bağlı olduğu sınıfın
+içerdiği davranışsal özellikler tek bir amaca uygun olmalı başka bir davranış göstermemelidir.
+Örneğin bir çalışan sınıfı içerisinde vergi hesaplama fonskiyonu bulunamaz. Bu single
+responsibilty prensibine aykırı bir kod yazım şeklidir.
 ```
 
 ## Circuat Breaker nedir ?
