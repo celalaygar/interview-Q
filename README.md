@@ -179,6 +179,35 @@ içerdiği davranışsal özellikler tek bir amaca uygun olmalı başka bir davr
 responsibilty prensibine aykırı bir kod yazım şeklidir.
 ```
 
+## Dependency Injection nedir?
+```
+"Dependency Inversion" prensibinin uygulanmasını içeren bir patterndir.Dependency Injection
+tekniğinde bağımlılık oluşturacak parçalarının ayrılıp, bunların sisteme dışarıdan verilmesi
+(enjekte edilmesi) ile meydana gelir. Temel olarak 3 tür DI vardır. Bunlar;
+- Constructor Injection,
+- Setter Injection,
+- Method Injection) Tüm yöntemler bağımlı olan sınıfları dışarıdan enjekte etmeye dayanır.
+```
+
+## DAO nedir?
+```
+DAO Data Access Object ifadesini: Bu araç geliştiricilere özellikle Java kaynaklı
+veri erişim araçlarıya daha kolay çalışma imkanı sunar.
+Bir yazılım uygulamasında veritabanı veya diğer veri kaynaklarına erişimi sağlayan
+bir tasarım desenidir. DAO ile diğer katmanlar etkilenmeden veritabanı ve
+bilgi bankası değiştirilebilir. 
+```
+
+## @Autowire ve @Qualifier ?
+```
+Bu kombinasyon türü uygulamada birçok farklı türde tekil bean bulunduğunda kullanılır.
+Bu kombinasyon her bir ayrı bean'i farklılaştırır.
+
+@Autowired annotasyonu kullanıldığında Spring, bağımlılığı otomatik olarak enjekte eder.
+Ancak birden fazla aday bean olduğunda, hangi bean’in kullanılması gerektiğini belirtmemiz
+gerekiyor. İşte @Qualifier annotasyonu bu seçimi yapmamızı kolaylaştırır.
+```
+
 ## Circuat Breaker nedir ?
 ```
 
@@ -197,6 +226,10 @@ HttpServletResponse nesnesini alır.
 
 Ref : 
 https://blog.burakkutbay.com/spring-boot-interceptor-nedir-uygulama-ornegi.html/
+
+Spring MVC'de interceptor'lar işlemeden önce, işleme sırasında ve işleme sonrasında
+bir istemcinin talebini yerine getirmek için kullanılır. Kodda istenmeyen herhangi bir
+tekrardan sakınmak için muhteşem bir araçtır.
 ```
 
 ## PostgreSQL de index türleri ?
