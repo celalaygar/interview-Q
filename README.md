@@ -31,6 +31,45 @@ tanımlanmazsa default olarak kabul edilir ve bu geçerli olur.
 4-Public: Her yerden erişilebilir.
 ```
 
+## ArrayList ile Array arasındaki fark nedir ? 
+```
+1- Boyut: Array'ler, boyutları sabit olan veri yapılarıdır, yani tanımlandıkları boyutta kalırlar.
+ArrayList'ler ise boyutları dinamik olarak değiştirilebilen veri yapılarıdır, yani öğe sayısı
+arttıkça boyutları da otomatik olarak artar.
+
+2- Tür: Array'ler, tek bir türdeki verileri depolamak için kullanılır. ArrayList'ler ise farklı
+türlerdeki verileri depolamak için kullanılabilir.
+
+3- İşlevsellik: Array'ler, basit bir veri yapısıdır ve sınırlı işlevselliğe sahiptirler.
+ArrayList'ler ise daha gelişmiş işlevselliklere sahiptir. Örneğin, ArrayList'lerde verileri
+ekleme, silme, sıralama gibi işlemler kolayca yapılabilir.
+
+4- İşlem hızı: Array'ler, verileri doğrudan belleklerinde tuttuklarından hızlı işleme imkanı
+sağlarlar. ArrayList'ler ise verileri heap bellekte tuttuklarından işlem hızı, Array'lere göre
+daha yavaş olabilir.
+
+5- Tip güvenliği: Array'ler, tür güvenliğine sahiptir. Yani, tanımlanan tür haricinde veri
+eklenemez. ArrayList'ler ise tür güvenliği sağlamak için cinsiyetli yapılar ile çalışırlar.
+
+6-Null değerler: Array'ler null değerler içerebilirken, ArrayList'ler null değerleri kabul etmezler.
+```
+
+## ArrayList ile LinkedList arasındaki fark nedir
+```
+1- Dizilerde ulaşmak istediğimiz elemana indisini girerek ulaşırız. Linked List’lerde ise
+ulaşmak istediğimiz elemanlara point eden pointerlar vasıtasıyla ulaşırız.
+
+2- Dizilerde eleman ekleme, silme gibi işlemler Linked List’lere göre performans açısından
+daha maliyetlidir. Örneğin; 1000 elemanlı bir dizimiz tanımlı olsun. Bu dizinin 500.cü elemanını
+silmek istediğimizde, bu elemandan sonra gelen her eleman bir sıra geri kaydırılacak bu da
+performans kaybına yol açacaktır. Linked List’te ise bu işlem sadece basit pointer
+operasyonlarıyla gerçekleştirilir ve kaydırma işlemlerine gerek kalmaz. Bu sayede
+performanstan kazanç sağlanmaktadır.
+
+3- Linked List dinamiktir. Dizi tanımlaması yapılırken en başında veri boyutunu belirtmemiz
+gerekirken, Linked List’lerde ihtiyaç duyduğumuzda boyutu artırabilir, silme işlemlerimizden
+sonra Linked List boyutumuzu küçültebiliriz.
+```
 ## Final anahtar kelimesi ne işe yarar?
 ```
 Final değişkenler:Değiştirilemez. Static ile beraber Constant olarak kullanılabilir.
