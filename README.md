@@ -22,7 +22,7 @@ yüklemesine izin verir. (Yazılan Kodlar) Bu sınıflar, “java.class.path” 
 bir klasörde bulunur.
 ```
 
-## Javada Access modifiers nelerdir? 
+## Javada Access modifiers nelerdir ? 
 ```
 1-Default: Aynı sınıftan, altsınıftan ve aynı package'den erişilebilir. Javada bir access modifier
 tanımlanmazsa default olarak kabul edilir ve bu geçerli olur.
@@ -54,7 +54,7 @@ eklenemez. ArrayList'ler ise tür güvenliği sağlamak için cinsiyetli yapıla
 6-Null değerler: Array'ler null değerler içerebilirken, ArrayList'ler null değerleri kabul etmezler.
 ```
 
-## ArrayList ile LinkedList arasındaki fark nedir
+## ArrayList ile LinkedList arasındaki fark nedir ? 
 ```
 1- Dizilerde ulaşmak istediğimiz elemana indisini girerek ulaşırız. Linked List’lerde ise
 ulaşmak istediğimiz elemanlara point eden pointerlar vasıtasıyla ulaşırız.
