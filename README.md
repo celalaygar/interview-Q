@@ -135,7 +135,7 @@ Deserilization ise byte haline çevrilen java objesinin eski haline çevrimine d
 
 ## Java Thread safe ?
 ```
-
+https://medium.com/@eda.dlkc/thread-safe-nedir-fe52d21238fa
 ```
 
 ## Java ConcurrentHashMap ?
