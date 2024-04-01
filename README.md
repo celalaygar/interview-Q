@@ -252,7 +252,9 @@ gerekiyor. İşte @Qualifier annotasyonu bu seçimi yapmamızı kolaylaştırır
 
 ## Circuat Breaker nedir ?
 ```
-
+Circuit Breaker, bir servisin aşırı yük altında olduğunu veya düzgün çalışmadığını tespit ettiğinde,
+otomatik olarak o servise gelen istekleri keser. Bu sayede sistem,
+tek bir servisin başarısızlığından dolayı tamamen çökme durumuna düşmekten korunmuş olur.
 ```
 
 ## Spring Boot Interceptor Nedir?
