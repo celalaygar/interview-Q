@@ -450,3 +450,7 @@ https://medium.com/@avniozunlu/domain-driven-design-ddd-151c90472914
 
 ```
 
+## Bir final class da içindekı liste final ise değişiklik yapılabilir mi.
+```
+
+```
