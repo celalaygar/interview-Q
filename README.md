@@ -258,12 +258,15 @@ tek bir servisin başarısızlığından dolayı tamamen çökme durumuna düşm
 ```
 ##### spring hystrix ?
 ```
-
+https://medium.com/@SametAkgul/circuit-breaker-pattern-e5311f670c2e
+```
+```
+https://medium.com/trendyol-tech/nedir-bu-circuit-breaker-pattern-2d3d34948767
 ```
 
 ##### spring resilience4j?
 ```
-
+https://umitsamimi.medium.com/circuit-breaker-resilience4j-7e1082610c52
 ```
 
 
