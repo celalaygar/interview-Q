@@ -54,6 +54,44 @@ eklenemez. ArrayList'ler ise tür güvenliği sağlamak için cinsiyetli yapıla
 6-Null değerler: Array'ler null değerler içerebilirken, ArrayList'ler null değerleri kabul etmezler.
 ```
 
+## List, Set, Hashmap  acıklayınız ?
+```
+Set Nesnesi: Kendisine verilen elemanların her birinde sadece bir tanesini tutar. Kopya ya da
+tekrarlanan elemanları barındırmaz.
+
+List Nesnesi: Kendisine verilen elemanları sıralı şekilde tutar. Tekrarlana elemanları barındırabilir.
+
+Map Nesnesi: Her biri birbirinden farklı anahtarlar ile eşleştirilen nesnelerden oluşur.
+```
+
+## Set içerisinde bir student nesnesi var nesne id ve name barındırıyor. id leri aynı name leri farklı olan objeleri Set'e yerleştirirsek ne olur acıklayınız ?
+```
+her yeni new ile oluşturulan class ların hash code ları farklı olduğundan dolayı
+Set listesine yeni bir farklı obje olarak eklenir. Örnek kod ve çıktısı aşşağıdadır.
+```
+```
+public static void main(String[] args) {
+    Set<Student> set = new HashSet<Student>();
+    set.add(new Student(1, "cello"));
+    set.add(new Student(2, "mello"));
+    set.stream().forEach(System.out::println);
+}
+
+class Student{
+    private int id;
+    private String name;
+
+    public Student(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+}
+```
+Output
+```
+main6.Student@7a81197d
+main6.Student@5ca881b5
+```
 ## ArrayList ile LinkedList arasındaki fark nedir ? 
 ```
 1- Dizilerde ulaşmak istediğimiz elemana indisini girerek ulaşırız. Linked List’lerde ise
