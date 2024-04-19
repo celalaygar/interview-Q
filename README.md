@@ -403,19 +403,37 @@ Inversion Of Control adı verilmektedir.
 - GRPC
 ```
 
-## CQRC nedir?
+## Transaction İsolation ? 
+```
+https://www.buraksenyurt.com/post/Transaction-larda-Izolasyon-Seviyeleri-(Isolation-Level)-1-bsenyurt-com-dan
+```
+```
+https://www.buraksenyurt.com/post/Transaction-larda-Izolasyon-Seviyeleri-2-(IsolationLevel-Numaralandc4b1rc4b1cc4b1sc4b1)-bsenyurt-com-dan
 ```
 
+## Oracle Explain Plan Kullanımı ? 
+```
+https://medium.com/yapi-kredi-teknoloji/oracle-explain-plan-kullan%C4%B1m%C4%B1-a0b5b746018e
+```
+
+## 3. part bir servise istek attığında hata alırsan yapılan işlemleri nasıl geri alırsın ? 
+```
+saga pattern ile yapılabilir. Saga pattern ile konuya özel açıklama yapılması iyi olur.
+```
+
+## CQRC nedir?
+```
+https://sefikcankanber.medium.com/cqrs-command-query-responsibility-segregation-nedir-16b196376389
 ```
 
 ## Apache Kafka ve Rabbit MQ arasındaki farklar nelerdir ?
 ```
-
+https://aws.amazon.com/tr/compare/the-difference-between-rabbitmq-and-kafka/
 ```
 
 ## Saga Pattern nedir ?
 ```
-
+https://sefikcankanber.medium.com/saga-pattern-nedir-e4a447bef361
 ```
 
 ## Domain Driven Design (DDD) ?
