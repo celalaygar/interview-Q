@@ -256,6 +256,16 @@ Circuit Breaker, bir servisin aşırı yük altında olduğunu veya düzgün ça
 otomatik olarak o servise gelen istekleri keser. Bu sayede sistem,
 tek bir servisin başarısızlığından dolayı tamamen çökme durumuna düşmekten korunmuş olur.
 ```
+##### spring hystrix ?
+```
+
+```
+
+##### spring resilience4j?
+```
+
+```
+
 
 ## Spring Boot Interceptor Nedir?
 ```
@@ -381,6 +391,13 @@ ve bizim kodumuzu çalıştırmak için framework gerekli kaynakları ve çalı�
 oluşturup, yönetmektedir. Yazdığımız kod bloğu çalışacağı zaman, framework bizim kodumuzu
 çağırır ve çalıştırır daha sonra kontrol yeniden framework’e geçmesi olayının tümüne
 Inversion Of Control adı verilmektedir.
+```
+
+## Microservices ler arası iletişim kurma yöntemleri nelerdir?
+```
+- RestTemplate
+- Feign Client
+- GRPC
 ```
 
 ## CQRC nedir?
