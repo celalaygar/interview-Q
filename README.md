@@ -2,6 +2,8 @@
 
 +1 +2 +3 Yıl tecrübeliler için Java mülakat soruları
 
+# JAVA - SPRING Mulakat soruları
+
 ## Java Class Loader nedir ?
 ```
 Java’da ClassLoader, Java programlarındaki sınıf dosyalarını yüklemek için kullanılan bir sınıftır.
@@ -62,6 +64,16 @@ tekrarlanan elemanları barındırmaz.
 List Nesnesi: Kendisine verilen elemanları sıralı şekilde tutar. Tekrarlana elemanları barındırabilir.
 
 Map Nesnesi: Her biri birbirinden farklı anahtarlar ile eşleştirilen nesnelerden oluşur.
+```
+
+## Java Spring bootda Aspect ile ilgili neler yaptın, ne yapılabilir.
+```
+
+```
+
+## Bir final class da içindekı liste final ise değişiklik yapılabilir mi.
+```
+
 ```
 
 ## Set içerisinde bir student nesnesi var nesne id ve name barındırıyor. id leri aynı name leri farklı olan objeleri Set'e yerleştirirsek ne olur acıklayınız ?
@@ -327,6 +339,114 @@ bir istemcinin talebini yerine getirmek için kullanılır. Kodda istenmeyen her
 tekrardan sakınmak için muhteşem bir araçtır.
 ```
 
+## Spring IOC Container ?
+```
+Spring IoC Container, Spring Framework'ün çekirdeğidir. Bu konteyner, nesneleri oluşturur,
+nesneleri birbirine bağlar, bağımlılıklarını yapılandırır ve tüm yaşam döngüsünü yönetir.
+
+Inversion of control bir yazılım tasarım prensibidir. Ioc ile Uygulama içerisindeki obje
+instance’larının yönetimi sağlanarak, bağımlılıklarını en aza indirgemek amaçlanmaktadır.
+Projeniz deki bağımlılıkların oluşturulmasını ve yönetilmesini geliştiricinin yerine,
+framework’ün yapması olarak da açıklanabilir.
+
+Framework‘in üzerinde çalıştığımız da görülüyor ki; frameworkler birçok işi kendisi yapmakta
+ve bizim kodumuzu çalıştırmak için framework gerekli kaynakları ve çalışması gereken metotları
+oluşturup, yönetmektedir. Yazdığımız kod bloğu çalışacağı zaman, framework bizim kodumuzu
+çağırır ve çalıştırır daha sonra kontrol yeniden framework’e geçmesi olayının tümüne
+Inversion Of Control adı verilmektedir.
+```
+
+## Microservices ler arası iletişim kurma yöntemleri nelerdir?
+```
+- RestTemplate
+- Feign Client
+- GRPC
+```
+
+
+# HIBERNATE Mulakat soruları
+
+Ref : https://www.turkninja.com/2024/02/hibernate-ileri-seviye-interview.html
+
+## Hibernate FetchType EAGER - LAZY Farkları ?
+```
+#FetchType : Aralarında ilişki bulunan entitylerden bir tarafı yüklerken diğer tarafın
+yüklenme stratejisini belirlememize olanak sağlar.
+
+EAGER kullanırsak nesneyi veritabanından çekerken EAGER olan tüm nesneleri de
+beraberinde çekeriz.
+
+LAZY kullanırsak, ihtiyaç duyduğumuzda ilgili veriler çekilecektir.
+```
+
+## Hibernate'de Lazy Loading nedir ve nasıl çalışır ?
+```
+Lazy Loading, bir nesnenin ilişkili nesnelerinin ihtiyaç duyulduğunda, yani
+erişildiğinde yüklenmesi yöntemidir. Bu, gereksiz veri yüklemeyi önlemek ve
+performansı artırmak için kullanılır. Hibernate, proxy nesneleri veya bytecode
+enhancement kullanarak lazy loading'i gerçekleştirir.
+```
+
+## Hibernate'de @Entity ve @Table annotasyonlarının farkı nedir?
+```
+@Entity annotasyonu, bir sınıfın bir veritabanı tablosuna karşılık geldiğini
+Hibernate'e belirtir.
+
+@Table annotasyonu ise, sınıfın eşleştirildiği tablonun adını ve isteğe bağlı olarak
+schema adını belirlemek için kullanılır.
+
+@Entity zorunludur, ancak @Table kullanımı isteğe bağlıdır; eğer kullanılmazsa,
+sınıf adı tablo adı olarak varsayılır.
+```
+
+## Hibernate'de Optimistic ve Pessimistic Kilitlenme nedir?
+```
+Optimistic Kilitlenme, veri çakışmalarını önlemek için sürüm numarası veya zaman damgası
+kullanır. Veri güncellenmeden önce, sürüm numarası veya zaman damgasının değişip
+değişmediği kontrol edilir.
+
+Pessimistic Kilitlenme ise, bir kaynağa erişim sırasında veritabanı seviyesinde kilit
+kullanır, böylece diğer işlemler o kaynağı değiştiremez veya okuyamaz.
+
+Optimistic kilitlenme genellikle okuma yoğun uygulamalarda tercih edilirken, Pessimistic
+kilitlenme yazma yoğun işlemlerde veya yüksek çakışma riski olan durumlarda kullanılır.
+```
+
+## Hibernate'de cascade türleri nelerdir ve nasıl kullanılır ?
+```
+Hibernate'de cascade türleri, bir nesne üzerinde yapılan işlemlerin ilişkili nesnelere
+nasıl uygulanacağını belirler.
+Ana cascade türleri şunlardır: ALL, PERSIST, MERGE, REMOVE, REFRESH, DETACH.
+
+Örneğin,
+bir Parent nesnesi Child nesneleri ile bir ilişki içindeyse ve Parent nesnesi
+kaydedildiğinde (PERSIST) veya güncellendiğinde (MERGE) Child nesnelerinin de
+otomatik olarak kaydedilmesi veya güncellenmesi isteniyorsa, ilgili cascade türü
+ilişkide belirtilir.
+```
+
+## Hibernate Query Plan Cache nedir ve performans üzerindeki etkisi nedir?
+```
+Hibernate Query Plan Cache, sorgu planlarını önbelleklemek için kullanılır.
+Bu, aynı sorgunun tekrar tekrar çalıştırılması durumunda, sorgu derleme süresini
+azaltarak performansı artırır. Önbellek, sorgu metni ve bağlamı (örneğin, parametre türleri)
+bazında sorgu planlarını saklar. Bu özellik, özellikle karmaşık sorguların ve
+sık çalıştırılan sorguların olduğu uygulamalarda önemli performans iyileştirmeleri
+sağlayabilir.
+```
+
+## Hibernate'de N+1 sorgu problemi nedir ve nasıl çözülür?
+```
+N+1 sorgu problemi, bir entity ve onun ilişkili nesnelerini yüklerken ortaya çıkan
+bir performans sorunudur. Örneğin, bir Parent entity'si ile ilişkili çok sayıda
+Child entity'sini yüklerken, ilk olarak Parent entity'si için bir sorgu çalıştırılır
+ve ardından her bir Child için ayrı ayrı sorgular çalıştırılır. Bu, toplamda
+1 (parent için) + N (N child için) sorgu anlamına gelir ve özellikle N'nin büyük olduğu
+durumlarda ciddi bir performans düşüklüğüne yol açabilir.
+```
+
+# DATABASE Mulakat soruları
+
 ## PostgreSQL de index türleri ?
 https://gokhana.dev/postgresql-index-tipleri-ve-index-secimi/
 ##### BTREE Index
@@ -417,30 +537,6 @@ kişi kaydı değiştirdikten sonra değiştirilen kayıt üzerindeki kilit aç�
 değiştirmek isteyenler artık değiştirebilir hale gelir.
 ```
 
-## Spring IOC Container ?
-```
-Spring IoC Container, Spring Framework'ün çekirdeğidir. Bu konteyner, nesneleri oluşturur,
-nesneleri birbirine bağlar, bağımlılıklarını yapılandırır ve tüm yaşam döngüsünü yönetir.
-
-Inversion of control bir yazılım tasarım prensibidir. Ioc ile Uygulama içerisindeki obje
-instance’larının yönetimi sağlanarak, bağımlılıklarını en aza indirgemek amaçlanmaktadır.
-Projeniz deki bağımlılıkların oluşturulmasını ve yönetilmesini geliştiricinin yerine,
-framework’ün yapması olarak da açıklanabilir.
-
-Framework‘in üzerinde çalıştığımız da görülüyor ki; frameworkler birçok işi kendisi yapmakta
-ve bizim kodumuzu çalıştırmak için framework gerekli kaynakları ve çalışması gereken metotları
-oluşturup, yönetmektedir. Yazdığımız kod bloğu çalışacağı zaman, framework bizim kodumuzu
-çağırır ve çalıştırır daha sonra kontrol yeniden framework’e geçmesi olayının tümüne
-Inversion Of Control adı verilmektedir.
-```
-
-## Microservices ler arası iletişim kurma yöntemleri nelerdir?
-```
-- RestTemplate
-- Feign Client
-- GRPC
-```
-
 ## Transaction İsolation ? 
 ```
 https://www.buraksenyurt.com/post/Transaction-larda-Izolasyon-Seviyeleri-(Isolation-Level)-1-bsenyurt-com-dan
@@ -481,14 +577,4 @@ https://medium.com/@avniozunlu/domain-driven-design-ddd-151c90472914
 ## Domain Driven Design Nedir?
 ```
 https://medium.com/@avniozunlu/domain-driven-design-ddd-151c90472914
-```
-
-## Java Spring bootda Aspect ile ilgili neler yaptın, ne yapılabilir.
-```
-
-```
-
-## Bir final class da içindekı liste final ise değişiklik yapılabilir mi.
-```
-
 ```
