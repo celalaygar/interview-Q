@@ -191,6 +191,15 @@ https://medium.com/@eda.dlkc/thread-safe-nedir-fe52d21238fa
 https://www.gencayyildiz.com/blog/thread-safe-concurrentqueue-concurrentdictionary-concurrentbag-concurrentstack-ve-blockingcollection-koleksiyonlari-ve-kullanim-durumlari/
 ```
 
+## JPA Nedir ?
+```
+JPA, Java objeleri ve ilişkisel (relational) database arasında bilgi aktarımı için kullanılan
+bir standarttır. JPA bu ikisi arasında bir köprü görevi görür. JPA kullanabilmek için projeye
+implemente edilmesi gerekir ve bu yüzden Java dilindeki Hibernate, TopLink gibi çeşitli ORM
+araçları bilgiler konusunda bir devamlılık sağlamak için JPA kullanır. JPA aracılığıyla farklı
+ORM araçları ufak birkaç ayarlama dışında yazılan kod değiştirilmeden kullanılabilir.
+```
+
 ## Java ConcurrentHashMap ?
 ```
 https://medium.com/@mmuratakbiyik/concurrenthashmap-detaylar%C4%B1-ve-temel-kullan%C4%B1m%C4%B1-5bb415d3bcf2
