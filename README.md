@@ -234,10 +234,10 @@ kullanıp çalışacaktır.
 ```
 ##### request Scope
 ```
-Request bean’i HTTP isteği geldiğinde oluşturulur. örneğin, bir “ /products” API’niz var, şimdi
-controller bu isteği aldığında ve service methodunu çağırdığında, Request Scope ile bir
-Bean’iniz olacak ve bu API isteği yanıtı geri gönderene kadar her zaman nesnenin aynı
-instance’ını alırsınız, ancak yeni bir request geldiğinde, yeni bir instance gönderecek.
+Request bean’i HTTP isteği geldiğinde oluşturulur. örneğin, bir “ /products” API’niz var, şimdi controller
+bu isteği aldığında ve service methodunu çağırdığında, Request Scope ile bir Bean’iniz olacak ve bu API
+isteği yanıtı geri gönderene kadar her zaman nesnenin aynı instance’ını alırsınız, ancak yeni bir request
+geldiğinde, yeni bir instance gönderecek.
 ```
 ##### session Scope
 ```
