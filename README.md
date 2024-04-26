@@ -441,10 +441,10 @@ Bu özellik, özellikle karmaşık sorguların ve sık çalıştırılan sorgula
 ## Hibernate'de N+1 sorgu problemi nedir ve nasıl çözülür?
 ```
 N+1 sorgu problemi, bir entity ve onun ilişkili nesnelerini yüklerken ortaya çıkan bir performans
-sorunudur. Örneğin, bir Parent entity'si ile ilişkili çok sayıda Child entity'sini yüklerken,
-ilk olarak Parent entity'si için bir sorgu çalıştırılır ve ardından her bir Child için ayrı ayrı
-sorgular çalıştırılır. Bu, toplamda 1 (parent için) + N (N child için) sorgu anlamına gelir ve
-özellikle N'nin büyük olduğu durumlarda ciddi bir performans düşüklüğüne yol açabilir.
+sorunudur. Örneğin, bir Parent entity'si ile ilişkili çok sayıda Child entity'sini yüklerken, ilk
+olarak Parent entity'si için bir sorgu çalıştırılır ve ardından her bir Child için ayrı ayrı sorgular
+çalıştırılır. Bu, toplamda 1 (parent için) + N (N child için) sorgu anlamına gelir ve özellikle N'nin
+büyük olduğu durumlarda ciddi bir performans düşüklüğüne yol açabilir.
 ```
 
 # DATABASE Mulakat soruları
