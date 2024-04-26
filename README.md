@@ -333,11 +333,10 @@ https://umitsamimi.medium.com/circuit-breaker-resilience4j-7e1082610c52
 Interceptor, Spring MVC paketinde bulunan bir sınıftır. HTTP isteklerinin öncesi, sonrası ve
 tamamlandıktan sonra yapılması gereken işlemleri bu sınıf aracılığı ile handle edebilmekteyiz.
 
-Gelen isteklerin endpointe ulaşmadan önce işlenmesini sağlamamıza yarayan bir sınıftır.
-Bir servlete benzer ve DispatcherServlet ten sonra bulunmaktadır. HTTP isteklerini kontrol
-etmek için kullanılır. İstek başlamadan önce çağrılır ve HTTP isteği ile ilgili bilgileri
-içeren HttpServletRequest nesnesini ve HTTP isteği ile ilgili yanıtı döndürecek
-HttpServletResponse nesnesini alır.
+Gelen isteklerin endpointe ulaşmadan önce işlenmesini sağlamamıza yarayan bir sınıftır. Bir servlete
+benzer ve DispatcherServlet ten sonra bulunmaktadır. HTTP isteklerini kontrol etmek için kullanılır.
+İstek başlamadan önce çağrılır ve HTTP isteği ile ilgili bilgileri içeren HttpServletRequest
+nesnesini ve HTTP isteği ile ilgili yanıtı döndürecek HttpServletResponse nesnesini alır.
 
 Ref : 
 https://blog.burakkutbay.com/spring-boot-interceptor-nedir-uygulama-ornegi.html/
@@ -349,19 +348,18 @@ sakınmak için muhteşem bir araçtır.
 
 ## Spring IOC Container ?
 ```
-Spring IoC Container, Spring Framework'ün çekirdeğidir. Bu konteyner, nesneleri oluşturur,
-nesneleri birbirine bağlar, bağımlılıklarını yapılandırır ve tüm yaşam döngüsünü yönetir.
+Spring IoC Container, Spring Framework'ün çekirdeğidir. Bu konteyner, nesneleri oluşturur, nesneleri
+birbirine bağlar, bağımlılıklarını yapılandırır ve tüm yaşam döngüsünü yönetir.
 
 Inversion of control bir yazılım tasarım prensibidir. Ioc ile Uygulama içerisindeki obje
-instance’larının yönetimi sağlanarak, bağımlılıklarını en aza indirgemek amaçlanmaktadır.
-Projeniz deki bağımlılıkların oluşturulmasını ve yönetilmesini geliştiricinin yerine,
-framework’ün yapması olarak da açıklanabilir.
+instance’larının yönetimi sağlanarak, bağımlılıklarını en aza indirgemek amaçlanmaktadır. Projenizdeki
+bağımlılıkların oluşturulmasını ve yönetilmesini geliştiricinin yerine, framework’ün yapması olarak da
+açıklanabilir.
 
-Framework‘in üzerinde çalıştığımız da görülüyor ki; frameworkler birçok işi kendisi yapmakta
-ve bizim kodumuzu çalıştırmak için framework gerekli kaynakları ve çalışması gereken metotları
-oluşturup, yönetmektedir. Yazdığımız kod bloğu çalışacağı zaman, framework bizim kodumuzu
-çağırır ve çalıştırır daha sonra kontrol yeniden framework’e geçmesi olayının tümüne
-Inversion Of Control adı verilmektedir.
+Framework‘in üzerinde çalıştığımız da görülüyor ki; frameworkler birçok işi kendisi yapmakta ve bizim
+kodumuzu çalıştırmak için framework gerekli kaynakları ve çalışması gereken metotları oluşturup,
+yönetmektedir. Yazdığımız kod bloğu çalışacağı zaman, framework bizim kodumuzu çağırır ve çalıştırır
+daha sonra kontrol yeniden framework’e geçmesi olayının tümüne Inversion Of Control adı verilmektedir.
 ```
 
 ## Microservices ler arası iletişim kurma yöntemleri nelerdir?
@@ -473,9 +471,9 @@ Bir index yaratıldığında tipi verilmez ise default olarak btree oluşturulma
 ```
 ##### Hash Index
 ```
-Hash daha çok eşitlik anında kullanılabilen bir index türüdür. Oluşum hızı index yaratma süresi açısından
-Btree’ye göre çok daha fazladır. Ancak kapladığı alan bakımından Btree’ye göre çok  daha az bir yer kaplar.
-Çünkü Btree ağaç yapısında tutulurken, hash flat bir yapıda tutulmaktadır.
+Hash daha çok eşitlik anında kullanılabilen bir index türüdür. Oluşum hızı index yaratma süresi
+açısından Btree’ye göre çok daha fazladır. Ancak kapladığı alan bakımından Btree’ye göre çok
+daha az bir yer kaplar. Çünkü Btree ağaç yapısında tutulurken, hash flat bir yapıda tutulmaktadır.
 
 Hash index, kullanım şekli açısından genellikle B-tree ile karşılaştırılmaktadır.
 
@@ -495,8 +493,8 @@ indexler tutulurken bloklar içerisindeki en büyük ve en küçük değerler ba
 aksine blok içersinde sıralanmış tüm değerler değil, sadece min ve max değerler tutulur. Eski
 adıyla min-max indextir.
 
-B-tree yaratıldığında 8Kb’lık veri setlerinin tümünü saklayacak şekilde bir indexleme yapar.
-Ancak BRIN ındex 8Kb’lık bloklardan sadece minumum ve maximum değerleri alarak index halinde saklar.
+B-tree yaratıldığında 8Kb’lık veri setlerinin tümünü saklayacak şekilde bir indexleme yapar. Ancak
+BRIN ındex 8Kb’lık bloklardan sadece minumum ve maximum değerleri alarak index halinde saklar.
 
 - Btree ile karşılaştırıldığında tutalan veri boyutuna bakarsak çok çok daha az
   olduğunu görebiliriz.
