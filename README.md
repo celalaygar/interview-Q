@@ -288,8 +288,8 @@ Tüm yöntemler bağımlı olan sınıfları dışarıdan enjekte etmeye dayanı
 
 ## DAO nedir?
 ```
-DAO Data Access Object ifadesini: Bu araç geliştiricilere özellikle Java kaynaklı veri erişim araçlarıya
-daha kolay çalışma imkanı sunar. Bir yazılım uygulamasında veritabanı veya diğer veri kaynaklarına
+DAO Data Access Object ifadesini: Bu araç geliştiricilere özellikle Java kaynaklı veri erişim araçları
+ile daha kolay çalışma imkanı sunar. Bir yazılım uygulamasında veritabanı veya diğer veri kaynaklarına
 erişimi sağlayan bir tasarım desenidir. DAO ile diğer katmanlar etkilenmeden veritabanı ve bilgi bankası
 değiştirilebilir. 
 ```
@@ -300,8 +300,8 @@ Bu kombinasyon türü uygulamada birçok farklı türde tekil bean bulunduğunda
 her bir ayrı bean'i farklılaştırır.
 
 @Autowired annotasyonu kullanıldığında Spring, bağımlılığı otomatik olarak enjekte eder. Ancak birden
-fazla aday bean olduğunda, hangi bean’in kullanılması gerektiğini belirtmemiz gerekiyor. İşte @Qualifier
-annotasyonu bu seçimi yapmamızı kolaylaştırır.
+fazla aday bean olduğunda, hangi bean’in kullanılması gerektiğini belirtmemiz gerekiyor. İşte
+@Qualifier annotasyonu bu seçimi yapmamızı kolaylaştırır.
 ```
 
 ## Circuat Breaker nedir ?
@@ -347,9 +347,10 @@ muhteşem bir araçtır.
 Spring IoC Container, Spring Framework'ün çekirdeğidir. Bu konteyner, nesneleri oluşturur, nesneleri
 birbirine bağlar, bağımlılıklarını yapılandırır ve tüm yaşam döngüsünü yönetir.
 
-Inversion of control bir yazılım tasarım prensibidir. Ioc ile Uygulama içerisindeki obje instance’larının
-yönetimi sağlanarak, bağımlılıklarını en aza indirgemek amaçlanmaktadır. Projenizdeki bağımlılıkların
-oluşturulmasını ve yönetilmesini geliştiricinin yerine, framework’ün yapması olarak daaçıklanabilir.
+Inversion of control bir yazılım tasarım prensibidir. Ioc ile Uygulama içerisindeki obje
+instance’larının yönetimi sağlanarak, bağımlılıklarını en aza indirgemek amaçlanmaktadır. Projenizdeki
+bağımlılıkların oluşturulmasını ve yönetilmesini geliştiricinin yerine, framework’ün yapması olarak da
+açıklanır.
 
 Framework‘in üzerinde çalıştığımız da görülüyor ki; frameworkler birçok işi kendisi yapmakta ve bizim
 kodumuzu çalıştırmak için framework gerekli kaynakları ve çalışması gereken metotları oluşturup,
