@@ -234,19 +234,19 @@ kullanıp çalışacaktır.
 ```
 ##### request Scope
 ```
-Request bean’i HTTP isteği geldiğinde oluşturulur. örneğin, bir “ /products” API’niz var, şimdi controller
-bu isteği aldığında ve service methodunu çağırdığında, Request Scope ile bir Bean’iniz olacak ve bu API
-isteği yanıtı geri gönderene kadar her zaman nesnenin aynı instance’ını alırsınız, ancak yeni bir request
-geldiğinde, yeni bir instance gönderecek.
+Request bean’i HTTP isteği geldiğinde oluşturulur. örneğin, bir “ /products” API’niz var, şimdi
+controller bu isteği aldığında ve service methodunu çağırdığında, Request Scope ile bir Bean’iniz
+olacak ve bu API isteği yanıtı geri gönderene kadar her zaman nesnenin aynı instance’ını alırsınız,
+ancak yeni bir request geldiğinde, yeni bir instance gönderecek.
 ```
 ##### session Scope
 ```
 Session Scope Web Uygulamalarında HTTP isteği geldiğinde oluşturulur. Mesela Spring boot uygulamanız
 kullanıcı sessionlarını sürdürdüğünde, bu scope yardımcı olabilir.
 
-Session Scope kullandığımızda, tüm Session için (kullanıcı düzeyindeki oturumda) her zaman
-nesnenin aynı instance’ını return eder. Ancak kullanıcı oturumu kapandığında, yeni bir
-kullanıcı oturumu için nesnenin yeni bir instance’ını alacaksınız.
+Session Scope kullandığımızda, tüm Session için (kullanıcı düzeyindeki oturumda) her zaman nesnenin
+aynı instance’ını return eder. Ancak kullanıcı oturumu kapandığında, yeni bir kullanıcı oturumu için
+nesnenin yeni bir instance’ını alacaksınız.
 ```
 ##### application Scope
 ```
@@ -259,14 +259,10 @@ bir bean yalnızca mevcut application context’i içerisinde tanımlıdır.
 ## Solid prensipleri nelerdir?
 ```
 1-Single responsibilty: Bir nesne ya da bir sınıfın tek bir sorumluluğu olmalıdır.
-
 2-Open-closed: Bir sınıf değişime kapalı gelişmeye açık olmalıdır.
-
 3-Liskov's Substitution: Nesneler programın çalışmasında sorun yaratmadan kendi alt örnekleriyle
   değiştirilebilmelidir.
-
 4-Interface Segregation: Nesneler ihtiyaç duymadıkları metotların interfacelerinden ayrıştırılmalıdır.
-
 5-Dependency Inversion: Yüksek seviyeli sınıflar düşük seviyeli sınıflara bağlı olmamalı,
   her ikisi de soyut kavramlara bağlı olmalıdır.
 ```
@@ -275,15 +271,15 @@ bir bean yalnızca mevcut application context’i içerisinde tanımlıdır.
 ```
 Single responsibilty bir nesnenin tek bir amaçla yaratılmasını konu alır. Bağlı olduğu sınıfın
 içerdiği davranışsal özellikler tek bir amaca uygun olmalı başka bir davranış göstermemelidir.
-Örneğin bir çalışan sınıfı içerisinde vergi hesaplama fonskiyonu bulunamaz. Bu single
-responsibilty prensibine aykırı bir kod yazım şeklidir.
+Örneğin bir çalışan sınıfı içerisinde vergi hesaplama fonskiyonu bulunamaz. Bu single responsibilty
+prensibine aykırı bir kod yazım şeklidir.
 ```
 
 ## Dependency Injection nedir?
 ```
-"Dependency Inversion" prensibinin uygulanmasını içeren bir patterndir.Dependency Injection
-tekniğinde bağımlılık oluşturacak parçalarının ayrılıp, bunların sisteme dışarıdan verilmesi
-(enjekte edilmesi) ile meydana gelir. Temel olarak 3 tür DI vardır. Bunlar;
+"Dependency Inversion" prensibinin uygulanmasını içeren bir patterndir.Dependency Injection tekniğinde
+bağımlılık oluşturacak parçalarının ayrılıp, bunların sisteme dışarıdan verilmesi (enjekte edilmesi)
+ile meydana gelir. Temel olarak 3 tür DI vardır. Bunlar;
 - Constructor Injection,
 - Setter Injection,
 - Method Injection 
@@ -292,27 +288,27 @@ Tüm yöntemler bağımlı olan sınıfları dışarıdan enjekte etmeye dayanı
 
 ## DAO nedir?
 ```
-DAO Data Access Object ifadesini: Bu araç geliştiricilere özellikle Java kaynaklı veri erişim
-araçlarıya daha kolay çalışma imkanı sunar. Bir yazılım uygulamasında veritabanı veya diğer
-veri kaynaklarına erişimi sağlayan bir tasarım desenidir. DAO ile diğer katmanlar etkilenmeden
-veritabanı ve bilgi bankası değiştirilebilir. 
+DAO Data Access Object ifadesini: Bu araç geliştiricilere özellikle Java kaynaklı veri erişim araçlarıya
+daha kolay çalışma imkanı sunar. Bir yazılım uygulamasında veritabanı veya diğer veri kaynaklarına
+erişimi sağlayan bir tasarım desenidir. DAO ile diğer katmanlar etkilenmeden veritabanı ve bilgi bankası
+değiştirilebilir. 
 ```
 
 ## @Autowire ve @Qualifier ?
 ```
-Bu kombinasyon türü uygulamada birçok farklı türde tekil bean bulunduğunda kullanılır.
-Bu kombinasyon her bir ayrı bean'i farklılaştırır.
+Bu kombinasyon türü uygulamada birçok farklı türde tekil bean bulunduğunda kullanılır. Bu kombinasyon
+her bir ayrı bean'i farklılaştırır.
 
-@Autowired annotasyonu kullanıldığında Spring, bağımlılığı otomatik olarak enjekte eder. Ancak
-birden fazla aday bean olduğunda, hangi bean’in kullanılması gerektiğini belirtmemiz gerekiyor.
-İşte @Qualifier annotasyonu bu seçimi yapmamızı kolaylaştırır.
+@Autowired annotasyonu kullanıldığında Spring, bağımlılığı otomatik olarak enjekte eder. Ancak birden
+fazla aday bean olduğunda, hangi bean’in kullanılması gerektiğini belirtmemiz gerekiyor. İşte @Qualifier
+annotasyonu bu seçimi yapmamızı kolaylaştırır.
 ```
 
 ## Circuat Breaker nedir ?
 ```
 Circuit Breaker, bir servisin aşırı yük altında olduğunu veya düzgün çalışmadığını tespit ettiğinde,
-otomatik olarak o servise gelen istekleri keser. Bu sayede sistem,
-tek bir servisin başarısızlığından dolayı tamamen çökme durumuna düşmekten korunmuş olur.
+otomatik olarak o servise gelen istekleri keser. Bu sayede sistem, tek bir servisin başarısızlığından
+dolayı tamamen çökme durumuna düşmekten korunmuş olur.
 ```
 ##### spring hystrix ?
 ```
@@ -335,15 +331,15 @@ tamamlandıktan sonra yapılması gereken işlemleri bu sınıf aracılığı il
 
 Gelen isteklerin endpointe ulaşmadan önce işlenmesini sağlamamıza yarayan bir sınıftır. Bir servlete
 benzer ve DispatcherServlet ten sonra bulunmaktadır. HTTP isteklerini kontrol etmek için kullanılır.
-İstek başlamadan önce çağrılır ve HTTP isteği ile ilgili bilgileri içeren HttpServletRequest
-nesnesini ve HTTP isteği ile ilgili yanıtı döndürecek HttpServletResponse nesnesini alır.
+İstek başlamadan önce çağrılır ve HTTP isteği ile ilgili bilgileri içeren HttpServletRequest nesnesini
+ve HTTP isteği ile ilgili yanıtı döndürecek HttpServletResponse nesnesini alır.
 
 Ref : 
 https://blog.burakkutbay.com/spring-boot-interceptor-nedir-uygulama-ornegi.html/
 
-Spring MVC'de interceptor'lar işlemeden önce, işleme sırasında ve işleme sonrasında bir
-istemcinin talebini yerine getirmek için kullanılır. Kodda istenmeyen herhangi bir tekrardan
-sakınmak için muhteşem bir araçtır.
+Spring MVC'de interceptor'lar işlemeden önce, işleme sırasında ve işleme sonrasında bir istemcinin
+talebini yerine getirmek için kullanılır. Kodda istenmeyen herhangi bir tekrardan sakınmak için
+muhteşem bir araçtır.
 ```
 
 ## Spring IOC Container ?
@@ -351,10 +347,9 @@ sakınmak için muhteşem bir araçtır.
 Spring IoC Container, Spring Framework'ün çekirdeğidir. Bu konteyner, nesneleri oluşturur, nesneleri
 birbirine bağlar, bağımlılıklarını yapılandırır ve tüm yaşam döngüsünü yönetir.
 
-Inversion of control bir yazılım tasarım prensibidir. Ioc ile Uygulama içerisindeki obje
-instance’larının yönetimi sağlanarak, bağımlılıklarını en aza indirgemek amaçlanmaktadır. Projenizdeki
-bağımlılıkların oluşturulmasını ve yönetilmesini geliştiricinin yerine, framework’ün yapması olarak da
-açıklanabilir.
+Inversion of control bir yazılım tasarım prensibidir. Ioc ile Uygulama içerisindeki obje instance’larının
+yönetimi sağlanarak, bağımlılıklarını en aza indirgemek amaçlanmaktadır. Projenizdeki bağımlılıkların
+oluşturulmasını ve yönetilmesini geliştiricinin yerine, framework’ün yapması olarak daaçıklanabilir.
 
 Framework‘in üzerinde çalıştığımız da görülüyor ki; frameworkler birçok işi kendisi yapmakta ve bizim
 kodumuzu çalıştırmak için framework gerekli kaynakları ve çalışması gereken metotları oluşturup,
