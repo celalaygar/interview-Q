@@ -397,34 +397,31 @@ gerçekleştirir.
 
 ## Hibernate'de @Entity ve @Table annotasyonlarının farkı nedir?
 ```
-@Entity annotasyonu, bir sınıfın bir veritabanı tablosuna karşılık geldiğini
-Hibernate'e belirtir.
+@Entity: bir sınıfın bir veritabanı tablosuna karşılık geldiğini Hibernate'e belirtir.
 
-@Table annotasyonu ise, sınıfın eşleştirildiği tablonun adını ve isteğe bağlı olarak
-schema adını belirlemek için kullanılır.
+@Table: sınıfın eşleştirildiği tablonun adını ve isteğe bağlı olarak schema adını belirlemek
+için kullanılır.
 
-@Entity zorunludur, ancak @Table kullanımı isteğe bağlıdır; eğer kullanılmazsa,
-sınıf adı tablo adı olarak varsayılır.
+@Entity zorunludur, ancak @Table kullanımı isteğe bağlıdır; eğer kullanılmazsa, sınıf adı
+tablo adı olarak varsayılır.
 ```
 
 ## Hibernate'de Optimistic ve Pessimistic Kilitlenme nedir?
 ```
-Optimistic Kilitlenme, veri çakışmalarını önlemek için sürüm numarası veya zaman damgası
-kullanır. Veri güncellenmeden önce, sürüm numarası veya zaman damgasının değişip
-değişmediği kontrol edilir.
+Optimistic Kilitlenme, veri çakışmalarını önlemek için sürüm numarası veya zaman damgası kullanır.
+Veri güncellenmeden önce, sürüm numarası veya zaman damgasının değişip değişmediği kontrol edilir.
 
-Pessimistic Kilitlenme ise, bir kaynağa erişim sırasında veritabanı seviyesinde kilit
-kullanır, böylece diğer işlemler o kaynağı değiştiremez veya okuyamaz.
+Pessimistic Kilitlenme ise, bir kaynağa erişim sırasında veritabanı seviyesinde kilit kullanır,
+böylece diğer işlemler o kaynağı değiştiremez veya okuyamaz.
 
-Optimistic kilitlenme genellikle okuma yoğun uygulamalarda tercih edilirken, Pessimistic
-kilitlenme yazma yoğun işlemlerde veya yüksek çakışma riski olan durumlarda kullanılır.
+Optimistic kilitlenme genellikle okuma yoğun uygulamalarda tercih edilirken, Pessimistic kilitlenme
+yazma yoğun işlemlerde veya yüksek çakışma riski olan durumlarda kullanılır.
 ```
 
 ## Hibernate'de cascade türleri nelerdir ve nasıl kullanılır ?
 ```
-Hibernate'de cascade türleri, bir nesne üzerinde yapılan işlemlerin ilişkili nesnelere
-nasıl uygulanacağını belirler.
-Ana cascade türleri şunlardır: ALL, PERSIST, MERGE, REMOVE, REFRESH, DETACH.
+Hibernate'de cascade türleri, bir nesne üzerinde yapılan işlemlerin ilişkili nesnelere nasıl
+uygulanacağını belirler. Ana cascade türleri: ALL, PERSIST, MERGE, REMOVE, REFRESH, DETACH.
 
 Örneğin,
 bir Parent nesnesi Child nesneleri ile bir ilişki içindeyse ve Parent nesnesi kaydedildiğinde
