@@ -166,19 +166,19 @@ threadin üzerine virtual threadler eşlenir.
 ## Java Multi Thread  nedir ?
 ```
 Thread safe, birden çok threadin bir kaynağı aynı anda kullanması durumlarında ortaya çıkan
-tutarsızlıkların sonucundaki hatalara karşı; o anki threadin kaynağını güvenceye alan ve
-bunu o kaynağı kullanan tüm threadler için uygulayan bir konsepttir.
+tutarsızlıkların sonucundaki hatalara karşı; o anki threadin kaynağını güvenceye alan ve bunu o kaynağı
+kullanan tüm threadler için uygulayan bir konsepttir.
 
-Asenkron yani multithreading bir yapıda threadlerin aynı veri kaynağına erişip değiştirmeye
-çalışması, hatalı davranışların sergilenmesine ve tutarlı bir sonuç elde edilememesine
-neden olabilir. Bu ve bunun gibi problemleri önlemek için threadleri güvenli bir şekilde
-tasarlamak ve geliştirmek gerekir. Bu metodolojiye thread safe, iş parçacığı güvenliği denir.
+Asenkron yani multithreading bir yapıda threadlerin aynı veri kaynağına erişip değiştirmeye çalışması,
+hatalı davranışların sergilenmesine ve tutarlı bir sonuç elde edilememesine neden olabilir. Bu ve
+bunun gibi problemleri önlemek için threadleri güvenli bir şekilde tasarlamak ve geliştirmek gerekir.
+Bu metodolojiye thread safe, iş parçacığı güvenliği denir.
 ```
 ## Serilization nedir?
 ```
-Bir nesnenin veya bir sınıfın saklanacak forma dönüştürülme işlemidir. Extend edilen
-Serilization sınıfı alt sınıf olan kullanacağımız sınıfın byte'lar halinde streamlere
-yazılabilir böylece bir java objesi veritabanına kaydedilebilir.
+Bir nesnenin veya bir sınıfın saklanacak forma dönüştürülme işlemidir. Extend edilen Serilization
+sınıfı alt sınıf olan kullanacağımız sınıfın byte'lar halinde streamlere yazılabilir böylece bir
+java objesi veritabanına kaydedilebilir.
 
 Deserilization ise byte haline çevrilen java objesinin eski haline çevrimine denir.
 ```
@@ -193,11 +193,11 @@ https://www.gencayyildiz.com/blog/thread-safe-concurrentqueue-concurrentdictiona
 
 ## JPA Nedir ?
 ```
-JPA, Java objeleri ve ilişkisel (relational) database arasında bilgi aktarımı için kullanılan
-bir standarttır. JPA bu ikisi arasında bir köprü görevi görür. JPA kullanabilmek için projeye
-implemente edilmesi gerekir ve bu yüzden Java dilindeki Hibernate, TopLink gibi çeşitli ORM
-araçları bilgiler konusunda bir devamlılık sağlamak için JPA kullanır. JPA aracılığıyla farklı
-ORM araçları ufak birkaç ayarlama dışında yazılan kod değiştirilmeden kullanılabilir.
+JPA, Java objeleri ve ilişkisel (relational) database arasında bilgi aktarımı için kullanılan bir
+standarttır. JPA bu ikisi arasında bir köprü görevi görür. JPA kullanabilmek için projeye implemente
+edilmesi gerekir ve bu yüzden Java dilindeki Hibernate, TopLink gibi çeşitli ORM araçları bilgiler
+konusunda bir devamlılık sağlamak için JPA kullanır. JPA aracılığıyla farklı ORM araçları ufak birkaç
+ayarlama dışında yazılan kod değiştirilmeden kullanılabilir.
 ```
 
 ## Java ConcurrentHashMap ?
@@ -211,27 +211,26 @@ Spring Framework içinde “scope” bir nesnenin yaşam döngüsünü ve ne kad
 olduğunu tanımlayan bir kavramdır. Spring, çeşitli nesne scope’ları sağlar ve bu scope’lar
 nesnelerin oluşturulma, kullanılma ve yok edilme şeklini belirler.
 
-Bu scope’lar, Spring uygulamalarında nesnelerin nasıl yönetileceğini belirlemek için kullanılır.
-Scope belirleme, nesnelerin doğru zamanda oluşturulması, paylaşılması ve yok edilmesi açısından
-önemlidir ve uygulamanın performansı ve davranışı üzerinde etkili olabilir.
+Bu scope’lar, Spring uygulamalarında nesnelerin nasıl yönetileceğini belirlemek için kullanılır. Scope
+belirleme, nesnelerin doğru zamanda oluşturulması, paylaşılması ve yok edilmesi açısından önemlidir ve
+uygulamanın performansı ve davranışı üzerinde etkili olabilir.
 ```
 
 ##### singleton Scope 
 ```
-Bir bean default olarak singleton scope’a sahiptir. Bean singleton scope ile tanımlandığı
-zaman mevcut application context‘imiz içerisinde o bean’den yalnızca tek bir adet initialize
-edileceğini garanti ederiz. Bu bean ile yapılacak olan tüm request’ler cache’lenmiş olan aynı
-nesne üzerinden yapılır. 
+Bir bean default olarak singleton scope’a sahiptir. Bean singleton scope ile tanımlandığı zaman mevcut
+application context‘imiz içerisinde o bean’den yalnızca tek bir adet initialize edileceğini garanti
+ederiz. Bu bean ile yapılacak olan tüm request’ler cache’lenmiş olan aynı nesne üzerinden yapılır. 
 ```
 ##### prototype Scope
 ```
 Prototype ile belirlenmiş bir bean, container içerisinde çağırıldığı her request’te yeniden
 oluşturulacaktır. Scope notasyonun iki farklı kullanımını aşağıda görebilirsiniz.
 
-Prototype Scope kullandığınızda, her request geldiğinde yeni bir instance döndürür. Diyelim ki
-bir setter methoduna sahip bir sınıfınız var, şimdi bu sınıf için bir bean oluşturduğunuzda,
-size her zaman sınıfın yeni bir instance’sını verecek ve nesne niteliklerini değiştirmek için
-setter’ı özgürce kullanıp çalışacaktır. 
+Prototype Scope kullandığınızda, her request geldiğinde yeni bir instance döndürür. Diyelim ki bir
+setter methoduna sahip bir sınıfınız var, şimdi bu sınıf için bir bean oluşturduğunuzda, size her
+zaman sınıfın yeni bir instance’sını verecek ve nesne niteliklerini değiştirmek için setter’ı özgürce
+kullanıp çalışacaktır. 
 ```
 ##### request Scope
 ```
@@ -242,19 +241,19 @@ instance’ını alırsınız, ancak yeni bir request geldiğinde, yeni bir inst
 ```
 ##### session Scope
 ```
-Session Scope Web Uygulamalarında HTTP isteği geldiğinde oluşturulur. Mesela Spring boot
-uygulamanız kullanıcı sessionlarını sürdürdüğünde, bu scope yardımcı olabilir.
+Session Scope Web Uygulamalarında HTTP isteği geldiğinde oluşturulur. Mesela Spring boot uygulamanız
+kullanıcı sessionlarını sürdürdüğünde, bu scope yardımcı olabilir.
+
 Session Scope kullandığımızda, tüm Session için (kullanıcı düzeyindeki oturumda) her zaman
 nesnenin aynı instance’ını return eder. Ancak kullanıcı oturumu kapandığında, yeni bir
 kullanıcı oturumu için nesnenin yeni bir instance’ını alacaksınız.
 ```
 ##### application Scope
 ```
-Bir application scope, ServletContext’in yaşam döngüsü için bean örneğini oluşturur.
-Bu singleton scope’a benzer ancak aralarında farklılıklar mevcuttur. Bir bean application
-scope değerine sahipken bu bean çoklu servlet tabanlı uygulamalar ile de paylaşılabilirken,
-singleton scope değerine sahip bir bean yalnızca mevcut application context’i içerisinde
-tanımlıdır.
+Bir application scope, ServletContext’in yaşam döngüsü için bean örneğini oluşturur. Bu singleton
+scope’a benzer ancak aralarında farklılıklar mevcuttur. Bir bean application scope değerine sahipken
+bu bean çoklu servlet tabanlı uygulamalar ile de paylaşılabilirken, singleton scope değerine sahip
+bir bean yalnızca mevcut application context’i içerisinde tanımlıdır.
 ```
 
 ## Solid prensipleri nelerdir?
@@ -287,16 +286,16 @@ tekniğinde bağımlılık oluşturacak parçalarının ayrılıp, bunların sis
 (enjekte edilmesi) ile meydana gelir. Temel olarak 3 tür DI vardır. Bunlar;
 - Constructor Injection,
 - Setter Injection,
-- Method Injection) Tüm yöntemler bağımlı olan sınıfları dışarıdan enjekte etmeye dayanır.
+- Method Injection 
+Tüm yöntemler bağımlı olan sınıfları dışarıdan enjekte etmeye dayanır.
 ```
 
 ## DAO nedir?
 ```
-DAO Data Access Object ifadesini: Bu araç geliştiricilere özellikle Java kaynaklı
-veri erişim araçlarıya daha kolay çalışma imkanı sunar.
-Bir yazılım uygulamasında veritabanı veya diğer veri kaynaklarına erişimi sağlayan
-bir tasarım desenidir. DAO ile diğer katmanlar etkilenmeden veritabanı ve
-bilgi bankası değiştirilebilir. 
+DAO Data Access Object ifadesini: Bu araç geliştiricilere özellikle Java kaynaklı veri erişim
+araçlarıya daha kolay çalışma imkanı sunar. Bir yazılım uygulamasında veritabanı veya diğer
+veri kaynaklarına erişimi sağlayan bir tasarım desenidir. DAO ile diğer katmanlar etkilenmeden
+veritabanı ve bilgi bankası değiştirilebilir. 
 ```
 
 ## @Autowire ve @Qualifier ?
@@ -304,9 +303,9 @@ bilgi bankası değiştirilebilir.
 Bu kombinasyon türü uygulamada birçok farklı türde tekil bean bulunduğunda kullanılır.
 Bu kombinasyon her bir ayrı bean'i farklılaştırır.
 
-@Autowired annotasyonu kullanıldığında Spring, bağımlılığı otomatik olarak enjekte eder.
-Ancak birden fazla aday bean olduğunda, hangi bean’in kullanılması gerektiğini belirtmemiz
-gerekiyor. İşte @Qualifier annotasyonu bu seçimi yapmamızı kolaylaştırır.
+@Autowired annotasyonu kullanıldığında Spring, bağımlılığı otomatik olarak enjekte eder. Ancak
+birden fazla aday bean olduğunda, hangi bean’in kullanılması gerektiğini belirtmemiz gerekiyor.
+İşte @Qualifier annotasyonu bu seçimi yapmamızı kolaylaştırır.
 ```
 
 ## Circuat Breaker nedir ?
@@ -375,6 +374,12 @@ Inversion Of Control adı verilmektedir.
 
 # HIBERNATE Mulakat soruları
 
+## Hibernate Nedir ?
+```
+Hibernate yazılım nesnelerin, ilişkisel veri tabanlarındaki (relational databases) kayıtlara
+nasıl karşılık geldiğini yürüten bir teknolojidir.
+```
+
 Ref : https://www.turkninja.com/2024/02/hibernate-ileri-seviye-interview.html
 
 ## Hibernate FetchType EAGER - LAZY Farkları ?
@@ -390,10 +395,10 @@ LAZY kullanırsak, ihtiyaç duyduğumuzda ilgili veriler çekilecektir.
 
 ## Hibernate'de Lazy Loading nedir ve nasıl çalışır ?
 ```
-Lazy Loading, bir nesnenin ilişkili nesnelerinin ihtiyaç duyulduğunda, yani
-erişildiğinde yüklenmesi yöntemidir. Bu, gereksiz veri yüklemeyi önlemek ve
-performansı artırmak için kullanılır. Hibernate, proxy nesneleri veya bytecode
-enhancement kullanarak lazy loading'i gerçekleştirir.
+Lazy Loading, bir nesnenin ilişkili nesnelerinin ihtiyaç duyulduğunda, yani erişildiğinde
+yüklenmesi yöntemidir. Bu, gereksiz veri yüklemeyi önlemek ve performansı artırmak için
+kullanılır. Hibernate, proxy nesneleri veya bytecode enhancement kullanarak lazy loading'i
+gerçekleştirir.
 ```
 
 ## Hibernate'de @Entity ve @Table annotasyonlarının farkı nedir?
@@ -428,30 +433,27 @@ nasıl uygulanacağını belirler.
 Ana cascade türleri şunlardır: ALL, PERSIST, MERGE, REMOVE, REFRESH, DETACH.
 
 Örneğin,
-bir Parent nesnesi Child nesneleri ile bir ilişki içindeyse ve Parent nesnesi
-kaydedildiğinde (PERSIST) veya güncellendiğinde (MERGE) Child nesnelerinin de
-otomatik olarak kaydedilmesi veya güncellenmesi isteniyorsa, ilgili cascade türü
-ilişkide belirtilir.
+bir Parent nesnesi Child nesneleri ile bir ilişki içindeyse ve Parent nesnesi kaydedildiğinde
+(PERSIST) veya güncellendiğinde (MERGE) Child nesnelerinin de otomatik olarak kaydedilmesi veya
+güncellenmesi isteniyorsa, ilgili cascade türü ilişkide belirtilir.
 ```
 
 ## Hibernate Query Plan Cache nedir ve performans üzerindeki etkisi nedir?
 ```
-Hibernate Query Plan Cache, sorgu planlarını önbelleklemek için kullanılır.
-Bu, aynı sorgunun tekrar tekrar çalıştırılması durumunda, sorgu derleme süresini
-azaltarak performansı artırır. Önbellek, sorgu metni ve bağlamı (örneğin, parametre türleri)
-bazında sorgu planlarını saklar. Bu özellik, özellikle karmaşık sorguların ve
-sık çalıştırılan sorguların olduğu uygulamalarda önemli performans iyileştirmeleri
-sağlayabilir.
+Hibernate Query Plan Cache, sorgu planlarını önbelleklemek için kullanılır. Bu, aynı sorgunun
+tekrar tekrar çalıştırılması durumunda, sorgu derleme süresini azaltarak performansı artırır.
+Önbellek, sorgu metni ve bağlamı (örneğin, parametre türleri) bazında sorgu planlarını saklar.
+Bu özellik, özellikle karmaşık sorguların ve sık çalıştırılan sorguların olduğu uygulamalarda
+önemli performans iyileştirmeleri sağlayabilir.
 ```
 
 ## Hibernate'de N+1 sorgu problemi nedir ve nasıl çözülür?
 ```
-N+1 sorgu problemi, bir entity ve onun ilişkili nesnelerini yüklerken ortaya çıkan
-bir performans sorunudur. Örneğin, bir Parent entity'si ile ilişkili çok sayıda
-Child entity'sini yüklerken, ilk olarak Parent entity'si için bir sorgu çalıştırılır
-ve ardından her bir Child için ayrı ayrı sorgular çalıştırılır. Bu, toplamda
-1 (parent için) + N (N child için) sorgu anlamına gelir ve özellikle N'nin büyük olduğu
-durumlarda ciddi bir performans düşüklüğüne yol açabilir.
+N+1 sorgu problemi, bir entity ve onun ilişkili nesnelerini yüklerken ortaya çıkan bir performans
+sorunudur. Örneğin, bir Parent entity'si ile ilişkili çok sayıda Child entity'sini yüklerken,
+ilk olarak Parent entity'si için bir sorgu çalıştırılır ve ardından her bir Child için ayrı ayrı
+sorgular çalıştırılır. Bu, toplamda 1 (parent için) + N (N child için) sorgu anlamına gelir ve
+özellikle N'nin büyük olduğu durumlarda ciddi bir performans düşüklüğüne yol açabilir.
 ```
 
 # DATABASE Mulakat soruları
