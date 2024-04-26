@@ -290,8 +290,8 @@ Tüm yöntemler bağımlı olan sınıfları dışarıdan enjekte etmeye dayanı
 ```
 DAO Data Access Object ifadesini: Bu araç geliştiricilere özellikle Java kaynaklı veri erişim araçları
 ile daha kolay çalışma imkanı sunar. Bir yazılım uygulamasında veritabanı veya diğer veri kaynaklarına
-erişimi sağlayan bir tasarım desenidir. DAO ile diğer katmanlar etkilenmeden veritabanı ve bilgi bankası
-değiştirilebilir. 
+erişimi sağlayan bir tasarım desenidir. DAO ile diğer katmanlar etkilenmeden veritabanı ve bilgi
+bankası değiştirilebilir. 
 ```
 
 ## @Autowire ve @Qualifier ?
