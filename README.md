@@ -372,6 +372,10 @@ daha sonra kontrol yeniden framework’e geçmesi olayının tümüne Inversion 
 ```
 Hibernate yazılım nesnelerin, ilişkisel veri tabanlarındaki (relational databases) kayıtlara
 nasıl karşılık geldiğini yürüten bir teknolojidir.
+
+Java programlama dilinde kullanılan açık kaynaklı bir nesne/ilişkisel eşleme (ORM) aracıdır.
+Hibernate, veri tabanı işlemlerini, Java sınıfları arasında doğrudan ilişki kurmak yerine nesnelerin
+saklanması ve yönetilmesi yoluyla yönetir.
 ```
 
 Ref : https://www.turkninja.com/2024/02/hibernate-ileri-seviye-interview.html
