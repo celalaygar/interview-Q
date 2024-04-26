@@ -330,8 +330,8 @@ https://umitsamimi.medium.com/circuit-breaker-resilience4j-7e1082610c52
 
 ## Spring Boot Interceptor Nedir?
 ```
-Interceptor, Spring MVC paketinde bulunan bir sınıftır. HTTP isteklerinin öncesi, sonrası
-ve tamamlandıktan sonra yapılması gereken işlemleri bu sınıf aracılığı ile handle edebilmekteyiz.
+Interceptor, Spring MVC paketinde bulunan bir sınıftır. HTTP isteklerinin öncesi, sonrası ve
+tamamlandıktan sonra yapılması gereken işlemleri bu sınıf aracılığı ile handle edebilmekteyiz.
 
 Gelen isteklerin endpointe ulaşmadan önce işlenmesini sağlamamıza yarayan bir sınıftır.
 Bir servlete benzer ve DispatcherServlet ten sonra bulunmaktadır. HTTP isteklerini kontrol
@@ -342,9 +342,9 @@ HttpServletResponse nesnesini alır.
 Ref : 
 https://blog.burakkutbay.com/spring-boot-interceptor-nedir-uygulama-ornegi.html/
 
-Spring MVC'de interceptor'lar işlemeden önce, işleme sırasında ve işleme sonrasında
-bir istemcinin talebini yerine getirmek için kullanılır. Kodda istenmeyen herhangi bir
-tekrardan sakınmak için muhteşem bir araçtır.
+Spring MVC'de interceptor'lar işlemeden önce, işleme sırasında ve işleme sonrasında bir
+istemcinin talebini yerine getirmek için kullanılır. Kodda istenmeyen herhangi bir tekrardan
+sakınmak için muhteşem bir araçtır.
 ```
 
 ## Spring IOC Container ?
@@ -473,9 +473,9 @@ Bir index yaratıldığında tipi verilmez ise default olarak btree oluşturulma
 ```
 ##### Hash Index
 ```
-Hash daha çok eşitlik anında kullanılabilen bir index türüdür. Oluşum hızı index yaratma süresi
-açısından Btree’ye göre çok daha fazladır. Ancak kapladığı alan bakımından Btree’ye göre çok 
-daha az bir yer kaplar. Çünkü Btree ağaç yapısında tutulurken, hash flat bir yapıda tutulmaktadır.
+Hash daha çok eşitlik anında kullanılabilen bir index türüdür. Oluşum hızı index yaratma süresi açısından
+Btree’ye göre çok daha fazladır. Ancak kapladığı alan bakımından Btree’ye göre çok  daha az bir yer kaplar.
+Çünkü Btree ağaç yapısında tutulurken, hash flat bir yapıda tutulmaktadır.
 
 Hash index, kullanım şekli açısından genellikle B-tree ile karşılaştırılmaktadır.
 
@@ -490,14 +490,13 @@ Hash index, kullanım şekli açısından genellikle B-tree ile karşılaştır�
 ```
 ##### BRIN: Block range index
 ```
-Postgresql verileri varsayılan olarak 8 Kb’lık bloklar halinde saklamaktadır. Brin
-indexlemede, indexler tutulurken bloklar içerisindeki en büyük ve en küçük değerler
-baz alınır. B-tree’nin aksine blok içersinde sıralanmış tüm değerler değil, sadece
-min ve max değerler tutulur. Eski adıyla min-max indextir.
+Postgresql verileri varsayılan olarak 8 Kb’lık bloklar halinde saklamaktadır. Brin indexlemede,
+indexler tutulurken bloklar içerisindeki en büyük ve en küçük değerler baz alınır. B-tree’nin
+aksine blok içersinde sıralanmış tüm değerler değil, sadece min ve max değerler tutulur. Eski
+adıyla min-max indextir.
 
-B-tree yaratıldığında 8Kb’lık veri setlerinin tümünü saklayacak şekilde bir
-indexleme yapar. Ancak BRIN ındex 8Kb’lık bloklardan sadece minumum ve maximum
-değerleri alarak index halinde saklar.
+B-tree yaratıldığında 8Kb’lık veri setlerinin tümünü saklayacak şekilde bir indexleme yapar.
+Ancak BRIN ındex 8Kb’lık bloklardan sadece minumum ve maximum değerleri alarak index halinde saklar.
 
 - Btree ile karşılaştırıldığında tutalan veri boyutuna bakarsak çok çok daha az
   olduğunu görebiliriz.
@@ -510,8 +509,8 @@ değerleri alarak index halinde saklar.
 ```
 ##### GIN Index
 ```
-Generalized Inverted Index ile her kelime için bir index ve bu indexin içinde aranan
-ifadenin geçtiği yerlerin listesini sıkıştırılmış olarak tutar.
+Generalized Inverted Index ile her kelime için bir index ve bu indexin içinde aranan ifadenin
+geçtiği yerlerin listesini sıkıştırılmış olarak tutar.
 
 - Bir kolonda array gibi çoklu verinin olması durumlarında kullanılabilir. Yani metin
   içinde aramalarda kullanılması önerilir
@@ -523,9 +522,9 @@ ifadenin geçtiği yerlerin listesini sıkıştırılmış olarak tutar.
 
 ##### GIST Index
 ```
-Generalized search tree, full text search için güçlü diğer bir adaydır. Btree karşılaştırma
-yapıları için kullanılırken, GIST’te ağaç yapısında veri tutmasına karşın daha çok modern
-veritabanlarındaki geodata, text documents gibi operatorler için kullanılmaktadır.
+Generalized search tree, full text search için güçlü diğer bir adaydır. Btree karşılaştırma yapıları
+için kullanılırken, GIST’te ağaç yapısında veri tutmasına karşın daha çok modern veritabanlarındaki
+geodata, text documents gibi operatorler için kullanılmaktadır.
 
 - Aynı kolonda değerlerin başka satırlarda çakışması durumlarında kullanılabilir.
 - Indexleme yöntemidir ve bu index tipinden birçok index türetilebilir.
@@ -534,18 +533,18 @@ veritabanlarındaki geodata, text documents gibi operatorler için kullanılmakt
 ```
 ## Optimistic Lock Nedir ?
 ```
-Optimistic, yani iyimser eş zamanlılık kontrolünde aynı anda bir kaydın update edilmeyeceği
-varsayılır ve birden fazla session aynı kaydı update etmek için erişilebilir. Eğer aynı kayıt
-birden fazla kişi tarafından update edilirse kayıtlardan biri iptal olur ve kullanıcıya
-iptal olduğuna dair bilgilendirme yapılır.
+Optimistic, yani iyimser eş zamanlılık kontrolünde aynı anda bir kaydın update edilmeyeceği varsayılır
+ve birden fazla session aynı kaydı update etmek için erişilebilir. Eğer aynı kayıt birden fazla kişi
+tarafından update edilirse kayıtlardan biri iptal olur ve kullanıcıya iptal olduğuna dair bilgilendirme
+yapılır.
 ```
 
 ## Pessimistic Lock Nedir ?
 ```
-Pessimistic, yani kötümser eş zamanlılık kontrolünde bir kullanıcı bir kaydı değiştirmek
-istediğinde o kayda kilit koyar ve o kaydı başkası değiştiremez. İlk değiştirmeye çalışan
-kişi kaydı değiştirdikten sonra değiştirilen kayıt üzerindeki kilit açılır ve diğer
-değiştirmek isteyenler artık değiştirebilir hale gelir.
+Pessimistic, yani kötümser eş zamanlılık kontrolünde bir kullanıcı bir kaydı değiştirmek istediğinde
+o kayda kilit koyar ve o kaydı başkası değiştiremez. İlk değiştirmeye çalışan kişi kaydı değiştirdikten
+sonra değiştirilen kayıt üzerindeki kilit açılır ve diğer değiştirmek isteyenler artık değiştirebilir
+hale gelir.
 ```
 
 ## Transaction İsolation ? 
