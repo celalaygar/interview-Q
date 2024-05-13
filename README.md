@@ -66,6 +66,34 @@ List Nesnesi: Kendisine verilen elemanları sıralı şekilde tutar. Tekrarlana 
 Map Nesnesi: Her biri birbirinden farklı anahtarlar ile eşleştirilen nesnelerden oluşur.
 ```
 
+## Javada Statement ve PreparedStatement arasındaki farklar?
+```
+PreparedStatement ile SQL ifadelerimizi veritabanımızda önceden derlenmek üzere gönderebileceğimiz ve
+her defasında derlenmiş hale değer göndererek tekrar tekrar kullanabileceğimiz bir yapıdır.
+
+Statement nesnesinde programımız üzerinde ifade derlenip veritabanımız sadece sorgulama işlemini
+gerçekleştirmekte idi.
+```
+##### Statement
+```
+- SQL sorgusunun yalnızca bir kez yürütülmesi gerektiğinde kullanılır.
+- Çalışma zamanında parametreleri iletemezsiniz.
+- Performans çok düşük.
+- Normal SQL sorgularını yürütmek için kullanılır.
+- Binary verileri okumak  ve yazmak için kullanılmaz.
+```
+##### PreparedStatement
+```
+- SQL sorgusunun birden çok kez yürütülmesi gerektiğinde kullanılır
+- Çalışma zamanında parametreleri iletebilirsiniz.
+- Birden çok kez çalıştırılacak sorgular için kullanılır.
+- Performans Statement'ten daha iyidir.
+- Dinamik SQL sorgularını çalıştırmak için kullanılır.
+- Binary verileri okumak  ve yazmak için Readydstatement'ı kullanabiliriz.
+- PreparedStatement, özel karakterlerden otomatik olarak kaçtığı için SQL enjeksiyon
+saldırılarını önlememize yardımcı olur.
+```
+
 ## Java Spring bootda Aspect ile ilgili neler yaptın, ne yapılabilir.
 ```
 
