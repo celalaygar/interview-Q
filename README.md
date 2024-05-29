@@ -26,24 +26,25 @@ bir klasörde bulunur.
 
 ## Java'da String ve StringBuilder arasındaki fark ? 
 ```
-String: String sınıfı değiştirilemez (immutable) bir sınıftır. Bir String nesnesi oluşturulduktan sonra,
-onun içeriği değiştirilemez. Örneğin, bir String üzerinde herhangi bir değişiklik yapmak (bir karakter
-eklemek, çıkarmak veya değiştirmek) yeni bir String nesnesi oluşturur.
+String: String sınıfı değiştirilemez (immutable) bir sınıftır. Bir String nesnesi oluşturulduktan
+sonra, onun içeriği değiştirilemez. Örneğin, bir String üzerinde herhangi bir değişiklik yapmak
+(bir karakter eklemek, çıkarmak veya değiştirmek) yeni bir String nesnesi oluşturur.
 
-StringBuilder: StringBuilder sınıfı değiştirilebilir (mutable) bir sınıftır. Bir StringBuilder nesnesi
-oluşturulduktan sonra, onun içeriği değiştirilebilir. Bu, aynı nesne üzerinde değişiklik yapmanıza olanak
-tanır ve genellikle daha verimlidir.
+StringBuilder: StringBuilder sınıfı değiştirilebilir (mutable) bir sınıftır. Bir StringBuilder
+nesnesi oluşturulduktan sonra, onun içeriği değiştirilebilir. Bu, aynı nesne üzerinde değişiklik
+yapmanıza olanak tanır ve genellikle daha verimlidir.
 ```
 
 ## Java'da StringBuilder ve StringBuffer arasındaki fark ? 
 ```
-StringBuilder: Thread-safe değildir. Bu, StringBuilder nesnesinin aynı anda birden fazla thread tarafından
-güvenli bir şekilde kullanılamayacağı anlamına gelir. Tek thread'li uygulamalarda veya birden fazla thread'in
-aynı StringBuilder nesnesine erişmeyeceği durumlarda kullanılması uygundur.
+StringBuilder: Thread-safe değildir. Bu, StringBuilder nesnesinin aynı anda birden fazla thread
+tarafından güvenli bir şekilde kullanılamayacağı anlamına gelir. Tek thread'li uygulamalarda veya
+birden fazla thread'in aynı StringBuilder nesnesine erişmeyeceği durumlarda kullanılması uygundur.
 
-StringBuffer: Thread-safe'dir. Bu sınıfın tüm yöntemleri senkronize edilmiştir, yani aynı anda birden fazla
-thread tarafından güvenli bir şekilde kullanılabilir. Bu nedenle, çok thread'li uygulamalarda veya birden fazla
-thread'in aynı StringBuffer nesnesine erişmesi gereken durumlarda kullanılması uygundur.
+StringBuffer: Thread-safe'dir. Bu sınıfın tüm yöntemleri senkronize edilmiştir, yani aynı anda
+birden fazla thread tarafından güvenli bir şekilde kullanılabilir. Bu nedenle, çok thread'li
+uygulamalarda veya birden fazla thread'in aynı StringBuffer nesnesine erişmesi gereken durumlarda
+kullanılması uygundur.
 ```
 
 ## Javada Access modifiers nelerdir ? 
