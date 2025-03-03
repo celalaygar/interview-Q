@@ -221,10 +221,10 @@ Thread safe, birden çok threadin bir kaynağı aynı anda kullanması durumlar�
 tutarsızlıkların sonucundaki hatalara karşı; o anki threadin kaynağını güvenceye alan ve bunu
 o kaynağı kullanan tüm threadler için uygulayan bir konsepttir.
 
-Asenkron yani multithreading bir yapıda threadlerin aynı veri kaynağına erişip değiştirmeye çalışması,
-hatalı davranışların sergilenmesine ve tutarlı bir sonuç elde edilememesine neden olabilir. Bu ve
-bunun gibi problemleri önlemek için threadleri güvenli bir şekilde tasarlamak ve geliştirmek gerekir.
-Bu metodolojiye thread safe, iş parçacığı güvenliği denir.
+Asenkron yani multithreading bir yapıda threadlerin aynı veri kaynağına erişip değiştirmeye
+çalışması, hatalı davranışların sergilenmesine ve tutarlı bir sonuç elde edilememesine neden
+olabilir. Bu ve bunun gibi problemleri önlemek için threadleri güvenli bir şekilde tasarlamak
+ve geliştirmek gerekir. Bu metodolojiye thread safe, iş parçacığı güvenliği denir.
 ```
 ## Serilization nedir?
 ```
@@ -588,18 +588,18 @@ geodata, text documents gibi operatorler için kullanılmaktadır.
 ```
 ## Optimistic Lock Nedir ?
 ```
-Optimistic, yani iyimser eş zamanlılık kontrolünde aynı anda bir kaydın update edilmeyeceği varsayılır
-ve birden fazla session aynı kaydı update etmek için erişilebilir. Eğer aynı kayıt birden fazla kişi
-tarafından update edilirse kayıtlardan biri iptal olur ve kullanıcıya iptal olduğuna dair bilgilendirme
-yapılır.
+Optimistic, yani iyimser eş zamanlılık kontrolünde aynı anda bir kaydın update edilmeyeceği
+varsayılır ve birden fazla session aynı kaydı update etmek için erişilebilir. Eğer aynı
+kayıt birden fazla kişi tarafından update edilirse kayıtlardan biri iptal olur ve kullanıcıya
+iptal olduğuna dair bilgilendirme yapılır.
 ```
 
 ## Pessimistic Lock Nedir ?
 ```
 Pessimistic, yani kötümser eş zamanlılık kontrolünde bir kullanıcı bir kaydı değiştirmek istediğinde
-o kayda kilit koyar ve o kaydı başkası değiştiremez. İlk değiştirmeye çalışan kişi kaydı değiştirdikten
-sonra değiştirilen kayıt üzerindeki kilit açılır ve diğer değiştirmek isteyenler artık değiştirebilir
-hale gelir.
+o kayda kilit koyar ve o kaydı başkası değiştiremez. İlk değiştirmeye çalışan kişi kaydı
+değiştirdikten sonra değiştirilen kayıt üzerindeki kilit açılır ve diğer değiştirmek isteyenler
+artık değiştirebilir hale gelir.
 ```
 
 ## Transaction İsolation ? 
