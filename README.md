@@ -12,9 +12,9 @@ byte kodlarını çalıştırarak Java programını yürütür.
 ```
 Java’da üç varsayılan ClassLoader vardır: Bootstrap, Extension ve System (Application) ClassLoader.
 ```
-1. Bootstrap ClassLoader : rt.jar ve diğer temel sınıflar gibi standart JDK sınıf dosyalarını yükler.
-Tüm ClassLoader’ların atasıdır ve herhangi bir atası yoktur. Primordial ClassLoader olarak da
-adlandırılır.
+1. Bootstrap ClassLoader : rt.jar ve diğer temel sınıflar gibi standart JDK sınıf dosyalarını
+yükler. Tüm ClassLoader’ların atasıdır ve herhangi bir atası yoktur. Primordial ClassLoader olarak
+da adlandırılır.
 
 2. Extension ClassLoader : Bu sınıf yükleyicisi, kullanıcının genişletilmiş sınıf dosyalarını
 yüklemesine izin verir. Bu sınıflar, “java.ext.dirs” olarak tanımlanan özel bir klasörde bulunur.
@@ -84,15 +84,16 @@ eklenemez. ArrayList'ler ise tür güvenliği sağlamak için cinsiyetli yapıla
 Set Nesnesi: Kendisine verilen elemanların her birinde sadece bir tanesini tutar. Kopya ya da
 tekrarlanan elemanları barındırmaz.
 
-List Nesnesi: Kendisine verilen elemanları sıralı şekilde tutar. Tekrarlana elemanları barındırabilir.
+List Nesnesi: Kendisine verilen elemanları sıralı şekilde tutar. Tekrarlana elemanları
+barındırabilir.
 
 Map Nesnesi: Her biri birbirinden farklı anahtarlar ile eşleştirilen nesnelerden oluşur.
 ```
 
 ## Javada Statement ve PreparedStatement arasındaki farklar?
 ```
-PreparedStatement ile SQL ifadelerimizi veritabanımızda önceden derlenmek üzere gönderebileceğimiz ve
-her defasında derlenmiş hale değer göndererek tekrar tekrar kullanabileceğimiz bir yapıdır.
+PreparedStatement ile SQL ifadelerimizi veritabanımızda önceden derlenmek üzere gönderebileceğimiz
+ve her defasında derlenmiş hale değer göndererek tekrar tekrar kullanabileceğimiz bir yapıdır.
 
 Statement nesnesinde programımız üzerinde ifade derlenip veritabanımız sadece sorgulama işlemini
 gerçekleştirmekte idi.
@@ -206,19 +207,19 @@ işletim sistemi tarafından yönetilir ve planlanır. Yeni bir platform thread 
 sistem çağrısı yapılmalıdır ve bu maliyetli bir işlemdir.
 
 Geleneksel threadlerin aksine virtual threadler JVM tarafından yönetilir. Bu nedenle, tahsisleri
-bir sistem çağrısı gerektirmez ve işletim sisteminin bağlam anahtarından (context switch) muaftırlar.
-Sonuç olarak, sistemin bağlam anahtarından kurtulduğumuz için daha az maliyetle birçok virtual
-thread üretebiliriz.Ayrıca virtual threadler, gerçek çekirdek thread olan taşıyıcı threadler
-üzerinde çalışır. Virtual threadler, Java kodu perspektifinden normal threadler gibi hissedilir,
-ancak işletim sistemi threadlerine 1:1 eşlenmezler. Taşıyıcı thread havuzundan uygun olan taşıyıcı
-threadin üzerine virtual threadler eşlenir.
+bir sistem çağrısı gerektirmez ve işletim sisteminin bağlam anahtarından (context switch)
+muaftırlar. Sonuç olarak, sistemin bağlam anahtarından kurtulduğumuz için daha az maliyetle
+birçok virtual thread üretebiliriz.Ayrıca virtual threadler, gerçek çekirdek thread olan taşıyıcı
+threadler üzerinde çalışır. Virtual threadler, Java kodu perspektifinden normal threadler gibi
+hissedilir, ancak işletim sistemi threadlerine 1:1 eşlenmezler. Taşıyıcı thread havuzundan uygun
+olan taşıyıcı threadin üzerine virtual threadler eşlenir.
 ```
 
 ## Java Multi Thread  nedir ?
 ```
 Thread safe, birden çok threadin bir kaynağı aynı anda kullanması durumlarında ortaya çıkan
-tutarsızlıkların sonucundaki hatalara karşı; o anki threadin kaynağını güvenceye alan ve bunu o kaynağı
-kullanan tüm threadler için uygulayan bir konsepttir.
+tutarsızlıkların sonucundaki hatalara karşı; o anki threadin kaynağını güvenceye alan ve bunu
+o kaynağı kullanan tüm threadler için uygulayan bir konsepttir.
 
 Asenkron yani multithreading bir yapıda threadlerin aynı veri kaynağına erişip değiştirmeye çalışması,
 hatalı davranışların sergilenmesine ve tutarlı bir sonuç elde edilememesine neden olabilir. Bu ve
@@ -245,10 +246,10 @@ https://www.gencayyildiz.com/blog/thread-safe-concurrentqueue-concurrentdictiona
 ## JPA Nedir ?
 ```
 JPA, Java objeleri ve ilişkisel (relational) database arasında bilgi aktarımı için kullanılan bir
-standarttır. JPA bu ikisi arasında bir köprü görevi görür. JPA kullanabilmek için projeye implemente
-edilmesi gerekir ve bu yüzden Java dilindeki Hibernate, TopLink gibi çeşitli ORM araçları bilgiler
-konusunda bir devamlılık sağlamak için JPA kullanır. JPA aracılığıyla farklı ORM araçları ufak birkaç
-ayarlama dışında yazılan kod değiştirilmeden kullanılabilir.
+standarttır. JPA bu ikisi arasında bir köprü görevi görür. JPA kullanabilmek için projeye
+implemente edilmesi gerekir ve bu yüzden Java dilindeki Hibernate, TopLink gibi çeşitli ORM
+araçları bilgiler konusunda bir devamlılık sağlamak için JPA kullanır. JPA aracılığıyla farklı
+ORM araçları ufak birkaç ayarlama dışında yazılan kod değiştirilmeden kullanılabilir.
 ```
 
 ## Java ConcurrentHashMap ?
@@ -262,26 +263,27 @@ Spring Framework içinde “scope” bir nesnenin yaşam döngüsünü ve ne kad
 olduğunu tanımlayan bir kavramdır. Spring, çeşitli nesne scope’ları sağlar ve bu scope’lar
 nesnelerin oluşturulma, kullanılma ve yok edilme şeklini belirler.
 
-Bu scope’lar, Spring uygulamalarında nesnelerin nasıl yönetileceğini belirlemek için kullanılır. Scope
-belirleme, nesnelerin doğru zamanda oluşturulması, paylaşılması ve yok edilmesi açısından önemlidir ve
-uygulamanın performansı ve davranışı üzerinde etkili olabilir.
+Bu scope’lar, Spring uygulamalarında nesnelerin nasıl yönetileceğini belirlemek için kullanılır.
+Scope belirleme, nesnelerin doğru zamanda oluşturulması, paylaşılması ve yok edilmesi açısından
+önemlidir ve uygulamanın performansı ve davranışı üzerinde etkili olabilir.
 ```
 
 ##### singleton Scope 
 ```
-Bir bean default olarak singleton scope’a sahiptir. Bean singleton scope ile tanımlandığı zaman mevcut
-application context‘imiz içerisinde o bean’den yalnızca tek bir adet initialize edileceğini garanti
-ederiz. Bu bean ile yapılacak olan tüm request’ler cache’lenmiş olan aynı nesne üzerinden yapılır. 
+Bir bean default olarak singleton scope’a sahiptir. Bean singleton scope ile tanımlandığı zaman
+mevcut application context‘imiz içerisinde o bean’den yalnızca tek bir adet initialize
+edileceğini garanti ederiz. Bu bean ile yapılacak olan tüm request’ler cache’lenmiş olan aynı
+nesne üzerinden yapılır. 
 ```
 ##### prototype Scope
 ```
 Prototype ile belirlenmiş bir bean, container içerisinde çağırıldığı her request’te yeniden
 oluşturulacaktır. Scope notasyonun iki farklı kullanımını aşağıda görebilirsiniz.
 
-Prototype Scope kullandığınızda, her request geldiğinde yeni bir instance döndürür. Diyelim ki bir
-setter methoduna sahip bir sınıfınız var, şimdi bu sınıf için bir bean oluşturduğunuzda, size her
-zaman sınıfın yeni bir instance’sını verecek ve nesne niteliklerini değiştirmek için setter’ı özgürce
-kullanıp çalışacaktır. 
+Prototype Scope kullandığınızda, her request geldiğinde yeni bir instance döndürür.
+Diyelim ki bir setter methoduna sahip bir sınıfınız var, şimdi bu sınıf için bir bean
+oluşturduğunuzda, size her zaman sınıfın yeni bir instance’sını verecek ve nesne
+niteliklerini değiştirmek için setter’ı özgürce kullanıp çalışacaktır. 
 ```
 ##### request Scope
 ```
@@ -302,18 +304,19 @@ nesnenin yeni bir instance’ını alacaksınız.
 ##### application Scope
 ```
 Bir application scope, ServletContext’in yaşam döngüsü için bean örneğini oluşturur. Bu singleton
-scope’a benzer ancak aralarında farklılıklar mevcuttur. Bir bean application scope değerine sahipken
-bu bean çoklu servlet tabanlı uygulamalar ile de paylaşılabilirken, singleton scope değerine sahip
-bir bean yalnızca mevcut application context’i içerisinde tanımlıdır.
+scope’a benzer ancak aralarında farklılıklar mevcuttur. Bir bean application scope değerine
+sahipken bu bean çoklu servlet tabanlı uygulamalar ile de paylaşılabilirken, singleton scope
+değerine sahip bir bean yalnızca mevcut application context’i içerisinde tanımlıdır.
 ```
 
 ## Solid prensipleri nelerdir?
 ```
 1-Single responsibilty: Bir nesne ya da bir sınıfın tek bir sorumluluğu olmalıdır.
 2-Open-closed: Bir sınıf değişime kapalı gelişmeye açık olmalıdır.
-3-Liskov's Substitution: Nesneler programın çalışmasında sorun yaratmadan kendi alt örnekleriyle
-  değiştirilebilmelidir.
-4-Interface Segregation: Nesneler ihtiyaç duymadıkları metotların interfacelerinden ayrıştırılmalıdır.
+3-Liskov's Substitution: Nesneler programın çalışmasında sorun yaratmadan kendi alt
+  örnekleriyle değiştirilebilmelidir.
+4-Interface Segregation: Nesneler ihtiyaç duymadıkları metotların interfacelerinden
+  ayrıştırılmalıdır.
 5-Dependency Inversion: Yüksek seviyeli sınıflar düşük seviyeli sınıflara bağlı olmamalı,
   her ikisi de soyut kavramlara bağlı olmalıdır.
 ```
@@ -328,9 +331,10 @@ prensibine aykırı bir kod yazım şeklidir.
 
 ## Dependency Injection nedir?
 ```
-"Dependency Inversion" prensibinin uygulanmasını içeren bir patterndir.Dependency Injection tekniğinde
-bağımlılık oluşturacak parçalarının ayrılıp, bunların sisteme dışarıdan verilmesi (enjekte edilmesi)
-ile meydana gelir. Temel olarak 3 tür DI vardır. Bunlar;
+"Dependency Inversion" prensibinin uygulanmasını içeren bir patterndir.Dependency Injection
+tekniğinde bağımlılık oluşturacak parçalarının ayrılıp, bunların sisteme dışarıdan verilmesi
+(enjekte edilmesi) ile meydana gelir. Temel olarak 3 tür DI vardır. Bunlar;
+
 - Constructor Injection,
 - Setter Injection,
 - Method Injection 
@@ -339,27 +343,27 @@ Tüm yöntemler bağımlı olan sınıfları dışarıdan enjekte etmeye dayanı
 
 ## DAO nedir?
 ```
-DAO Data Access Object ifadesini: Bu araç geliştiricilere özellikle Java kaynaklı veri erişim araçları
-ile daha kolay çalışma imkanı sunar. Bir yazılım uygulamasında veritabanı veya diğer veri kaynaklarına
-erişimi sağlayan bir tasarım desenidir. DAO ile diğer katmanlar etkilenmeden veritabanı ve bilgi
-bankası değiştirilebilir. 
+DAO Data Access Object ifadesini: Bu araç geliştiricilere özellikle Java kaynaklı veri erişim
+araçları ile daha kolay çalışma imkanı sunar. Bir yazılım uygulamasında veritabanı veya diğer
+veri kaynaklarına erişimi sağlayan bir tasarım desenidir. DAO ile diğer katmanlar etkilenmeden
+veritabanı ve bilgi bankası değiştirilebilir. 
 ```
 
 ## @Autowire ve @Qualifier ?
 ```
-Bu kombinasyon türü uygulamada birçok farklı türde tekil bean bulunduğunda kullanılır. Bu kombinasyon
-her bir ayrı bean'i farklılaştırır.
+Bu kombinasyon türü uygulamada birçok farklı türde tekil bean bulunduğunda kullanılır. Bu
+kombinasyon her bir ayrı bean'i farklılaştırır.
 
-@Autowired annotasyonu kullanıldığında Spring, bağımlılığı otomatik olarak enjekte eder. Ancak birden
-fazla aday bean olduğunda, hangi bean’in kullanılması gerektiğini belirtmemiz gerekiyor. İşte
-@Qualifier annotasyonu bu seçimi yapmamızı kolaylaştırır.
+@Autowired annotasyonu kullanıldığında Spring, bağımlılığı otomatik olarak enjekte eder.
+Ancak birden fazla aday bean olduğunda, hangi bean’in kullanılması gerektiğini belirtmemiz
+gerekiyor. İşte @Qualifier annotasyonu bu seçimi yapmamızı kolaylaştırır.
 ```
 
 ## Circuat Breaker nedir ?
 ```
-Circuit Breaker, bir servisin aşırı yük altında olduğunu veya düzgün çalışmadığını tespit ettiğinde,
-otomatik olarak o servise gelen istekleri keser. Bu sayede sistem, tek bir servisin başarısızlığından
-dolayı tamamen çökme durumuna düşmekten korunmuş olur.
+Circuit Breaker, bir servisin aşırı yük altında olduğunu veya düzgün çalışmadığını tespit
+ettiğinde, otomatik olarak o servise gelen istekleri keser. Bu sayede sistem, tek bir
+servisin başarısızlığından dolayı tamamen çökme durumuna düşmekten korunmuş olur.
 ```
 ##### spring hystrix ?
 ```
@@ -380,33 +384,35 @@ https://umitsamimi.medium.com/circuit-breaker-resilience4j-7e1082610c52
 Interceptor, Spring MVC paketinde bulunan bir sınıftır. HTTP isteklerinin öncesi, sonrası ve
 tamamlandıktan sonra yapılması gereken işlemleri bu sınıf aracılığı ile handle edebilmekteyiz.
 
-Gelen isteklerin endpointe ulaşmadan önce işlenmesini sağlamamıza yarayan bir sınıftır. Bir servlete
-benzer ve DispatcherServlet ten sonra bulunmaktadır. HTTP isteklerini kontrol etmek için kullanılır.
-İstek başlamadan önce çağrılır ve HTTP isteği ile ilgili bilgileri içeren HttpServletRequest nesnesini
-ve HTTP isteği ile ilgili yanıtı döndürecek HttpServletResponse nesnesini alır.
+Gelen isteklerin endpointe ulaşmadan önce işlenmesini sağlamamıza yarayan bir sınıftır. Bir
+servlete benzer ve DispatcherServlet ten sonra bulunmaktadır. HTTP isteklerini kontrol etmek
+için kullanılır. İstek başlamadan önce çağrılır ve HTTP isteği ile ilgili bilgileri içeren
+HttpServletRequest nesnesini ve HTTP isteği ile ilgili yanıtı döndürecek HttpServletResponse
+nesnesini alır.
 
 Ref : 
 https://blog.burakkutbay.com/spring-boot-interceptor-nedir-uygulama-ornegi.html/
 
-Spring MVC'de interceptor'lar işlemeden önce, işleme sırasında ve işleme sonrasında bir istemcinin
-talebini yerine getirmek için kullanılır. Kodda istenmeyen herhangi bir tekrardan sakınmak için
-muhteşem bir araçtır.
+Spring MVC'de interceptor'lar işlemeden önce, işleme sırasında ve işleme sonrasında bir
+istemcinin talebini yerine getirmek için kullanılır. Kodda istenmeyen herhangi bir tekrardan
+sakınmak için muhteşem bir araçtır.
 ```
 
 ## Spring IOC Container ?
 ```
-Spring IoC Container, Spring Framework'ün çekirdeğidir. Bu konteyner, nesneleri oluşturur, nesneleri
-birbirine bağlar, bağımlılıklarını yapılandırır ve tüm yaşam döngüsünü yönetir.
+Spring IoC Container, Spring Framework'ün çekirdeğidir. Bu konteyner, nesneleri oluşturur,
+nesneleri birbirine bağlar, bağımlılıklarını yapılandırır ve tüm yaşam döngüsünü yönetir.
 
 Inversion of control bir yazılım tasarım prensibidir. Ioc ile Uygulama içerisindeki obje
-instance’larının yönetimi sağlanarak, bağımlılıklarını en aza indirgemek amaçlanmaktadır. Projenizdeki
-bağımlılıkların oluşturulmasını ve yönetilmesini geliştiricinin yerine, framework’ün yapması olarak da
-açıklanır.
+instance’larının yönetimi sağlanarak, bağımlılıklarını en aza indirgemek amaçlanmaktadır.
+Projenizdeki bağımlılıkların oluşturulmasını ve yönetilmesini geliştiricinin yerine,
+framework’ün yapması olarak da açıklanır.
 
-Framework‘in üzerinde çalıştığımız da görülüyor ki; frameworkler birçok işi kendisi yapmakta ve bizim
-kodumuzu çalıştırmak için framework gerekli kaynakları ve çalışması gereken metotları oluşturup,
-yönetmektedir. Yazdığımız kod bloğu çalışacağı zaman, framework bizim kodumuzu çağırır ve çalıştırır
-daha sonra kontrol yeniden framework’e geçmesi olayının tümüne Inversion Of Control adı verilmektedir.
+Framework‘in üzerinde çalıştığımız da görülüyor ki; frameworkler birçok işi kendisi yapmakta
+ve bizim kodumuzu çalıştırmak için framework gerekli kaynakları ve çalışması gereken
+metotları oluşturup, yönetmektedir. Yazdığımız kod bloğu çalışacağı zaman, framework bizim
+kodumuzu çağırır ve çalıştırır daha sonra kontrol yeniden framework’e geçmesi olayının tümüne
+Inversion Of Control adı verilmektedir.
 ```
 
 ## Microservices ler arası iletişim kurma yöntemleri nelerdir?
@@ -425,8 +431,8 @@ Hibernate yazılım nesnelerin, ilişkisel veri tabanlarındaki (relational data
 nasıl karşılık geldiğini yürüten bir teknolojidir.
 
 Java programlama dilinde kullanılan açık kaynaklı bir nesne/ilişkisel eşleme (ORM) aracıdır.
-Hibernate, veri tabanı işlemlerini, Java sınıfları arasında doğrudan ilişki kurmak yerine nesnelerin
-saklanması ve yönetilmesi yoluyla yönetir.
+Hibernate, veri tabanı işlemlerini, Java sınıfları arasında doğrudan ilişki kurmak yerine
+nesnelerin saklanması ve yönetilmesi yoluyla yönetir.
 ```
 
 Ref : https://www.turkninja.com/2024/02/hibernate-ileri-seviye-interview.html
@@ -463,14 +469,15 @@ tablo adı olarak varsayılır.
 
 ## Hibernate'de Optimistic ve Pessimistic Kilitlenme nedir?
 ```
-Optimistic Kilitlenme, veri çakışmalarını önlemek için sürüm numarası veya zaman damgası kullanır.
-Veri güncellenmeden önce, sürüm numarası veya zaman damgasının değişip değişmediği kontrol edilir.
+Optimistic Kilitlenme, veri çakışmalarını önlemek için sürüm numarası veya zaman damgası
+kullanır. Veri güncellenmeden önce, sürüm numarası veya zaman damgasının değişip
+değişmediği kontrol edilir.
 
-Pessimistic Kilitlenme ise, bir kaynağa erişim sırasında veritabanı seviyesinde kilit kullanır,
-böylece diğer işlemler o kaynağı değiştiremez veya okuyamaz.
+Pessimistic Kilitlenme ise, bir kaynağa erişim sırasında veritabanı seviyesinde kilit
+kullanır, böylece diğer işlemler o kaynağı değiştiremez veya okuyamaz.
 
-Optimistic kilitlenme genellikle okuma yoğun uygulamalarda tercih edilirken, Pessimistic kilitlenme
-yazma yoğun işlemlerde veya yüksek çakışma riski olan durumlarda kullanılır.
+Optimistic kilitlenme genellikle okuma yoğun uygulamalarda tercih edilirken, Pessimistic
+kilitlenme yazma yoğun işlemlerde veya yüksek çakışma riski olan durumlarda kullanılır.
 ```
 
 ## Hibernate'de cascade türleri nelerdir ve nasıl kullanılır ?
@@ -480,8 +487,8 @@ uygulanacağını belirler. Ana cascade türleri: ALL, PERSIST, MERGE, REMOVE, R
 
 Örneğin,
 bir Parent nesnesi Child nesneleri ile bir ilişki içindeyse ve Parent nesnesi kaydedildiğinde
-(PERSIST) veya güncellendiğinde (MERGE) Child nesnelerinin de otomatik olarak kaydedilmesi veya
-güncellenmesi isteniyorsa, ilgili cascade türü ilişkide belirtilir.
+(PERSIST) veya güncellendiğinde (MERGE) Child nesnelerinin de otomatik olarak kaydedilmesi
+veya güncellenmesi isteniyorsa, ilgili cascade türü ilişkide belirtilir.
 ```
 
 ## Hibernate Query Plan Cache nedir ve performans üzerindeki etkisi nedir?
@@ -496,10 +503,10 @@ Bu özellik, özellikle karmaşık sorguların ve sık çalıştırılan sorgula
 ## Hibernate'de N+1 sorgu problemi nedir ve nasıl çözülür?
 ```
 N+1 sorgu problemi, bir entity ve onun ilişkili nesnelerini yüklerken ortaya çıkan bir performans
-sorunudur. Örneğin, bir Parent entity'si ile ilişkili çok sayıda Child entity'sini yüklerken, ilk
-olarak Parent entity'si için bir sorgu çalıştırılır ve ardından her bir Child için ayrı ayrı sorgular
-çalıştırılır. Bu, toplamda 1 (parent için) + N (N child için) sorgu anlamına gelir ve özellikle N'nin
-büyük olduğu durumlarda ciddi bir performans düşüklüğüne yol açabilir.
+sorunudur. Örneğin, bir Parent entity'si ile ilişkili çok sayıda Child entity'sini yüklerken,
+ilk olarak Parent entity'si için bir sorgu çalıştırılır ve ardından her bir Child için ayrı ayrı
+sorgular çalıştırılır. Bu, toplamda 1 (parent için) + N (N child için) sorgu anlamına gelir ve
+özellikle N'nin büyük olduğu durumlarda ciddi bir performans düşüklüğüne yol açabilir.
 ```
 
 # DATABASE Mulakat soruları
@@ -519,9 +526,10 @@ Bir index yaratıldığında tipi verilmez ise default olarak btree oluşturulma
 ```
 ##### Hash Index
 ```
-Hash daha çok eşitlik anında kullanılabilen bir index türüdür. Oluşum hızı index yaratma süresi
-açısından Btree’ye göre çok daha fazladır. Ancak kapladığı alan bakımından Btree’ye göre çok
-daha az bir yer kaplar. Çünkü Btree ağaç yapısında tutulurken, hash flat bir yapıda tutulmaktadır.
+Hash daha çok eşitlik anında kullanılabilen bir index türüdür. Oluşum hızı index yaratma
+süresi açısından Btree’ye göre çok daha fazladır. Ancak kapladığı alan bakımından Btree’ye
+göre çok daha az bir yer kaplar. Çünkü Btree ağaç yapısında tutulurken, hash flat bir yapıda
+tutulmaktadır.
 
 Hash index, kullanım şekli açısından genellikle B-tree ile karşılaştırılmaktadır.
 
@@ -536,13 +544,14 @@ Hash index, kullanım şekli açısından genellikle B-tree ile karşılaştır�
 ```
 ##### BRIN: Block range index
 ```
-Postgresql verileri varsayılan olarak 8 Kb’lık bloklar halinde saklamaktadır. Brin indexlemede,
-indexler tutulurken bloklar içerisindeki en büyük ve en küçük değerler baz alınır. B-tree’nin
-aksine blok içersinde sıralanmış tüm değerler değil, sadece min ve max değerler tutulur. Eski
-adıyla min-max indextir.
+Postgresql verileri varsayılan olarak 8 Kb’lık bloklar halinde saklamaktadır. Brin
+indexlemede, indexler tutulurken bloklar içerisindeki en büyük ve en küçük değerler baz alınır.
+B-tree’nin aksine blok içersinde sıralanmış tüm değerler değil, sadece min ve max değerler
+tutulur. Eski adıyla min-max indextir.
 
-B-tree yaratıldığında 8Kb’lık veri setlerinin tümünü saklayacak şekilde bir indexleme yapar. Ancak
-BRIN ındex 8Kb’lık bloklardan sadece minumum ve maximum değerleri alarak index halinde saklar.
+B-tree yaratıldığında 8Kb’lık veri setlerinin tümünü saklayacak şekilde bir indexleme yapar.
+Ancak BRIN ındex 8Kb’lık bloklardan sadece minumum ve maximum değerleri alarak index
+halinde saklar.
 
 - Btree ile karşılaştırıldığında tutalan veri boyutuna bakarsak çok çok daha az
   olduğunu görebiliriz.
