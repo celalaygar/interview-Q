@@ -784,3 +784,136 @@ https://medium.com/@avniozunlu/domain-driven-design-ddd-151c90472914
 
 4.  **Soru:** Spring Boot Actuator nedir ve hangi amaçlarla kullanılır?
     **Cevap:** Spring Boot Actuator, çalışan bir Spring Boot uygulamasının iç işleyişini izlemek ve yönetmek için kullanılan bir modü
+
+
+# Spring Boot, Spring Cloud ve Mikroservis Mülakat Soruları ve Cevapları
+
+## Spring Boot
+
+1.  **Soru:** Spring Boot'un temel özellikleri nelerdir?
+    **Cevap:** Spring Boot'un temel özellikleri şunlardır:
+    * Bağımsız (stand-alone) Spring uygulamaları oluşturma yeteneği.
+    * Gömülü Tomcat, Jetty veya Undertow gibi servlet konteynerleri sunması.
+    * Basitleştirilmiş yapılandırma (auto-configuration) sayesinde hızlı geliştirme.
+    * "Opinionated" varsayılan yapılandırmalar sunarak geliştirici kararlarını azaltması.
+    * Geliştirme araçları ve Actuator gibi özellikler sunarak uygulama izleme ve yönetimi kolaylaştırması.
+
+2.  **Soru:** Spring Boot'ta Auto-Configuration nasıl çalışır?
+    **Cevap:** Spring Boot Auto-Configuration, projenize eklediğiniz bağımlılıkları analiz ederek, uygulamanız için gerekli olan bean'leri otomatik olarak yapılandırır. Bu işlem `@EnableAutoConfiguration` anotasyonu (genellikle `@SpringBootApplication` içinde bulunur) ile tetiklenir. Spring Boot, `spring.factories` dosyalarında tanımlanan `AutoConfiguration` sınıflarını yükler ve belirli koşullar sağlandığında bu sınıflardaki bean tanımlarını IoC konteynerine ekler.
+
+3.  **Soru:** Spring Boot Actuator'ın temel kullanım alanları nelerdir? Hangi önemli endpoint'leri sunar?
+    **Cevap:** Spring Boot Actuator, çalışan bir Spring Boot uygulamasının sağlık durumu, metrikleri, yapılandırması ve diğer operasyonel bilgilerini izlemek ve yönetmek için kullanılır. Önemli endpoint'leri şunlardır:
+    * `/health`: Uygulamanın sağlık durumunu gösterir.
+    * `/info`: Uygulama hakkında özel bilgileri (örneğin sürüm, build bilgileri) gösterir.
+    * `/metrics`: Uygulama metriklerini (bellek kullanımı, CPU kullanımı, HTTP istek sayıları vb.) gösterir.
+    * `/env`: Uygulama ortam özelliklerini gösterir.
+    * `/beans`: Spring IoC konteynerindeki tüm bean'leri listeler.
+    * `/configprops`: `@ConfigurationProperties` ile tanımlanmış yapılandırma özelliklerini gösterir.
+    * `/mappings`: Uygulamadaki tüm request mapping'lerini (endpoint'leri) listeler.
+    * `/loggers`: Uygulamanın logger yapılandırmasını yönetmeye olanak tanır.
+
+4.  **Soru:** Spring Boot CLI (Command Line Interface) ne işe yarar?
+    **Cevap:** Spring Boot CLI, Spring Boot uygulamalarını hızlı bir şekilde prototiplemek ve çalıştırmak için komut satırı araçları sunar. Özellikle basit uygulamalar veya hızlı denemeler için faydalıdır. Java kodunu derleme ve çalıştırma süreçlerini basitleştirir.
+
+5.  **Soru:** Spring Boot'ta farklı profiller nasıl yönetilir? Ne zaman kullanılırlar?
+    **Cevap:** Spring Boot'ta farklı ortamlar (development, test, production vb.) için farklı yapılandırmalar tanımlamak için profiller kullanılır. `application-{profilAdı}.properties` veya `application-{profilAdı}.yml` şeklinde isimlendirilmiş yapılandırma dosyaları oluşturularak profiller tanımlanır. Uygulama başlatılırken `--spring.profiles.active={profilAdı}` argümanı ile veya `spring.profiles.active` ortam değişkeni ile aktif profil belirtilebilir.
+
+6.  **Soru:** Spring Boot'ta gömülü sunucu (embedded server) kullanmanın avantajları nelerdir?
+    **Cevap:** Gömülü sunucu kullanmanın avantajları şunlardır:
+    * Uygulamanın bağımsız bir şekilde çalıştırılabilmesi (JAR olarak paketlenebilir).
+    * Dağıtımın kolaylaşması (harici bir sunucu kurulumuna gerek kalmaz).
+    * Geliştirme sürecinin hızlanması (dahili sunucu ile hızlı test ve yineleme).
+    * Test ortamlarının kolayca kurulabilmesi.
+
+7.  **Soru:** Spring Boot uygulamasını production ortamına nasıl deploy edersiniz? Farklı yöntemler nelerdir?
+    **Cevap:** Spring Boot uygulamalarını production ortamına deploy etmek için farklı yöntemler vardır:
+    * **JAR olarak çalıştırma:** Gömülü sunucu ile paketlenmiş JAR dosyasını `java -jar` komutuyla çalıştırmak.
+    * **WAR olarak deploy etme:** Uygulamayı geleneksel bir Java EE uygulama sunucusuna (Tomcat, JBoss vb.) WAR dosyası olarak deploy etmek (bu durumda `spring-boot-starter-tomcat` gibi bağımlılıkların `provided` olarak işaretlenmesi gerekebilir).
+    * **Docker konteyneri:** Uygulamayı bir Docker imajı içine alıp, konteyner orkestrasyon araçları (Kubernetes, Docker Swarm vb.) ile yönetmek.
+    * **Cloud platformlarına deploy etme:** AWS, Azure, Google Cloud gibi bulut platformlarının sunduğu özel servisler (örneğin AWS Elastic Beanstalk, Azure App Service, Google Cloud Run) aracılığıyla deploy etmek.
+
+## Spring Cloud
+
+1.  **Soru:** Spring Cloud nedir ve mikroservis mimarisindeki rolü nedir?
+    **Cevap:** Spring Cloud, mikroservis mimarisi oluşturmayı kolaylaştıran bir dizi araç ve kütüphane sağlayan bir şemsiye projedir. Mikroservisler arasındaki iletişimi, yapılandırma yönetimini, servis keşfini, devre kesici (circuit breaker) mekanizmalarını, API ağ geçidini ve daha birçok dağıtık sistem sorununu çözmek için çözümler sunar.
+
+2.  **Soru:** Spring Cloud Config Server ne işe yarar? Avantajları nelerdir?
+    **Cevap:** Spring Cloud Config Server, mikroservis uygulamalarının merkezi bir yerden yapılandırılmasını sağlayan bir servistir. Git, SVN veya HashiCorp Vault gibi farklı backend'lerden yapılandırma bilgilerini okuyabilir ve istemci mikroservislere HTTP üzerinden sunar. Avantajları şunlardır:
+    * Yapılandırma yönetimini merkezileştirir.
+    * Yapılandırma değişikliklerinin tüm servislere kolayca yayılmasını sağlar.
+    * Sürüm kontrolü ve yapılandırma geçmişi tutulabilir.
+    * Güvenli yapılandırma yönetimi imkanı sunar.
+
+3.  **Soru:** Spring Cloud Netflix Eureka nedir ve mikroservislerde servis keşfi (service discovery) için nasıl kullanılır?
+    **Cevap:** Spring Cloud Netflix Eureka, mikroservislerin birbirlerini bulmasını sağlayan bir servis keşfi sunucusudur. Her mikroservis, başlatıldığında Eureka Server'a kendi adres ve port bilgilerini kaydeder. Diğer mikroservisler de Eureka Server'a danışarak ihtiyaç duydukları servisin konumunu öğrenir ve iletişim kurarlar. Bu sayede servislerin dinamik olarak ölçeklenmesi ve yer değiştirmesi kolaylaşır.
+
+4.  **Soru:** Spring Cloud Gateway nedir ve mikroservis mimarisinde ne gibi roller üstlenir?
+    **Cevap:** Spring Cloud Gateway, mikroservisler için bir API ağ geçidi (API Gateway) görevi gören bir projedir. Temel rolleri şunlardır:
+    * Tek bir giriş noktası sağlayarak istemcilerin mikroservislere erişimini kolaylaştırır.
+    * Yönlendirme (routing) kurallarını yönetir.
+    * Güvenlik (authentication, authorization) gibi kesen ilgileri merkezi olarak yönetebilir.
+    * Hız sınırlaması (rate limiting), devre kesici (circuit breaking) gibi özellikleri uygulayabilir.
+    * İstek ve cevapları dönüştürebilir.
+
+5.  **Soru:** Spring Cloud Circuit Breaker (örneğin Resilience4j) ne işe yarar? Hangi sorunları çözmeye yardımcı olur?
+    **Cevap:** Spring Cloud Circuit Breaker (Resilience4j gibi kütüphaneler aracılığıyla), dağıtık sistemlerde servisler arasındaki iletişimde olası hatalara karşı dayanıklılığı artırmak için kullanılır. Bir servis çağrısı belirli bir eşiği aşan sayıda başarısız olursa, devre kesici açılır ve bir süre boyunca hatalı servise yapılan çağrıları engeller. Bu sayede sistemin tamamının çökmesi önlenir ve hatalı servisin iyileşmesi için zaman tanınır.
+
+6.  **Soru:** Spring Cloud Load Balancer mikroservisler arasındaki yük dengelemesini nasıl sağlar?
+    **Cevap:** Spring Cloud Load Balancer, Eureka gibi bir servis keşfi mekanizmasıyla entegre olarak çalışır. Bir istemci bir servise istek gönderdiğinde, Load Balancer mevcut olan servis örnekleri arasından birini seçerek isteği yönlendirir. Bu, yükün birden fazla servis örneğine eşit olarak dağıtılmasını sağlar ve tek bir servis örneğinin aşırı yüklenmesini önler. Farklı yük dengeleme algoritmaları (round-robin, random, weighted response time vb.) desteklenebilir.
+
+7.  **Soru:** Spring Cloud Stream nedir ve mikroservisler arasında asenkron iletişimi nasıl kolaylaştırır?
+    **Cevap:** Spring Cloud Stream, mikroservisler arasında olay güdümlü (event-driven) ve asenkron iletişimi basitleştiren bir framework'tür. Kafka, RabbitMQ gibi farklı mesajlaşma aracıları (message broker) için soyut bir katman sağlar. Mikroservisler, Spring Cloud Stream'in sağladığı binder'lar aracılığıyla mesaj kuyruklarına kolayca mesaj gönderebilir ve mesajları dinleyebilirler. Bu, servisler arasındaki bağımlılığı azaltır ve daha ölçeklenebilir ve esnek sistemler oluşturmaya olanak tanır.
+
+## Mikroservis Mimarisi
+
+1.  **Soru:** Monolitik mimari ile mikroservis mimarisinin temel farkları nelerdir? Mikroservislerin avantaj ve dezavantajları nelerdir?
+    **Cevap:**
+    * **Monolitik Mimari:** Tüm uygulama tek bir büyük kod tabanı ve tek bir dağıtım birimi olarak geliştirilir.
+    * **Mikroservis Mimarisi:** Uygulama, bağımsız olarak dağıtılabilen küçük, özel amaçlı servislerden oluşur. Her servis kendi veritabanına ve teknoloji yığınına sahip olabilir.
+
+    **Mikroservislerin Avantajları:**
+    * **Teknolojik Çeşitlilik:** Farklı servisler farklı teknolojilerle geliştirilebilir.
+    * **Ölçeklenebilirlik:** Her servis bağımsız olarak ölçeklenebilir.
+    * **Hızlı Geliştirme ve Dağıtım:** Küçük ve bağımsız servisler daha hızlı geliştirilip deploy edilebilir.
+    * **Hata İzolasyonu:** Bir servisteki hata diğer servisleri etkilemez.
+    * **Daha İyi Organizasyon:** Küçük, odaklanmış ekipler tarafından geliştirilebilir.
+
+    **Mikroservislerin Dezavantajları:**
+    * **Dağıtık Sistem Karmaşıklığı:** Servisler arası iletişim, ağ sorunları, dağıtık veri yönetimi gibi zorluklar ortaya çıkar.
+    * **Operasyonel Yük:** Daha fazla sayıda servis yönetmek gerekir.
+    * **İzleme ve Hata Ayıklama Zorluğu:** Dağıtık sistemlerde izleme ve hata ayıklama daha karmaşıktır.
+    * **Servisler Arası İletişim Yönetimi:** Etkili ve performanslı servisler arası iletişim mekanizmaları (REST, gRPC, mesajlaşma) gereklidir.
+
+2.  **Soru:** Mikroservisler arası iletişimde kullanılan yaygın yöntemler nelerdir? Avantaj ve dezavantajlarını karşılaştırınız.
+    **Cevap:** Yaygın iletişim yöntemleri şunlardır:
+    * **REST (Synchronous):** HTTP protokolü üzerinden yapılan senkron iletişimdir. Basit ve yaygın olarak kullanılır. Dezavantajı, servisler arasındaki sıkı bağlılık ve olası performans sorunlarıdır.
+    * **Mesajlaşma (Asynchronous):** Kafka, RabbitMQ gibi mesaj kuyrukları aracılığıyla yapılan asenkron iletişimdir. Daha gevşek bağlılık, daha iyi ölçeklenebilirlik ve güvenilirlik sağlar. Dezavantajı, karmaşıklık ve eventual consistency (sonunda tutarlılık) sorunlarıdır.
+    * **gRPC (Synchronous/Asynchronous):** Google tarafından geliştirilen yüksek performanslı, dil bağımsız bir RPC framework'üdür. Protobuf ile veri serileştirme kullanır. Yüksek performans ve güçlü tip güvenliği sunar. Dezavantajı, bazı platformlarda ve dillerde daha az yaygın olmasıdır.
+
+3.  **Soru:** Mikroservislerde veri yönetimi nasıl ele alınır? Her servis kendi veritabanına sahip olmanın avantajları nelerdir?
+    **Cevap:** Mikroservislerde genellikle her servis kendi bağımsız veritabanına sahiptir (database per service pattern). Bunun avantajları şunlardır:
+    * **Teknolojik Özgürlük:** Her servis kendi ihtiyaçlarına en uygun veritabanı teknolojisini seçebilir.
+    * **İzolasyon:** Bir servisteki veri modeli veya şemasındaki değişiklikler diğer servisleri etkilemez.
+    * **Ölçeklenebilirlik:** Her veritabanı servisin ihtiyaçlarına göre bağımsız olarak ölçeklenebilir.
+    * **Daha İyi Performans:** Her servis kendi veri erişimini optimize edebilir.
+
+    Ancak bu yaklaşım, dağıtık işlemler (distributed transactions) gibi veri tutarlılığı sorunlarını da beraberinde getirebilir. Bu sorunları çözmek için Saga pattern gibi yaklaşımlar kullanılabilir.
+
+4.  **Soru:** Mikroservislerde distributed tracing (dağıtık izleme) neden önemlidir? Hangi araçlar kullanılabilir?
+    **Cevap:** Mikroservislerde distributed tracing, bir isteğin birden fazla servis üzerinden geçerkenki yolunu ve her bir serviste harcadığı süreyi izlemek için kritik öneme sahiptir. Bu, performans sorunlarını tespit etmek, hataları ayıklamak ve sistemin genel davranışını anlamak için gereklidir. Kullanılabilecek araçlar arasında Zipkin, Jaeger ve Spring Cloud Sleuth (çeşitli tracing backend'lerini destekler) bulunur.
+
+5.  **Soru:** API Gateway mikroservis mimarisinde neden gereklidir? Temel sorumlulukları nelerdir?
+    **Cevap:** API Gateway, mikroservis mimarisinde istemciler için tek bir giriş noktası sağlayarak karmaşıklığı azaltır. Temel sorumlulukları şunlardır:
+    * **Yönlendirme (Routing):** Gelen istekleri uygun mikroservislere yönlendirmek.
+    * **Güvenlik (Authentication ve Authorization):** Kimlik doğrulama ve yetkilendirme işlemlerini merkezi olarak yönetmek.
+    * **Hız Sınırlaması (Rate Limiting):** Servislerin aşırı yüklenmesini önlemek için istek hızını kontrol etmek.
+    * **İstek ve Cevap Dönüşümü:** İstemci ve servisler arasındaki veri formatlarını dönüştürmek.
+    * **Önbellekleme (Caching):** Sık erişilen verilere daha hızlı erişim sağlamak.
+    * **İzleme ve Günlükleme:** İstekleri ve cevapları izlemek ve loglamak.
+
+6.  **Soru:** Mikroservis mimarisinde "Contract Testing" ve "End-to-End Testing" arasındaki fark nedir? Neden önemlidirler?
+    **Cevap:**
+    * **Contract Testing (Kontrat Testi):** Bir servis sağlayıcısının (provider) sunduğu API kontratının (istek ve cevap formatları) tüketicisi (consumer) tarafından beklendiği gibi olduğunu doğrular. Amaç, servisler arasındaki entegrasyon sorunlarını erken aşamada tespit etmektir.
+    * **End-to-End Testing (Uçtan Uca Test):** Tüm sistemin veya belirli bir iş akışının baştan sona doğru çalıştığını doğrular. Birden fazla servisin etkileşimini ve genel sistem davranışını test eder.
+
+    Her iki test türü de mikroservis mimarisinde önemlidir. Kontrat testleri, servisler arasındaki bağımsızlığı korurken entegrasyon sorunlarını azaltmaya yardımcı olur. Uçtan uca testler ise sistemin genel olarak doğru çalıştığını ve iş gereksinimlerini karşıladığını doğrular.
