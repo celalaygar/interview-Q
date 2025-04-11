@@ -916,4 +916,4 @@ https://medium.com/@avniozunlu/domain-driven-design-ddd-151c90472914
     * **Contract Testing (Kontrat Testi):** Bir servis sağlayıcısının (provider) sunduğu API kontratının (istek ve cevap formatları) tüketicisi (consumer) tarafından beklendiği gibi olduğunu doğrular. Amaç, servisler arasındaki entegrasyon sorunlarını erken aşamada tespit etmektir.
     * **End-to-End Testing (Uçtan Uca Test):** Tüm sistemin veya belirli bir iş akışının baştan sona doğru çalıştığını doğrular. Birden fazla servisin etkileşimini ve genel sistem davranışını test eder.
 
-    Her iki test türü de mikroservis mimarisinde önemlidir. Kontrat testleri, servisler arasındaki bağımsızlığı korurken entegrasyon sorunlarını azaltmaya yardımcı olur. Uçtan uca testler ise sistemin genel olarak doğru çalıştığını ve iş gereksinimlerini karşıladığını doğrular.
+
