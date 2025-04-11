@@ -643,3 +643,144 @@ https://medium.com/@avniozunlu/domain-driven-design-ddd-151c90472914
 ```
 https://medium.com/@avniozunlu/domain-driven-design-ddd-151c90472914
 ```
+
+
+
+
+# Java ve Spring Mülakat Soruları ve Cevapları
+
+## İçindekiler
+
+1.  [Java Temelleri](#java-temelleri) (8 Soru)
+2.  [Spring Framework](#spring-framework) (8 Soru)
+3.  [Spring Boot](#spring-boot) (8 Soru)
+4.  [Spring Security](#spring-security) (8 Soru)
+5.  [Spring Cloud](#spring-cloud) (8 Soru)
+
+## Java Temelleri
+
+1.  **Soru:** Java'da "OOP" (Nesne Yönelimli Programlama) prensipleri nelerdir? Açıklayınız.
+    **Cevap:** OOP'nin temel prensipleri şunlardır:
+    * **Encapsulation (Kapsülleme):** Verileri ve bu veriler üzerinde işlem yapan metotları bir arada tutmaktır. Erişim belirleyiciler (public, private, protected) ile kontrol sağlanır.
+    * **Inheritance (Kalıtım):** Bir sınıfın (alt sınıf/türetilmiş sınıf) başka bir sınıfın (üst sınıf/temel sınıf) özelliklerini ve davranışlarını miras almasıdır. Kodun yeniden kullanılabilirliğini artırır.
+    * **Polymorphism (Çok Biçimlilik):** Bir nesnenin farklı biçimlerde davranabilme yeteneğidir. Metot aşırı yüklemesi (method overloading) ve metot geçersiz kılma (method overriding) ile sağlanır.
+    * **Abstraction (Soyutlama):** Karmaşık gerçekliği basitleştirerek sadece ilgili detayları göstermektir. Abstract sınıflar ve interface'ler ile sağlanır.
+
+2.  **Soru:** `==` operatörü ile `.equals()` metodu arasındaki fark nedir?
+    **Cevap:**
+    * `==` operatörü, primitive veri tipleri için değer eşitliğini, referans tipleri için ise nesnelerin bellek adreslerinin eşitliğini kontrol eder.
+    * `.equals()` metodu, Object sınıfında tanımlanmış bir metottur ve varsayılan olarak referans eşitliğini kontrol eder. Ancak, String, Integer gibi birçok sınıf bu metodu nesnelerin içeriklerinin eşitliğini kontrol edecek şekilde geçersiz kılmıştır (override). Özel sınıflarınızda da içerik eşitliğini kontrol etmek için `.equals()` metodunu geçersiz kılmanız önerilir.
+
+3.  **Soru:** Java'da Garbage Collection (Çöp Toplama) nasıl çalışır?
+    **Cevap:** Java'da otomatik bellek yönetimi sağlayan bir süreçtir. JVM (Java Virtual Machine), artık erişilmeyen (referansı olmayan) nesneleri periyodik olarak tespit eder ve bu nesnelerin kapladığı bellek alanını serbest bırakır. Bu sayede programcının manuel bellek yönetimiyle uğraşmasına gerek kalmaz.
+
+4.  **Soru:** Exception (İstisna) nedir ve Java'da exception handling (istisna yönetimi) nasıl yapılır?
+    **Cevap:** Exception, programın normal akışını bozan çalışma zamanı olaylarıdır. Java'da istisna yönetimi `try-catch-finally` blokları ve `throws` anahtar kelimesi ile yapılır.
+    * `try`: İstisna oluşabilecek kod bloğu içine alınır.
+    * `catch`: Belirli bir türdeki istisna yakalandığında çalışacak kod bloğudur. Birden fazla `catch` bloğu olabilir.
+    * `finally`: `try` bloğu başarılı bir şekilde tamamlanmış olsa da, bir istisna oluşmuş olsa da her zaman çalışacak kod bloğudur (genellikle kaynakların serbest bırakılması için kullanılır).
+    * `throws`: Bir metodun belirli bir istisna türünü fırlatabileceğini belirtmek için kullanılır.
+
+5.  **Soru:** Interface (Arayüz) ve Abstract Class (Soyut Sınıf) arasındaki temel farklar nelerdir?
+    **Cevap:**
+    * **Interface:** Tamamen soyuttur. Metot tanımları (imzaları) içerir, ancak varsayılan olarak herhangi bir uygulama içermez (Java 8 ile gelen default metotlar hariç). Bir sınıf birden fazla interface'i implement edebilir.
+    * **Abstract Class:** Hem soyut (abstract metotlar) hem de somut (uygulanmış metotlar) metotlar içerebilir. Bir sınıf sadece bir abstract sınıfı extend edebilir. Abstract sınıflar genellikle ortak davranışları alt sınıflara aktarmak için kullanılır.
+
+6.  **Soru:** Java'da multithreading (çoklu iş parçacığı) nedir ve nasıl sağlanır?
+    **Cevap:** Multithreading, bir programın aynı anda birden fazla görevi (iş parçacığı) eş zamanlı olarak çalıştırmasıdır. Java'da iki temel şekilde sağlanır:
+    * `Runnable` interface'ini implement eden bir sınıf oluşturup, bu sınıfın bir nesnesini bir `Thread` nesnesine geçirerek `start()` metodunu çağırmak.
+    * `Thread` sınıfını extend eden bir sınıf oluşturup, bu sınıfın bir nesnesini oluşturarak `start()` metodunu çağırmak.
+
+7.  **Soru:** Java'da Collection Framework nedir ve en sık kullanılan Collection türleri nelerdir?
+    **Cevap:** Java Collection Framework, nesne gruplarını (koleksiyonları) temsil etmek ve yönetmek için birleşik bir mimari sağlayan bir dizi interface ve sınıftır. En sık kullanılan Collection türleri şunlardır:
+    * **List:** Sıralı ve tekrar eden elemanlara izin verir (ArrayList, LinkedList).
+    * **Set:** Sırasız ve tekrar etmeyen elemanlara izin verir (HashSet, TreeSet).
+    * **Map:** Anahtar-değer çiftlerini saklar (HashMap, TreeMap, LinkedHashMap).
+
+8.  **Soru:** Final anahtar kelimesinin Java'daki farklı kullanım alanlarını açıklayınız.
+    **Cevap:**
+    * **Sınıflarda (`final class`):** Bir sınıfın alt sınıf oluşturulmasını engeller.
+    * **Metotlarda (`final method`):** Bir metodun alt sınıflar tarafından geçersiz kılınmasını (override) engeller.
+    * **Değişkenlerde (`final variable`):** Bir değişkene sadece bir kez değer atanabileceği anlamına gelir. İlklendirildikten sonra değeri değiştirilemez (sabit gibi davranır).
+
+## Spring Framework
+
+1.  **Soru:** Spring Framework'ün temel prensipleri nelerdir?
+    **Cevap:** Spring Framework'ün temel prensipleri şunlardır:
+    * **Dependency Injection (DI - Bağımlılık Enjeksiyonu):** Nesnelerin bağımlılıklarının (diğer nesneler) dışarıdan sağlanmasıdır. Bu, gevşek bağlı (loosely coupled) ve daha test edilebilir kod oluşturmayı sağlar.
+    * **Inversion of Control (IoC - Kontrolün Tersine Çevrilmesi):** Nesnelerin oluşturulması ve yönetilmesi sorumluluğunun framework'e devredilmesidir.
+    * **Aspect-Oriented Programming (AOP - Yönlendirilmiş Programlama):** Uygulamanın farklı bölümlerinde tekrar eden kesen ilgileri (logging, transaction management gibi) merkezi bir şekilde yönetmeyi sağlar.
+    * **Data Access Abstraction:** Farklı veri erişim teknolojileri için tutarlı bir arayüz sunar.
+    * **Model-View-Controller (MVC):** Web uygulamaları geliştirmek için kullanılan bir tasarım desenidir.
+
+2.  **Soru:** Dependency Injection (DI) Spring'de nasıl uygulanır? Farklı DI türleri nelerdir?
+    **Cevap:** Spring'de DI temel olarak iki şekilde uygulanır:
+    * **Constructor Injection (Kurucu Enjeksiyonu):** Bağımlılıklar sınıfın kurucu metodu aracılığıyla enjekte edilir. Genellikle zorunlu bağımlılıklar için tercih edilir.
+    * **Setter Injection (Setter Metot Enjeksiyonu):** Bağımlılıklar sınıfın setter metotları aracılığıyla enjekte edilir. İsteğe bağlı bağımlılıklar için kullanılabilir.
+    * **Field Injection (Alan Enjeksiyonu):** `@Autowired` anotasyonu doğrudan alan üzerine uygulanarak bağımlılıklar enjekte edilir. Genellikle önerilmez çünkü birim testini zorlaştırabilir.
+
+3.  **Soru:** Spring Bean nedir ve Bean yaşam döngüsü nasıldır?
+    **Cevap:** Spring Bean, Spring IoC konteyneri tarafından yönetilen bir nesnedir. Bean yaşam döngüsü şu aşamaları içerir:
+    1.  **Bean Definition (Bean Tanımı):** Spring konfigürasyon dosyalarında (XML veya anotasyonlar aracılığıyla) bean'in nasıl oluşturulacağı tanımlanır.
+    2.  **Bean Instantiation (Bean Oluşturma):** Spring konteyneri, bean tanımına göre bean'in bir örneğini oluşturur.
+    3.  **Dependency Injection (Bağımlılık Enjeksiyonu):** Bean'in bağımlılıkları enjekte edilir.
+    4.  **Initialization (Başlatma):** Bean özelliklerinin ayarlanması ve özel başlatma metotlarının (örneğin `@PostConstruct` anotasyonlu metotlar veya `InitializingBean` interface'indeki `afterPropertiesSet()` metodu) çalıştırılması.
+    5.  **Usage (Kullanım):** Bean uygulama içinde kullanılır.
+    6.  **Destruction (Yok Etme):** Uygulama kapandığında veya bean kapsamı sona erdiğinde, özel yok etme metotları (örneğin `@PreDestroy` anotasyonlu metotlar veya `DisposableBean` interface'indeki `destroy()` metodu) çalıştırılır ve bean yok edilir.
+
+4.  **Soru:** Spring'de `@Component`, `@Service`, `@Repository`, `@Controller` anotasyonlarının rolleri nelerdir?
+    **Cevap:** Bu anotasyonlar, sınıfları Spring tarafından yönetilen bean'ler olarak işaretlemek için kullanılır ve aynı zamanda anlamsal bir rol de taşırlar:
+    * `@Component`: Genel amaçlı bir Spring bean'ini işaretler. Diğer özel anotasyonların temelidir.
+    * `@Service`: İş mantığı katmanındaki (service layer) bean'leri işaretler.
+    * `@Repository`: Veri erişim katmanındaki (data access layer) bean'leri işaretler. Genellikle veritabanı etkileşimlerini yöneten sınıflar için kullanılır. Ayrıca platforma özgü istisnaları Spring'in `DataAccessException` hiyerarşisine çevirme konusunda yardımcı olur.
+    * `@Controller`: Web katmanındaki (presentation layer) bean'leri işaretler ve gelen web isteklerini işlemek için kullanılır.
+
+5.  **Soru:** Spring AOP (Aspect-Oriented Programming) nedir ve temel kavramları nelerdir?
+    **Cevap:** Spring AOP, uygulamanın farklı bölümlerinde tekrar eden kesen ilgileri (cross-cutting concerns) merkezi bir şekilde yönetmeyi sağlayan bir programlama paradigmasıdır. Temel kavramları şunlardır:
+    * **Aspect:** Kesen bir ilgiyi (örneğin logging, güvenlik) uygulayan modüldür. Java'da genellikle bir sınıf ve anotasyonlar (örneğin `@Aspect`) ile tanımlanır.
+    * **Join Point:** Uygulamada bir aspect'in uygulanabileceği bir noktadır (örneğin bir metot çağrısı, bir exception fırlatılması).
+    * **Advice:** Bir join point'te gerçekleştirilecek eylemdir (örneğin bir metot çağrısı öncesinde loglama yapmak). Farklı advice türleri vardır: `@Before`, `@After`, `@AfterReturning`, `@AfterThrowing`, `@Around`.
+    * **Pointcut:** Hangi join point'lere advice'ın uygulanacağını belirleyen bir ifadedir. Genellikle AspectJ pointcut ifadesi dili kullanılır.
+    * **Weaving:** Aspect'in join point'lere uygulanması sürecidir. Compile-time, load-time veya runtime'da gerçekleşebilir.
+
+6.  **Soru:** Spring MVC mimarisini açıklayınız.
+    **Cevap:** Spring MVC (Model-View-Controller), web uygulamaları geliştirmek için kullanılan bir tasarım deseninin Spring Framework tarafından implementasyonudur. Temel bileşenleri şunlardır:
+    * **Model:** Uygulamanın verilerini ve iş mantığını temsil eder.
+    * **View:** Kullanıcıya gösterilecek olan arayüzü (genellikle HTML, JSP, Thymeleaf gibi şablon motorları ile oluşturulur) temsil eder.
+    * **Controller:** Kullanıcıdan gelen istekleri işler, modeli günceller ve hangi view'in gösterileceğine karar verir.
+    İstek akışı genellikle şu şekildedir: Kullanıcı bir istek gönderir -> DispatcherServlet bu isteği alır -> HandlerMapping uygun Controller'ı bulur -> Controller isteği işler, modeli günceller -> ViewResolver uygun View'i bulur -> View modeldeki verilerle birlikte render edilir -> Kullanıcıya cevap gönderilir.
+
+7.  **Soru:** Spring Bean scope'ları nelerdir? En sık kullanılanları açıklayınız.
+    **Cevap:** Spring Bean scope'ları, Spring konteynerinin bean örneklerini nasıl oluşturacağını ve yöneteceğini belirler. En sık kullanılan scope'lar şunlardır:
+    * **singleton:** Uygulama boyunca sadece bir tane bean örneği oluşturulur ve tüm istekler için aynı örnek kullanılır (varsayılan scope).
+    * **prototype:** Her istek için yeni bir bean örneği oluşturulur.
+    * **request:** Her HTTP isteği için yeni bir bean örneği oluşturulur. Sadece web uygulamalarında geçerlidir.
+    * **session:** Her HTTP oturumu için yeni bir bean örneği oluşturulur. Sadece web uygulamalarında geçerlidir.
+    * **global-session:** Portlet tabanlı web uygulamalarında global HTTP oturumu için yeni bir bean örneği oluşturulur.
+    * **application:** Web uygulamasının ServletContext yaşam döngüsü boyunca bir tane bean örneği oluşturulur. Sadece web uygulamalarında geçerlidir.
+    * **websocket:** Bir WebSocket oturumunun yaşam döngüsü boyunca bir tane bean örneği oluşturulur. Sadece WebSocket uygulamalarında geçerlidir.
+
+8.  **Soru:** Spring'de `@Autowired` ve `@Qualifier` anotasyonları ne için kullanılır?
+    **Cevap:**
+    * `@Autowired`: Spring IoC konteynerine, işaretlendiği alan, kurucu veya setter metodu aracılığıyla bağımlılığı otomatik olarak enjekte etmesini söyler. Spring, uyumlu tipteki bir bean'i konteynerden bulup enjekte eder.
+    * `@Qualifier`: Birden fazla uyumlu tipte bean olduğunda, hangi bean'in enjekte edileceğini belirtmek için `@Autowired` ile birlikte kullanılır. `@Qualifier` anotasyonuna, enjekte edilecek bean'in adını veya özel bir niteleyici değerini belirtebilirsiniz.
+
+## Spring Boot
+
+1.  **Soru:** Spring Boot nedir ve Spring Framework'e göre avantajları nelerdir?
+    **Cevap:** Spring Boot, Spring tabanlı uygulamaları hızlı ve kolay bir şekilde geliştirmek, yapılandırmak ve çalıştırmak için tasarlanmış bir framework'tür. Spring Framework'ün üzerine inşa edilmiştir ve aşağıdaki avantajları sunar:
+    * **Hızlı Başlangıç:** Minimum yapılandırma ile bağımsız, üretim düzeyinde Spring uygulamaları oluşturmayı kolaylaştırır.
+    * **Otomatik Yapılandırma (Auto-Configuration):** Bağımlılıklarınıza göre yaygın uygulama yapılandırmalarını otomatik olarak yapar.
+    * **Gömülü Sunucular:** Tomcat, Jetty veya Undertow gibi gömülü sunucularla birlikte gelir, bu da uygulamaların kolayca çalıştırılmasını sağlar.
+    * **Opinionated Defaults:** Çoğu kullanım senaryosu için mantıklı varsayılan yapılandırmalar sunar, ancak gerektiğinde özelleştirmeye izin verir.
+    * **CLI (Command Line Interface):** Komut satırından Spring Boot uygulamalarını geliştirmek ve yönetmek için araçlar sunar.
+    * **Geliştirilmiş Geliştirici Deneyimi:** Daha az boilerplate kod ve daha hızlı geliştirme döngüsü sağlar.
+
+2.  **Soru:** Spring Boot'ta "Starters" nedir? Ne işe yararlar?
+    **Cevap:** Spring Boot Starters, belirli bir işlevsellik için gereken tüm bağımlılıkları içeren bağımlılık gruplarıdır. Örneğin, `spring-boot-starter-web` web uygulaması geliştirmek için gereken tüm temel bağımlılıkları (Spring MVC, Tomcat, Jackson vb.) içerir. Starters, proje bağımlılıklarını yönetmeyi kolaylaştırır ve uyumlu bağımlılık sürümlerini bir arada tutar.
+
+3.  **Soru:** Spring Boot uygulamasının temel yapılandırma dosyası hangisidir ve nasıl yapılandırılır?
+    **Cevap:** Spring Boot uygulamasının temel yapılandırma dosyaları `application.properties` veya `application.yml` dosyalarıdır. Bu dosyalarda uygulama ayarları (sunucu portu, veritabanı bağlantı bilgileri, logging seviyeleri vb.) tanımlanır. Yapılandırma, ana kaynaklar (src/main/resources) dizinine yerleştirilerek veya komut satırı argümanları veya ortam değişkenleri aracılığıyla yapılabilir. YAML daha yapılandırılmış ve okunabilir bir format sunarken, Properties daha basit bir anahtar-değer çifti formatındadır.
+
+4.  **Soru:** Spring Boot Actuator nedir ve hangi amaçlarla kullanılır?
+    **Cevap:** Spring Boot Actuator, çalışan bir Spring Boot uygulamasının iç işleyişini izlemek ve yönetmek için kullanılan bir modü
