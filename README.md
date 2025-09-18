@@ -413,13 +413,15 @@ gösteren bir rapordur.
 → @Component ile işaretlenmiş sınıf, component-scan sırasında Spring IoC Container’a eklenir.
 
 Ne zaman kullanılır?
-→ Eğer sınıfın rolü service, repository veya controller gibi belirgin değilse, genel amaçlı bir Spring bileşeni olduğunu belirtmek için.
+→ Eğer sınıfın rolü service, repository veya controller gibi belirgin değilse, genel amaçlı
+bir Spring bileşeni olduğunu belirtmek için.
 ```
 ```
 2. @Service
 → @Component’in specialization (özelleştirilmiş) halidir.
 → Semantik olarak bu sınıfın iş mantığını (business logic) içerdiğini belirtir.
-→ Ekstra olarak Spring AOP ile iş katmanına yönelik işlemlerde (örneğin transaction, logging, security) anlam kazanır.
+→ Ekstra olarak Spring AOP ile iş katmanına yönelik işlemlerde
+(örneğin transaction, logging, security) anlam kazanır.
 
 Ne zaman kullanılır?
 → Service/Business katmanı sınıflarında.
@@ -428,7 +430,8 @@ Ne zaman kullanılır?
 3. @Repository
 → @Component’in başka bir specialization’ıdır.
 → Semantik olarak bu sınıfın data access layer (DAO) olduğunu belirtir.
-→ Ekstra özellik: Spring, @Repository ile işaretlenmiş sınıflarda veritabanı exception’larını Spring’in DataAccessException hiyerarşisine dönüştürür.
+→ Ekstra özellik: Spring, @Repository ile işaretlenmiş sınıflarda veritabanı
+exception’larını Spring’in DataAccessException hiyerarşisine dönüştürür.
 
 Ne zaman kullanılır?
 → Database erişim katmanında (JPA, JDBC, MongoDB, vb.).
