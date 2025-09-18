@@ -714,7 +714,187 @@ setlerinde çok hızlı çalışır.
 reader/writer optimizasyonu.
 ```
 
+## Spring WebFlux ile Spring MVC arasındaki temel fark nedir?
+```
+→ Spring MVC: Thread-per-request modeli (blocking I/O).
+→ Spring WebFlux: Event-loop tabanlı (non-blocking, reactive), çok daha az thread ile
+yüksek concurrency sağlar.
+→ Kullanım senaryosu: WebFlux → yüksek trafik, streaming API’ler; MVC → klasik CRUD uygulamaları.
+```
 
+## Reactive programming’de Mono ve Flux nedir?
+```
+→ Mono<T>: 0 veya 1 sonuç döner.
+→ Flux<T>: 0…N sonuç döner (stream).
+👉 Örn: Mono<User> (tek kullanıcı), Flux<User> (çok kullanıcı).
+```
+
+## Microservices mimarisinde Service Discovery (Eureka/Consul) neden kullanılır?
+```
+→ Servisler dinamik olarak scale olunca IP/port sabit kalmaz.
+→ Eureka/Consul gibi discovery server’lar, servislerin birbirini bulmasını sağlar.
+→ Örn: OrderService → UserService’in IP’sini bilmeden istek atabilir.
+```
+
+## Spring Cloud Config Server ne işe yarar?
+```
+→ Tüm microservice’lerin konfigürasyonlarını merkezi yönetmek için kullanılır.
+→ Konfigürasyonlar genellikle Git repo’da tutulur.
+→ Dinamik olarak config değişimi (refresh scope) yapılabilir.
+```
+
+## Circuit Breaker nedir? Spring Cloud ile nasıl uygulanır?
+```
+→ Amaç: Bir servis sürekli hata veriyorsa diğer servisleri korumak.
+→ Resilience4j / Hystrix ile uygulanır.
+→ Örn: @CircuitBreaker(name="inventoryService", fallbackMethod="fallback")
+```
+
+## Kafka ile RabbitMQ arasındaki fark nedir?
+```
+→ Kafka: High throughput, event streaming, partition + offset bazlı,
+log mantığında çalışır. Gerçek zamanlı veri işleme (stream processing).
+
+→ RabbitMQ: Message broker, queue tabanlı, daha klasik mesajlaşma.
+```
+
+## Spring Boot’ta Kafka consumer grupları nasıl çalışır?
+```
+→ Cache olarak: @EnableCaching + @Cacheable, @CacheEvict.
+→ Data structure store olarak: Hash, List, Set kullanarak (örn: alışveriş sepeti).
+→ Message broker olarak: Pub/Sub mekanizması.
+```
+
+## Reactive WebFlux + R2DBC nedir?
+```
+→ R2DBC (Reactive Relational Database Connectivity), klasik JDBC’nin reactive versiyonudur.
+→ JDBC blocking çalışır → WebFlux uyumlu değil.
+→ R2DBC → Non-blocking DB erişimi (Postgres, MySQL, MSSQL için destek var).
+```
+
+
+## Saga Pattern nedir? Microservices’te neden kullanılır?
+```
+→ Microservices’te dağıtık transaction problemini çözmek için kullanılan pattern.
+→ Her servis kendi DB’sine sahip → klasik transaction yok.
+→ Saga → işlemleri adım adım yürütür, hata olursa compensating transaction ile geri alır.
+→ Örn: Sipariş → Ödeme → Stok → kargo. Ödeme başarısız olursa sipariş iptal edilir.
+```
+
+## WebFlux hangi senaryoda uygun değil?
+Spring WebFlux çok güçlü ama her durumda uygun değildir. İşte detaylar:
+```
+✅ WebFlux’un güçlü olduğu alanlar
+
+→ Çok yüksek concurrency (aynı anda binlerce request → streaming, chat, IoT).
+→ Streaming API’ler (Server-Sent Events, WebSocket).
+→ I/O bound işler (dosya okuma, başka servis çağırma, DB’den veri çekme).
+→ Non-blocking driver’lar ile (R2DBC, Reactive Mongo, WebClient).
+```
+
+❌ WebFlux’un uygun olmadığı senaryolar
+```
+✅CPU-bound işler (ağır işlemci yükü)
+→ Örn: görüntü işleme, büyük matematiksel hesaplar, AI model çalıştırma.
+→ Çünkü WebFlux event-loop modeli kullanır → CPU’yu meşgul eden işler event-loop’u bloke eder,
+performans düşer.
+→ Çözüm: Bu tür işleri ayrı thread pool (ör. Schedulers.boundedElastic()) üzerinde çalıştırmak.
+
+✅Blocking API / Driver kullanımı
+→ Eğer kullandığın kütüphane blocking ise (örn: klasik JDBC), WebFlux’ın faydasını kaybedersin.
+→ Çünkü tek bir blocking işlem event-loop’u durdurur → diğer tüm request’ler etkilenir.
+→ Çözüm: R2DBC, Reactive MongoDB, Reactive Redis gibi non-blocking driver’lar kullan.
+
+✅Düşük concurrency, basit CRUD uygulamaları
+→ Örn: Küçük bir şirket içi CRUD paneli.
+→ MVC daha basittir, debugging kolaydır, community daha büyüktür.
+→ WebFlux burada gereksiz karmaşıklık yaratır.
+
+✅Transaction-heavy senaryolar (RDBMS + ACID)
+→ WebFlux + R2DBC ile transaction yönetimi sınırlıdır.
+→ Eğer çok karmaşık SQL transaction’ların varsa (multi-step join, distributed transaction),
+klasik Spring MVC + JDBC daha stabil olur.
+
+✅Ecosystem uyumsuzluğu
+→ Bazı 3rd party kütüphaneler (özellikle eski olanlar) reactive desteklemez.
+→ Örn: raporlama, PDF, e-mail API’leri blocking çalışır → WebFlux’ı verimsiz hale getirir.
+```
+🎯 Özet
+```
+WebFlux = non-blocking, I/O-heavy, high concurrency uygulamalar için süper.
+Spring MVC = CPU-heavy, transaction-heavy, basit CRUD için daha uygun.
+```
+
+## Reactive WebFlux’ta backpressure nedir, nasıl yönetilir?
+```
+→ Backpressure: Publisher’ın ürettiği veri hızının, Subscriber’ın tüketme hızını aşması.
+→ Yönetim yolları: onBackpressureBuffer(), onBackpressureDrop(), limitRate() gibi
+Reactor operatörleriyle kontrol edilir.
+```
+
+## Reactive WebFlux’ta thread modeli nasıl çalışır?
+```
+→ WebFlux Netty event-loop modeli kullanır.
+→ Default: N CPU çekirdeği için 2N thread oluşturur.
+→ Request processing → event-loop threadlerinde yürür, CPU-bound işler için boundedElastic
+veya parallel scheduler kullanılır.
+```
+
+## Spring Cloud Gateway ile Zuul arasındaki fark nedir?
+```
+→ Zuul 1: Servlet (blocking I/O).
+→ Spring Cloud Gateway: Netty (non-blocking, reactive).
+→ Gateway → route, filter, rate limiting, circuit breaker gibi modern özellikler destekler.
+```
+
+## Distributed tracing (Zipkin/Jaeger) nasıl entegre edilir?
+```
+→ Spring Cloud Sleuth → microservice’ler arasında traceId ve spanId ekler.
+→ Log’lar merkezi hale gelir, Zipkin/Jaeger UI’dan request flow izlenebilir.
+→ Örn: traceId=123 spanId=456 → hangi servislerde gezdiği görülür.
+```
+
+## Kafka’da exactly-once delivery nasıl sağlanır?
+```
+→ Producer tarafında: enable.idempotence=true.
+→ Transactional producer + consumer offset commit birlikte yönetilir (transactional.id).
+→ Böylece duplicate veya kayıp mesaj engellenir.
+```
+
+## Redis Cluster ve Sentinel arasındaki fark nedir?
+```
+→ Redis Sentinel: High availability (master-slave failover).
+→ Redis Cluster: Sharding + horizontal scaling.
+→ Büyük verilerde Redis Cluster, yüksek availability için Sentinel.
+```
+
+## CQRS (Command Query Responsibility Segregation) nedir, Microservices’te nasıl uygulanır?
+```
+→ Command (yazma) ve Query (okuma) işlemleri ayrı servisler/DB’ler ile yapılır.
+→ Örn: Write DB (Postgres), Read DB (ElasticSearch/Redis).
+→ Microservices’te performans + ölçeklenebilirlik sağlar.
+```
+
+## Reactive Kafka (spring-kafka vs reactor-kafka) farkı nedir?
+```
+→ spring-kafka: Classic (blocking) consumer/producer API’si.
+→ reactor-kafka: Kafka client’ını Reactive Streams (Flux/Mono) ile entegre eder.
+→ WebFlux tabanlı uygulamalarda reactor-kafka tercih edilir.
+```
+
+## Saga Pattern ile Choreography ve Orchestration farkı nedir?
+```
+→ Choreography: Event-driven, servisler birbirine event gönderir (loosely coupled).
+→ Orchestration: Merkezi bir Saga orchestrator servis, tüm adımları yönetir.
+→ Trade-off: Choreography → basit ama karmaşıklaşabilir, Orchestration → merkezi kontrol ama single point of failure riski.
+```
+
+## Redis’i sadece cache değil, event streaming için nasıl kullanırsın?
+```
+→ Redis Streams (Kafka benzeri, log-based, consumer group destekli).
+→ Event-driven microservices için hafif alternatif.
+→ XADD, XREADGROUP komutları ile çalışır.
+```
 
 ## JPA Nedir ?
 ```
