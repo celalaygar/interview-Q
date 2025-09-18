@@ -243,6 +243,476 @@ https://medium.com/@eda.dlkc/thread-safe-nedir-fe52d21238fa
 https://www.gencayyildiz.com/blog/thread-safe-concurrentqueue-concurrentdictionary-concurrentbag-concurrentstack-ve-blockingcollection-koleksiyonlari-ve-kullanim-durumlari/
 ```
 
+## JSpring Boot ve Spring Framework arasındaki fark nedir?
+```
+- Spring Framework → Konfigürasyon ağırlıklı, XML veya Java Config gerekebilir.
+- Spring Boot → Spring üzerine kuruludur, hazır starter bağımlılıkları ve otomatik konfigürasyonu
+sayesinde çok daha hızlı geliştirme sağlar.
+
+Özet: Spring Boot = Spring + Auto Configuration + Embedded Server + Production tools
+```
+
+## Spring Boot Auto-Configuration nasıl çalışır?
+```
+Spring Boot uygulama başlarken classpath’teki bağımlılıkları kontrol eder ve uygun
+konfigürasyonu otomatik yükler.
+- spring-boot-starter-web varsa → DispatcherServlet, Tomcat otomatik başlatılır.
+- spring-boot-starter-data-jpa varsa → EntityManagerFactory, DataSource otomatik oluşturulur.
+
+Bunu sağlayan mekanizma: @EnableAutoConfiguration anotasyonu.
+```
+
+## Spring Boot Auto-Configuration nasıl çalışır?
+```
+Spring Boot Actuator, uygulamanın çalışma zamanında sağlık durumu, metrikler, loglar,
+env bilgileri gibi üretim seviyesinde izleme (monitoring) ve yönetim özellikleri sağlar.
+- /actuator/health → Uygulamanın sağlık durumu
+- /actuator/metrics → Bellek, CPU, istek sayısı
+- /actuator/env → Ortam değişkenleri
+```
+
+## Spring Boot’ta application.properties ve application.yml farkı nedir?
+```
+- application.properties → Anahtar-değer (key=value) formatındadır.
+- application.yml → YAML formatında, daha okunabilir ve hiyerarşik yapı destekler.
+```
+
+## Spring Boot’ta Profil (Profile) nedir?
+```
+Spring Boot, farklı ortamlar için (dev, test, prod) ayrı konfigürasyonlara izin verir.
+@Profile anotasyonu ile hangi bean’in hangi ortamda çalışacağını belirleyebiliriz.
+```
+```
+@Profile("dev")
+@Bean
+public DataSource devDataSource() {
+    ...
+}
+```
+
+## Spring Boot Security ile kimlik doğrulama nasıl yapılır?
+```
+Spring Security, Spring Boot’ta otomatik entegre gelir.
+Varsayılan olarak tüm endpointler korunur, user isimli kullanıcı oluşturulur ve şifre konsolda
+gösterilir. Gelişmiş senaryolar için:
+```
+```
+- JWT tabanlı kimlik doğrulama
+- OAuth2 / OpenID Connect entegrasyonu
+- Role-based access control
+```
+
+## Spring’de @Transactional anotasyonu kullanılmasına rağmen neden rollback olmuyor?
+#### 1. Exception türü rollback tetiklemiyor olabilir
+```
+Spring, varsayılan olarak sadece RuntimeException ve Error tiplerinde rollback yapar.
+Checked Exception (örn. IOException, SQLException) fırlatılırsa rollback olmaz.
+```
+```
+@Transactional(rollbackFor = Exception.class)
+public void myMethod() throws Exception {
+    ...
+}
+```
+#### 2. Metodun aynı sınıf içinde çağrılması (self-invocation)
+```
+Spring @Transactional, AOP proxy üzerinden çalışır.
+Eğer bir sınıf içinde transactional metod, yine aynı sınıftaki başka bir metod tarafından
+çağrılıyorsa proxy devreye girmez → rollback çalışmaz.
+
+👉 Çözüm:
+Transactional metodu başka bir bean’den çağır veya aspectJ ile compile-time weaving kullan.
+```
+#### 3. Transactional metod public değilse
+```
+Spring AOP proxy, sadece public metodlara transactional uygular.
+Eğer metod private, protected veya default ise rollback çalışmaz.
+
+👉 Çözüm:
+Transactional metod public olmalı.
+```
+#### 4. Exception yakalanıp swallow (yutuluyorsa)
+```
+Eğer exception try-catch içinde yakalanıp üst kata fırlatılmıyorsa rollback tetiklenmez.
+```
+```
+@Transactional
+public void saveData() {
+    try {
+        // hata fırlatılır
+    } catch (Exception e) {
+        // log atıp swallow ederse rollback OLMAZ
+    }
+}
+```
+```
+👉 Çözüm:
+
+- Exception tekrar fırlatılmalı (throw e;)
+- Ya da rollback manuel çağrılmalı:
+
+TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
+```
+#### 5. Transactional propagation yanlış ayarlanmış olabilir
+```
+Örneğin REQUIRES_NEW kullanılırken iç transaction rollback olsa bile dış transaction
+rollback olmayabilir.
+
+👉 Çözüm:
+Doğru propagation stratejisini seçmek (REQUIRED, REQUIRES_NEW, NESTED vs.).
+```
+#### 6. No proxy / yanlış yapılandırma
+```
+- @EnableTransactionManagement unutulmuş olabilir.
+- Transaction manager (DataSourceTransactionManager, JpaTransactionManager) yanlış veya hiç
+tanımlanmamış olabilir.
+```
+#### 7. Read-only transaction
+```
+Eğer @Transactional(readOnly = true) kullanıyorsan, bazı veritabanı sürücüleri update/delete
+işlemlerini commit etmeyebilir, rollback davranışı da farklı olabilir.
+```
+✅ Özet:
+
+```
+@Transactional var ama rollback olmuyorsa en büyük sebepler:
+- Exception tipi (checked/unchecked farkı)
+- Self-invocation (aynı sınıf içinden çağrı)
+- Metodun public olmaması
+- Exception’ın swallow edilmesi
+- Yanlış propagation
+- Transaction yönetiminin devreye girmemesi
+```
+
+## Thread Dump nedir?
+```
+- Thread Dump, JVM üzerinde o anda çalışan tüm thread’lerin (iş parçacıklarının) durumunu
+gösteren bir rapordur.
+- İçinde şunlar olur:
+  - Hangi thread çalışıyor, hangi kod satırında
+  - Thread’in state’i (RUNNABLE, WAITING, BLOCKED, TIMED_WAITING vs.)
+  - Lock’lar, deadlock bilgisi
+  - Stack trace
+
+👉 Kısaca: Thread Dump = JVM’in “röntgen filmi”
+```
+
+## Thread Dump ne zaman kullanılır?
+```
+- Uygulama donmuşsa (hang, deadlock)
+- Yüksek CPU kullanımı varsa
+- Thread sayısı artıyorsa (thread leak)
+- Performans analizi yapmak gerektiğinde
+```
+
+## Spring’te @Component, @Service, @Repository arasındaki farklar?
+```
+1. @Component
+→ En genel stereotype anotasyondur.
+→ Spring bean’i tanımlamak için kullanılır.
+→ @Component ile işaretlenmiş sınıf, component-scan sırasında Spring IoC Container’a eklenir.
+
+Ne zaman kullanılır?
+→ Eğer sınıfın rolü service, repository veya controller gibi belirgin değilse, genel amaçlı bir Spring bileşeni olduğunu belirtmek için.
+```
+```
+2. @Service
+→ @Component’in specialization (özelleştirilmiş) halidir.
+→ Semantik olarak bu sınıfın iş mantığını (business logic) içerdiğini belirtir.
+→ Ekstra olarak Spring AOP ile iş katmanına yönelik işlemlerde (örneğin transaction, logging, security) anlam kazanır.
+
+Ne zaman kullanılır?
+→ Service/Business katmanı sınıflarında.
+```
+```
+3. @Repository
+→ @Component’in başka bir specialization’ıdır.
+→ Semantik olarak bu sınıfın data access layer (DAO) olduğunu belirtir.
+→ Ekstra özellik: Spring, @Repository ile işaretlenmiş sınıflarda veritabanı exception’larını Spring’in DataAccessException hiyerarşisine dönüştürür.
+
+Ne zaman kullanılır?
+→ Database erişim katmanında (JPA, JDBC, MongoDB, vb.).
+```
+
+## Veritabanında 200 bin kayıt update ederken performans problemini nasıl çözersin?
+
+#### 1. Tek sorgu ile toplu update yapmak ✅
+```
+En hızlı yöntem, 200 bin satırı tek bir SQL UPDATE sorgusu ile güncellemektir.
+```
+```
+UPDATE orders
+SET status = 'CLOSED'
+WHERE status = 'PENDING';
+```
+```
+👉 Avantajı: Tek transaction, tek IO, çok hızlı.
+👉 Not: Eğer güncellemeler farklı değerler içeriyorsa, bu yöntem her zaman uygulanamayabilir.
+```
+
+#### 2. Batch Update (Toplu Güncelleme)
+```
+Eğer her kayıt için farklı değer update edilecekse → tek tek update yerine batch kullanılır.
+```
+```
+jdbcTemplate.batchUpdate(
+    "UPDATE employees SET salary = ? WHERE id = ?",
+    employees,
+    1000, // batch size
+    (ps, emp) -> {
+        ps.setBigDecimal(1, emp.getSalary());
+        ps.setLong(2, emp.getId());
+    }
+);
+```
+```
+👉 Batch size genelde 1000 – 5000 arasında ayarlanır.
+👉 Böylece 200.000 update = 200 query yerine, 200 batch × 1000 update olur → çok daha hızlı.
+```
+#### 3. Transaction Yönetimi
+```
+Tek tek update + auto-commit açıksa → her kayıt için commit yapar, çok yavaş olur.
+Çözüm: Auto-commit’i kapatıp tek transaction veya batch transaction kullanmak.
+```
+```
+@Transactional
+public void bulkUpdate(...) {
+   // batch işlemler
+}
+
+```
+#### 4. Index Optimizasyonu
+```
+Update sırasında WHERE şartında kullanılan sütunlar indexlenmiş olmalı.
+```
+```
+UPDATE employees SET salary = salary * 1.1 WHERE department_id = 5;
+```
+```
+→ department_id üzerinde index varsa çok daha hızlı çalışır.
+```
+#### 5. Partitioning veya Chunk Processing
+```
+200 bin çok büyük değil ama milyonlarca kayıt olduğunda →
+- İşlemi chunk’lara bölmek gerekir (örneğin 10k kayıt = 20 işlem).
+- Spring Batch veya cursor ile yönetilebilir.
+```
+#### 6. Lock ve Concurrency Sorunları
+```
+→ Büyük update işlemi uzun sürerse, tabloyu kilitleyebilir.
+→ Çözüm:
+  → Update işlemini off-peak saatlerde yapmak
+  → Küçük batch’lerle güncellemek
+  → Gerekiyorsa row-level lock ile yönetmek
+```
+#### 7. Veritabanı Özel Çözümleri
+```
+→ PostgreSQL: COPY ile geçici tabloya yükleyip join-update yapmak çok hızlıdır.
+→ Oracle: MERGE INTO kullanılabilir.
+→ MySQL: Bulk update için geçici tablo (LOAD DATA INFILE) ve join update yapılabilir.
+```
+
+## Sepetteki veriyi nasıl tutarım nasıl hızlı getirirrim nasıl hızlı update ederim..
+E-commerce gibi sistemlerde “sepet (shopping cart)” performansı kritik bir konudur.
+
+#### 1. Sepet verisini nerede tutarım?
+```
+→ Frontend tarafında (client-side):
+
+localStorage veya sessionStorage → küçük sepetler için hızlı çözüm.
+Redux / Context API → sayfa yenilendiğinde kaybolmaması için.
+Avantaj: Hızlı, server yükünü azaltır.
+Dezavantaj: User login olmadan farklı cihazlardan senkronize edemezsin.
+```
+```
+→ Backend tarafında (server-side):
+
+Database (RDBMS/MongoDB) → kalıcı depolama.
+Cache (Redis, Memcached) → hızlı erişim için.
+Genellikle Redis + DB birlikte kullanılır.
+Redis → anlık sepet işlemleri (okuma/yazma çok hızlı).
+DB → checkout sırasında kalıcı hale getirme.
+```
+#### 2. Nasıl hızlı getiririm?
+```
+→ Cache (Redis) kullan:
+
+Key → cart:userId
+Value → JSON formatında sepet içeriği.
+Böylece her istek DB’ye gitmez, Redis’ten milisaniyede gelir.
+```
+```
+→ Indexleme yap:
+
+DB’de userId + cartId üzerinde index olmalı.
+```
+```
+→ API optimizasyonu:
+
+GET /cart → tek endpoint, tüm ürünleri + toplam tutarı döner.
+Gerekirse ürün bilgilerini batch query ile getir (N+1 probleminden kaçın).
+```
+
+#### 3. Nasıl hızlı update ederim?
+```
+→ Redis Hash veya JSON set kullan:
+Örn: HSET cart:123 productId:456 quantity 3
+O(1) performans, çok hızlıdır.
+
+→ Optimistic Locking (ETag, Versioning) kullan:
+Aynı sepeti iki istek aynı anda güncellerse çakışmayı önler.
+
+→ Partial update yap:
+“Sepeti komple sil → tekrar yaz” yerine sadece değişen ürünü update et.
+
+→ Event-driven yaklaşım:
+Update geldiğinde bir Kafka/RabbitMQ event yayınla → DB & Redis senkronize olur.
+```
+#### 4. Örnek Senaryo (Redis + DB birlikte)
+```
+→ Kullanıcı ürünü sepete ekler → API çağrısı alır.
+→ API önce Redis’te günceller (cart:userId).
+→ Checkout sırasında Redis’teki sepet alınır, DB’ye yazılır (kalıcı hale gelir).
+→ Redis’te TTL (time to live) koy → mesela 7 gün işlem yapılmazsa otomatik silinsin.
+```
+#### 5. Spring Boot Örneği (Redis ile)
+```
+@Service
+public class CartService {
+
+    private final RedisTemplate<String, Object> redisTemplate;
+    private final String CART_KEY_PREFIX = "cart:";
+
+    public CartService(RedisTemplate<String, Object> redisTemplate) {
+        this.redisTemplate = redisTemplate;
+    }
+
+    public void addToCart(String userId, String productId, int quantity) {
+        String key = CART_KEY_PREFIX + userId;
+        redisTemplate.opsForHash().put(key, productId, quantity);
+        redisTemplate.expire(key, Duration.ofDays(7)); // TTL
+    }
+
+    public Map<Object, Object> getCart(String userId) {
+        String key = CART_KEY_PREFIX + userId;
+        return redisTemplate.opsForHash().entries(key);
+    }
+
+    public void removeFromCart(String userId, String productId) {
+        String key = CART_KEY_PREFIX + userId;
+        redisTemplate.opsForHash().delete(key, productId);
+    }
+}
+```
+```
+✅ Özet
+
+→ Küçük / basit projeler: localStorage + backend DB yeterli.
+→ Orta / büyük ölçek: Redis + DB (hybrid model).
+→ Çok büyük ölçek (Amazon, Trendyol, Hepsiburada): Redis Cluster + Kafka event + DB
+(CQRS ve Event Sourcing yaklaşımı).
+```
+
+## Spring Boot’ta BatchConfig (Spring Batch) ile Cron Job kavramları hem benzer hem de farklı şeylerdir
+#### 1. Spring Batch (BatchConfig)
+```
+→ Ne iş yapar:
+
+Büyük veri setleri üzerinde toplu işlem (read-process-write) yapar.
+Örnek: 200.000 kaydı güncellemek, dosyadan veri okumak, ETL işlemleri.
+
+→ Nasıl çalışır:
+
+Job → Step → Reader, Processor, Writer
+Chunk’lar ile parçalı işleme (batch update)
+Restart, retry, skip, transaction yönetimi hazır gelir
+
+→ Özellikleri:
+
+Veri yoğun işleri yönetmek için optimize edilmiştir.
+Database, CSV, Excel, JMS, Kafka gibi kaynaklardan veri okuyabilir.
+Spring Batch framework’ü, iş mantığını ve state managementi sağlar.
+```
+#### 2. Cron Job (@Scheduled)
+```
+→ Ne iş yapar:
+
+Belirli zamanlarda veya periyodik olarak bir metodu çalıştırır.
+Örnek: Her gece 00:00’da rapor oluşturmak, her 5 dakikada bir API çağrısı yapmak.
+
+→ Nasıl çalışır:
+
+Spring Boot’ta @EnableScheduling ve @Scheduled(cron = "...") ile yapılır.
+Tek bir metod çağrılır, çoğunlukla küçük işleri yürütmek için uygundur.
+```
+3. Farklar Tablosu
+```
+| Özellik              | Spring Batch (BatchConfig)               | Cron Job (@Scheduled)      |
+| -------------------- | ---------------------------------------- | -------------------------- |
+| Amaç                 | Büyük veri işleme, ETL, toplu güncelleme | Zamanlanmış görevler       |
+| Veri kaynağı         | DB, CSV, Excel, JMS, Kafka vs.           | Metod / iş mantığı         |
+| Transaction yönetimi | Var (chunk, retry, skip)                 | Yok / manuel               |
+| Performans           | Büyük veri setleri için optimize         | Küçük/orta işlerde yeterli |
+| Zamanlama            | Spring Batch job launcher veya scheduler | @Scheduled / cron          |
+| Durum yönetimi       | Job execution, Step execution, restart   | Yok                        |
+
+```
+```
+✅ Yani:
+
+Spring Batch = iş mantığı ve veri işleme
+Cron Job = zamanlama ve tetikleme
+```
+
+## Batch Büyük veri işleme yöntemınde hızlı mı çalışıyor ?
+```
+Evet, Spring Batch büyük veri işleme yönteminde hızlı çalışabilir, ama bu tamamen kullanım
+şekline ve yapılandırmaya bağlıdır.
+```
+
+#### 1. Neden hızlı çalışabilir?
+```
+→  Chunk-based processing:
+Büyük veri seti küçük parçalara (chunk) bölünerek işlenir.
+Örneğin 200.000 kayıt → chunk size 1000 → 200 batch.
+Böylece transaction yönetimi ve memory kullanımı optimize edilir.
+
+→ Batch Update / JDBC Batch:
+Update veya insert işlemleri toplu (batch) olarak veritabanına gönderilir.
+Tek tek kayıt göndermek yerine, birden fazla kayıt tek seferde işlenir → performans artar.
+
+→ Transaction yönetimi:
+Spring Batch, her chunk için tek bir transaction yönetir.
+Gereksiz commit ve rollback’leri azaltır.
+
+→ Restart ve Skip mekanizması:
+Hata durumunda yalnızca problemli chunk tekrar işlenir, tüm veri baştan işlenmez.
+```
+
+#### 2. Performansı etkileyen faktörler
+```
+→ Chunk boyutu: Çok küçük → sık commit → yavaş. Çok büyük → memory problemi.
+Önerilen: 500–5000 arası, veri tipine ve memory’ye göre ayarla.
+
+→ Veritabanı optimizasyonu:
+Index’ler, partitioning, batch insert/update destekleyen DB özellikleri.
+
+→ Reader / Writer seçimi:
+JDBC, JPA, Hibernate, CSV veya flat file reader hız farkı yaratır.
+
+→ Parallel processing / Multi-threading:
+Spring Batch, step’leri paralel çalıştırabilir. Çok büyük verilerde performans artışı sağlar.
+```
+#### 3. Özet
+```
+→ Spring Batch tek başına “otomatik hızlı” değildir, doğru yapılandırılırsa büyük veri
+setlerinde çok hızlı çalışır.
+→ Ana hız faktörleri: chunk size, batch update, transaction yönetimi, paralel processing ve
+reader/writer optimizasyonu.
+```
+
+
+
 ## JPA Nedir ?
 ```
 JPA, Java objeleri ve ilişkisel (relational) database arasında bilgi aktarımı için kullanılan bir
