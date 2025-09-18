@@ -243,7 +243,7 @@ https://medium.com/@eda.dlkc/thread-safe-nedir-fe52d21238fa
 https://www.gencayyildiz.com/blog/thread-safe-concurrentqueue-concurrentdictionary-concurrentbag-concurrentstack-ve-blockingcollection-koleksiyonlari-ve-kullanim-durumlari/
 ```
 
-## JSpring Boot ve Spring Framework arasındaki fark nedir?
+## Spring Boot ve Spring Framework arasındaki fark nedir?
 ```
 - Spring Framework → Konfigürasyon ağırlıklı, XML veya Java Config gerekebilir.
 - Spring Boot → Spring üzerine kuruludur, hazır starter bağımlılıkları ve otomatik konfigürasyonu
@@ -262,7 +262,7 @@ konfigürasyonu otomatik yükler.
 Bunu sağlayan mekanizma: @EnableAutoConfiguration anotasyonu.
 ```
 
-## Spring Boot Auto-Configuration nasıl çalışır?
+## Spring Boot Actuator nedir?
 ```
 Spring Boot Actuator, uygulamanın çalışma zamanında sağlık durumu, metrikler, loglar,
 env bilgileri gibi üretim seviyesinde izleme (monitoring) ve yönetim özellikleri sağlar.
